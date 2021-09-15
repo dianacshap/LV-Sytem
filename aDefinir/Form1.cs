@@ -35,13 +35,43 @@ namespace aDefinir
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CadClientes cliente = new CadClientes();
-            cliente.TopLevel = false;
-            cliente.Dock = DockStyle.Fill;
+            CadClientes cliente = new CadClientes();  //estaciar form
+            cliente.TopLevel = false; //ñ é form de topo
+            cliente.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
             panelCentral.Controls.Clear(); // limpa o painel
             panelCentral.Controls.Add(cliente); //add o form no painel
+            cliente.Show();
+
+            //aplica a posição inicial ao marcador
+            panelMarcador.Top = btnCliente.Top;
+
+
 
                  
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            panelCentral.Controls.Clear(); //para voltar a tela inicio
+
+            panelMarcador.Top = btnInicio.Top;
+
+
+        }
+
+        private void btnCarros_Click(object sender, EventArgs e)
+        {
+            panelMarcador.Top = btnCarros.Top;
+        }
+
+        private void btnServico_Click(object sender, EventArgs e)
+        {
+            panelMarcador.Top = btnServico.Top;
+        }
+
+        private void btnAgenda_Click(object sender, EventArgs e)
+        {
+            panelMarcador.Top = btnAgenda.Top;
         }
     }
 }

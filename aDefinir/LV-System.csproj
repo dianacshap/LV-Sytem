@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadAgenda.Designer.cs">
+      <DependentUpon>CadAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadCarros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadCarros.Designer.cs">
+      <DependentUpon>CadCarros.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadClientes.Designer.cs">
       <DependentUpon>CadClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadServicos.Designer.cs">
+      <DependentUpon>CadServicos.cs</DependentUpon>
     </Compile>
     <Compile Include="Domain\Agendamento.cs" />
     <Compile Include="Domain\Carro.cs" />
@@ -64,8 +82,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CadAgenda.resx">
+      <DependentUpon>CadAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadCarros.resx">
+      <DependentUpon>CadCarros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadClientes.resx">
       <DependentUpon>CadClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadServicos.resx">
+      <DependentUpon>CadServicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -95,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2021-09-14 at 20.03.00.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

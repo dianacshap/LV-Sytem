@@ -63,6 +63,16 @@ namespace aDefinir.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seta {
+            get {
+                object obj = ResourceManager.GetObject("seta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2021_09_14_at_20_03_00 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2021-09-14 at 20.03.00", resourceCulture);

@@ -33,12 +33,13 @@ namespace aDefinir
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panelEsquerdo = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panelCentral = new System.Windows.Forms.Panel();
             this.btnInicio = new System.Windows.Forms.Button();
+            this.btnAgenda = new System.Windows.Forms.Button();
+            this.btnCarros = new System.Windows.Forms.Button();
+            this.btnServico = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.panelCentral = new System.Windows.Forms.Panel();
+            this.panelMarcador = new System.Windows.Forms.Panel();
             this.panelTopo.SuspendLayout();
             this.panelEsquerdo.SuspendLayout();
             this.SuspendLayout();
@@ -86,69 +87,85 @@ namespace aDefinir
             // panelEsquerdo
             // 
             this.panelEsquerdo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelEsquerdo.Controls.Add(this.panelMarcador);
             this.panelEsquerdo.Controls.Add(this.btnInicio);
-            this.panelEsquerdo.Controls.Add(this.button4);
-            this.panelEsquerdo.Controls.Add(this.button3);
-            this.panelEsquerdo.Controls.Add(this.button2);
-            this.panelEsquerdo.Controls.Add(this.button1);
+            this.panelEsquerdo.Controls.Add(this.btnAgenda);
+            this.panelEsquerdo.Controls.Add(this.btnCarros);
+            this.panelEsquerdo.Controls.Add(this.btnServico);
+            this.panelEsquerdo.Controls.Add(this.btnCliente);
             this.panelEsquerdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEsquerdo.Location = new System.Drawing.Point(0, 43);
             this.panelEsquerdo.Name = "panelEsquerdo";
             this.panelEsquerdo.Size = new System.Drawing.Size(180, 438);
             this.panelEsquerdo.TabIndex = 2;
             // 
-            // button4
+            // btnInicio
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkGray;
-            this.button4.Location = new System.Drawing.Point(29, 274);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 42);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Agenda";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnInicio.Location = new System.Drawing.Point(45, 44);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(129, 42);
+            this.btnInicio.TabIndex = 4;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // button3
+            // btnAgenda
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkGray;
-            this.button3.Location = new System.Drawing.Point(29, 160);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 42);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Carros";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgenda.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnAgenda.Location = new System.Drawing.Point(45, 274);
+            this.btnAgenda.Name = "btnAgenda";
+            this.btnAgenda.Size = new System.Drawing.Size(129, 42);
+            this.btnAgenda.TabIndex = 3;
+            this.btnAgenda.Text = "Agenda";
+            this.btnAgenda.UseVisualStyleBackColor = true;
+            this.btnAgenda.Click += new System.EventHandler(this.btnAgenda_Click);
             // 
-            // button2
+            // btnCarros
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkGray;
-            this.button2.Location = new System.Drawing.Point(29, 217);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Serviços";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCarros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarros.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCarros.Location = new System.Drawing.Point(45, 169);
+            this.btnCarros.Name = "btnCarros";
+            this.btnCarros.Size = new System.Drawing.Size(129, 42);
+            this.btnCarros.TabIndex = 2;
+            this.btnCarros.Text = "Carros";
+            this.btnCarros.UseVisualStyleBackColor = true;
+            this.btnCarros.Click += new System.EventHandler(this.btnCarros_Click);
             // 
-            // button1
+            // btnServico
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkGray;
-            this.button1.Location = new System.Drawing.Point(29, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Clientes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServico.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnServico.Location = new System.Drawing.Point(45, 226);
+            this.btnServico.Name = "btnServico";
+            this.btnServico.Size = new System.Drawing.Size(129, 42);
+            this.btnServico.TabIndex = 1;
+            this.btnServico.Text = "Serviços";
+            this.btnServico.UseVisualStyleBackColor = true;
+            this.btnServico.Click += new System.EventHandler(this.btnServico_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCliente.Location = new System.Drawing.Point(45, 102);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(129, 42);
+            this.btnCliente.TabIndex = 0;
+            this.btnCliente.Text = "Clientes";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelCentral
             // 
-            this.panelCentral.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panelCentral.BackgroundImage = global::aDefinir.Properties.Resources.WhatsApp_Image_2021_09_14_at_20_03_00;
             this.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -158,17 +175,14 @@ namespace aDefinir
             this.panelCentral.Size = new System.Drawing.Size(735, 438);
             this.panelCentral.TabIndex = 3;
             // 
-            // btnInicio
+            // panelMarcador
             // 
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnInicio.Location = new System.Drawing.Point(29, 44);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(129, 42);
-            this.btnInicio.TabIndex = 4;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
+            this.panelMarcador.BackColor = System.Drawing.Color.SandyBrown;
+            this.panelMarcador.Font = new System.Drawing.Font("Marlett", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMarcador.Location = new System.Drawing.Point(24, 58);
+            this.panelMarcador.Name = "panelMarcador";
+            this.panelMarcador.Size = new System.Drawing.Size(15, 19);
+            this.panelMarcador.TabIndex = 0;
             // 
             // Form1
             // 
@@ -194,13 +208,14 @@ namespace aDefinir
         private System.Windows.Forms.Panel panelTopo;
         private System.Windows.Forms.Panel panelEsquerdo;
         private System.Windows.Forms.Panel panelCentral;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.Button btnAgenda;
+        private System.Windows.Forms.Button btnCarros;
+        private System.Windows.Forms.Button btnServico;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Panel panelMarcador;
     }
 }
 
