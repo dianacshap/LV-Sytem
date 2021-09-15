@@ -35,15 +35,14 @@ namespace aDefinir
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CadClientes cliente = new CadClientes();  //estaciar form
+            CadClientes cliente = new CadClientes();  //instanciar form
             cliente.TopLevel = false; //ñ é form de topo
             cliente.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
             panelCentral.Controls.Clear(); // limpa o painel
             panelCentral.Controls.Add(cliente); //add o form no painel
             cliente.Show();
 
-            //aplica a posição inicial ao marcador
-            panelMarcador.Top = btnCliente.Top;
+           
 
 
 
@@ -54,24 +53,44 @@ namespace aDefinir
         {
             panelCentral.Controls.Clear(); //para voltar a tela inicio
 
-            panelMarcador.Top = btnInicio.Top;
+           
 
 
         }
 
         private void btnCarros_Click(object sender, EventArgs e)
         {
-            panelMarcador.Top = btnCarros.Top;
+            CadCarros carros = new CadCarros();  //instanciar form
+            carros.TopLevel = false; //ñ é form de topo
+            carros.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            panelCentral.Controls.Clear(); // limpa o painel
+            panelCentral.Controls.Add(carros); //add o form no painel
+            carros.Show();
+
+
         }
 
         private void btnServico_Click(object sender, EventArgs e)
         {
-            panelMarcador.Top = btnServico.Top;
+            CadServicos Servicos = new CadServicos();  //instanciar form
+            Servicos.TopLevel = false; //ñ é form de topo
+            Servicos.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            panelCentral.Controls.Clear(); // limpa o painel
+            panelCentral.Controls.Add(Servicos); //add o form no painel
+            Servicos.Show();
+
+            
         }
 
         private void btnAgenda_Click(object sender, EventArgs e)
         {
-            panelMarcador.Top = btnAgenda.Top;
+            CadAgenda agenda = new CadAgenda();  //instanciar form
+            agenda.TopLevel = false; //ñ é form de topo
+            agenda.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            panelCentral.Controls.Clear(); // limpa o painel
+            panelCentral.Controls.Add(agenda); //add o form no painel
+            agenda.Show();
+          
         }
     }
 }
