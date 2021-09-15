@@ -16,5 +16,32 @@ namespace aDefinir
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja Sair?", "LV System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes) ;
+            {
+                Application.Exit();
+            }
+            
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+           //minimizar
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CadClientes cliente = new CadClientes();
+            cliente.TopLevel = false;
+            cliente.Dock = DockStyle.Fill;
+            panelCentral.Controls.Clear(); // limpa o painel
+            panelCentral.Controls.Add(cliente); //add o form no painel
+
+                 
+        }
     }
 }
