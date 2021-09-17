@@ -190,6 +190,7 @@
     <Compile Include="Domain\Agendamento.cs" />
     <Compile Include="Domain\Carro.cs" />
     <Compile Include="Domain\Cliente.cs" />
+    <Compile Include="Domain\Produto.cs" />
     <Compile Include="Domain\Servico.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -197,9 +198,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20210916031129_v02.cs" />
-    <Compile Include="Migrations\20210916031129_v02.designer.cs">
-      <DependentUpon>20210916031129_v02.cs</DependentUpon>
+    <Compile Include="Migrations\20210917014151_v01.cs" />
+    <Compile Include="Migrations\20210917014151_v01.designer.cs">
+      <DependentUpon>20210917014151_v01.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LvSystemContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />

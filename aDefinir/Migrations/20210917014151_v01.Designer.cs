@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using aDefinir.Data;
 
 namespace aDefinir.Migrations
 {
     [DbContext(typeof(LvSystemContext))]
-    partial class LvSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210917014151_v01")]
+    partial class v01
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

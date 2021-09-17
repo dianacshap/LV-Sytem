@@ -17,8 +17,10 @@ namespace aDefinir.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=LvSystemm;Data Source=WIN10");
+            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=LvSystem3;Data Source=WIN10");
         }
+
+      
 
     }
 }

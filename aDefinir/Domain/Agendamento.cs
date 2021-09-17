@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,13 @@ namespace aDefinir.Domain
 {
     class Agendamento
     {
-        public int Id { get; set; }
-        public string Nome { get; set; }
+        [Key]
+        public int Codigo { get; set; }
+        public DateTime Data { get; set; }
+        public DateTime Hora { get; set; }
+        public string Situacao { get; set; }
+        public Carro Carro { get; set; }
+        public Cliente Cliente { get; set; }
+        public Servico Servico { get; set; }
     }
 }
