@@ -10,8 +10,8 @@ using aDefinir.Data;
 namespace aDefinir.Migrations
 {
     [DbContext(typeof(LvSystemContext))]
-    [Migration("20210917014151_v01")]
-    partial class v01
+    [Migration("20210917215007_v8")]
+    partial class v8
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

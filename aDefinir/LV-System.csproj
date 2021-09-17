@@ -198,9 +198,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20210917014151_v01.cs" />
-    <Compile Include="Migrations\20210917014151_v01.designer.cs">
-      <DependentUpon>20210917014151_v01.cs</DependentUpon>
+    <Compile Include="Migrations\20210917215007_v8.cs" />
+    <Compile Include="Migrations\20210917215007_v8.designer.cs">
+      <DependentUpon>20210917215007_v8.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LvSystemContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
