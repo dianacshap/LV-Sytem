@@ -16,5 +16,42 @@ namespace aDefinir
         {
             InitializeComponent();
         }
+
+        private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.clientesBindingSource.EndEdit();
+                clientesTableAdapter.Update(this.lvSystemDataSet.Clientes);
+                MessageBox.Show("Regsitro Salvo");
+            
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro, verifique os valores informados");
+            }
+
+               
+        }
+
+        private void CadClientes_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Clientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.clientesTableAdapter.Fill(this.lvSystemDataSet.Clientes);
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.AddNew();
+            groupBox1.Enabled = true;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

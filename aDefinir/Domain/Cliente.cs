@@ -12,10 +12,10 @@ namespace aDefinir.Domain
         [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
-        public double Cpf { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public string Cpf { get; set; }
         public string Endereco { get; set; }
-        public double Celular { get; set; }
+        public string Celular { get; set; }
         public string Email { get; set; }
+        public DateTime DataNascimento { get; set; }
     }
 }
