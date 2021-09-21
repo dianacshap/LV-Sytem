@@ -19,7 +19,7 @@ namespace aDefinir
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja Sair?", "LV System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes) ;
+            if (MessageBox.Show("Deseja Sair?", "LV System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
             {
                 Application.Exit();
             }
