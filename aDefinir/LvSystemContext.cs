@@ -15,10 +15,10 @@ namespace aDefinir.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Servico> Servicos { get; set; }
 
-        //public LvSystemContext() : base(nameOrConnectionString: "LvSystem")
-        //{
-        //}
-        //
+        public LvSystemContext() : base(nameOrConnectionString: "LvSystemConnectionString")
+        {
+        }
+
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    modelBuilder.HasDefaultSchema("public");
