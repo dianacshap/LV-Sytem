@@ -1,10 +1,10 @@
 ﻿using aDefinir.Domain;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace aDefinir.Data
 {
@@ -28,12 +28,6 @@ namespace aDefinir.Data
         //
         //}
         //
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source=localhost;Network Library=DBMSSOCN;Initial Catalog=LvSystem;User ID=sa;Password=admin;");
-        }
-
-
 
     }
 }
