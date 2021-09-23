@@ -42,11 +42,10 @@ namespace aDefinir
             panelCentral.Controls.Add(cliente); //add o form no painel
             cliente.Show();
 
-           
+            //cursor panel seleçao
+            panelSelecao.Top = btnCliente.Top;
 
-
-
-                 
+      
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -67,6 +66,9 @@ namespace aDefinir
             panelCentral.Controls.Add(carros); //add o form no painel
             carros.Show();
 
+            //cursor panel seleçao
+            panelSelecao.Top = btnCliente.Top;
+
 
         }
 
@@ -79,7 +81,10 @@ namespace aDefinir
             panelCentral.Controls.Add(Servicos); //add o form no painel
             Servicos.Show();
 
-            
+            //cursor panel seleçao
+            panelSelecao.Top = btnCliente.Top;
+
+
         }
 
         private void btnAgenda_Click(object sender, EventArgs e)
@@ -90,7 +95,10 @@ namespace aDefinir
             panelCentral.Controls.Clear(); // limpa o painel
             panelCentral.Controls.Add(agenda); //add o form no painel
             agenda.Show();
-          
+
+            //cursor panel seleçao
+            panelSelecao.Top = btnCliente.Top;
+
         }
     }
 }

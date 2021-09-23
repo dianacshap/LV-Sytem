@@ -24,7 +24,8 @@ namespace aDefinir
                 this.Validate();
                 this.clientesBindingSource.EndEdit();
                 clientesTableAdapter.Update(this.lvSystemDataSet.Clientes);
-                MessageBox.Show("Regsitro Salvo");
+                groupBox1.Enabled = false;
+                MessageBox.Show("Registro Salvo");
             
 
             }
@@ -51,6 +52,40 @@ namespace aDefinir
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.CancelEdit();
+            groupBox1.Enabled = false;
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Confirma a exclusão do registro", "LVSystem", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    clientesBindingSource.RemoveCurrent();//remove
+                    clientesTableAdapter.Update(lvSystemDataSet.Clientes);//salva
+
+                }
+
+            }
+            catch(Exception)//se "ele" não conseguir aqui captura o erro 
+            {
+                clientesTableAdapter.Fill(lvSystemDataSet.Clientes); //se não tiver esse metodo, o registro é excluido mas ainda fica no bd
+                MessageBox.Show("Registro não pode ser excluido");
+            }
+          
 
         }
     }
