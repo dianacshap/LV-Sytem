@@ -19,12 +19,13 @@ namespace aDefinir
 
         private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+            //Tratamento de erro
             try
             {
                 this.Validate();
                 this.clientesBindingSource.EndEdit();
-                clientesTableAdapter.Update(this.lvSystemDataSet.Clientes);
-                groupBox1.Enabled = false;
+                clientesTableAdapter.Update(lvSystemDataSet.Clientes);
+                groupBox1.Enabled = false; //Bloqueia Groupbox após salvar
                 MessageBox.Show("Registro Salvo");
             
 
@@ -46,8 +47,8 @@ namespace aDefinir
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            clientesBindingSource.AddNew();
-            groupBox1.Enabled = true;
+            clientesBindingSource.AddNew(); //Adiciona novo item
+            groupBox1.Enabled = true; //Desbloqueia Group Box
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace aDefinir
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            try
+            try //Tratamento de erro
             {
                 if (MessageBox.Show("Confirma a exclusão do registro", "LVSystem", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -86,6 +87,16 @@ namespace aDefinir
                 MessageBox.Show("Registro não pode ser excluido");
             }
           
+
+        }
+
+        private void clientesBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clientesBindingNavigator_RefreshItems_1(object sender, EventArgs e)
+        {
 
         }
     }

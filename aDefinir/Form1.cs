@@ -38,8 +38,8 @@ namespace aDefinir
             CadClientes cliente = new CadClientes();  //instanciar form
             cliente.TopLevel = false; //ñ é form de topo
             cliente.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
-            panelCentral.Controls.Clear(); // limpa o painel
-            panelCentral.Controls.Add(cliente); //add o form no painel
+            panel2.Controls.Clear(); // limpa o painel
+            panel2.Controls.Add(cliente); //add o form no painel
             cliente.Show();
 
             //cursor panel seleçao
@@ -62,8 +62,8 @@ namespace aDefinir
             CadCarros carros = new CadCarros();  //instanciar form
             carros.TopLevel = false; //ñ é form de topo
             carros.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
-            panelCentral.Controls.Clear(); // limpa o painel
-            panelCentral.Controls.Add(carros); //add o form no painel
+            panel2.Controls.Clear(); // limpa o painel
+            panel2.Controls.Add(carros); //add o form no painel
             carros.Show();
 
             //cursor panel seleçao

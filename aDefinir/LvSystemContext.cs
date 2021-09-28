@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,14 @@ namespace aDefinir.Data
         {
         }
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.HasDefaultSchema("public");
-        //    modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
-        //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        //    base.OnModelCreating(modelBuilder);
-        //
-        //}
-        //
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        
+        }
+        
 
     }
 }

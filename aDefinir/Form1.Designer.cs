@@ -35,12 +35,12 @@ namespace aDefinir
             this.btnCarros = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelSelecao = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panelTopo = new System.Windows.Forms.Panel();
-            this.panelSelecao = new System.Windows.Forms.Panel();
             this.panelCentral.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTopo.SuspendLayout();
@@ -123,6 +123,15 @@ namespace aDefinir
             this.panelCentral.Size = new System.Drawing.Size(915, 436);
             this.panelCentral.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(165, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(748, 434);
+            this.panel2.TabIndex = 1;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panelSelecao);
@@ -138,13 +147,14 @@ namespace aDefinir
             this.panel1.Size = new System.Drawing.Size(165, 434);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panelSelecao
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(165, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(748, 434);
-            this.panel2.TabIndex = 1;
+            this.panelSelecao.BackColor = System.Drawing.SystemColors.MenuText;
+            this.panelSelecao.ForeColor = System.Drawing.Color.DarkRed;
+            this.panelSelecao.Location = new System.Drawing.Point(11, 18);
+            this.panelSelecao.Name = "panelSelecao";
+            this.panelSelecao.Size = new System.Drawing.Size(17, 19);
+            this.panelSelecao.TabIndex = 1;
             // 
             // button5
             // 
@@ -186,15 +196,6 @@ namespace aDefinir
             this.panelTopo.Name = "panelTopo";
             this.panelTopo.Size = new System.Drawing.Size(915, 45);
             this.panelTopo.TabIndex = 1;
-            // 
-            // panelSelecao
-            // 
-            this.panelSelecao.BackColor = System.Drawing.SystemColors.MenuText;
-            this.panelSelecao.ForeColor = System.Drawing.Color.DarkRed;
-            this.panelSelecao.Location = new System.Drawing.Point(11, 18);
-            this.panelSelecao.Name = "panelSelecao";
-            this.panelSelecao.Size = new System.Drawing.Size(17, 19);
-            this.panelSelecao.TabIndex = 1;
             // 
             // Form1
             // 

@@ -16,7 +16,7 @@ namespace aDefinir.Domain
         public string Placa { get; set; }
         public string Cor { get; set; }
         public string Observacoes { get; set; }
-        public int Ano { get; set; }
+        public string Ano { get; set; }
         public Cliente Cliente { get; set; }
     }
 }

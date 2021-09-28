@@ -30,24 +30,24 @@ namespace aDefinir
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label nomeLabel;
-            System.Windows.Forms.Label cpfLabel;
-            System.Windows.Forms.Label dataNascimentoLabel;
-            System.Windows.Forms.Label enderecoLabel;
-            System.Windows.Forms.Label celularLabel;
             System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label celularLabel;
+            System.Windows.Forms.Label enderecoLabel;
+            System.Windows.Forms.Label dataNascimentoLabel;
+            System.Windows.Forms.Label nomeLabel;
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label cpfLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadClientes));
+            System.Windows.Forms.MaskedTextBox cpfMaskedTextBox;
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
             this.clientesTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ClientesTableAdapter();
             this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
-            this.clientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -57,21 +57,22 @@ namespace aDefinir
             this.clientesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.idLabel1 = new System.Windows.Forms.Label();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.dataNascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.enderecoTextBox = new System.Windows.Forms.TextBox();
-            this.celularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.clientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            idLabel = new System.Windows.Forms.Label();
-            nomeLabel = new System.Windows.Forms.Label();
-            cpfLabel = new System.Windows.Forms.Label();
-            dataNascimentoLabel = new System.Windows.Forms.Label();
-            enderecoLabel = new System.Windows.Forms.Label();
-            celularLabel = new System.Windows.Forms.Label();
+            this.celularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.dataNascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.idLabel1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             emailLabel = new System.Windows.Forms.Label();
+            celularLabel = new System.Windows.Forms.Label();
+            enderecoLabel = new System.Windows.Forms.Label();
+            dataNascimentoLabel = new System.Windows.Forms.Label();
+            nomeLabel = new System.Windows.Forms.Label();
+            idLabel = new System.Windows.Forms.Label();
+            cpfLabel = new System.Windows.Forms.Label();
+            cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingNavigator)).BeginInit();
@@ -79,50 +80,14 @@ namespace aDefinir
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // idLabel
+            // emailLabel
             // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(112, 65);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(34, 25);
-            idLabel.TabIndex = 0;
-            idLabel.Text = "Id:";
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(112, 96);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(70, 25);
-            nomeLabel.TabIndex = 2;
-            nomeLabel.Text = "Nome:";
-            // 
-            // cpfLabel
-            // 
-            cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(112, 132);
-            cpfLabel.Name = "cpfLabel";
-            cpfLabel.Size = new System.Drawing.Size(49, 25);
-            cpfLabel.TabIndex = 4;
-            cpfLabel.Text = "Cpf:";
-            // 
-            // dataNascimentoLabel
-            // 
-            dataNascimentoLabel.AutoSize = true;
-            dataNascimentoLabel.Location = new System.Drawing.Point(112, 169);
-            dataNascimentoLabel.Name = "dataNascimentoLabel";
-            dataNascimentoLabel.Size = new System.Drawing.Size(194, 25);
-            dataNascimentoLabel.TabIndex = 6;
-            dataNascimentoLabel.Text = "Data de Nascimento:";
-            // 
-            // enderecoLabel
-            // 
-            enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(112, 204);
-            enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(102, 25);
-            enderecoLabel.TabIndex = 8;
-            enderecoLabel.Text = "Endereço:";
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(112, 276);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(66, 25);
+            emailLabel.TabIndex = 12;
+            emailLabel.Text = "Email:";
             // 
             // celularLabel
             // 
@@ -133,14 +98,50 @@ namespace aDefinir
             celularLabel.TabIndex = 10;
             celularLabel.Text = "Celular:";
             // 
-            // emailLabel
+            // enderecoLabel
             // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(112, 276);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(66, 25);
-            emailLabel.TabIndex = 12;
-            emailLabel.Text = "Email:";
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(112, 204);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(102, 25);
+            enderecoLabel.TabIndex = 8;
+            enderecoLabel.Text = "Endereço:";
+            // 
+            // dataNascimentoLabel
+            // 
+            dataNascimentoLabel.AutoSize = true;
+            dataNascimentoLabel.Location = new System.Drawing.Point(112, 169);
+            dataNascimentoLabel.Name = "dataNascimentoLabel";
+            dataNascimentoLabel.Size = new System.Drawing.Size(194, 25);
+            dataNascimentoLabel.TabIndex = 6;
+            dataNascimentoLabel.Text = "Data de Nascimento:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(112, 96);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(70, 25);
+            nomeLabel.TabIndex = 2;
+            nomeLabel.Text = "Nome:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(112, 65);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(34, 25);
+            idLabel.TabIndex = 0;
+            idLabel.Text = "Id:";
+            // 
+            // cpfLabel
+            // 
+            cpfLabel.AutoSize = true;
+            cpfLabel.Location = new System.Drawing.Point(112, 132);
+            cpfLabel.Name = "cpfLabel";
+            cpfLabel.Size = new System.Drawing.Size(49, 25);
+            cpfLabel.TabIndex = 4;
+            cpfLabel.Text = "Cpf:";
             // 
             // clientesBindingSource
             // 
@@ -165,46 +166,6 @@ namespace aDefinir
             this.tableAdapterManager.ProdutoTableAdapter = null;
             this.tableAdapterManager.ServicosTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // clientesBindingNavigator
-            // 
-            this.clientesBindingNavigator.AddNewItem = null;
-            this.clientesBindingNavigator.BindingSource = this.clientesBindingSource;
-            this.clientesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.clientesBindingNavigator.DeleteItem = null;
-            this.clientesBindingNavigator.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.clientesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.clientesBindingNavigatorSaveItem,
-            this.btnCancelar,
-            this.btnEditar});
-            this.clientesBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.clientesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.clientesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.clientesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.clientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.clientesBindingNavigator.Name = "clientesBindingNavigator";
-            this.clientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clientesBindingNavigator.Size = new System.Drawing.Size(735, 39);
-            this.clientesBindingNavigator.TabIndex = 1;
-            this.clientesBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 36);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -238,6 +199,13 @@ namespace aDefinir
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 36);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
             // bindingNavigatorSeparator1
             // 
@@ -314,31 +282,83 @@ namespace aDefinir
             this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // groupBox1
+            // clientesBindingNavigator
             // 
-            this.groupBox1.Controls.Add(idLabel);
-            this.groupBox1.Controls.Add(this.idLabel1);
-            this.groupBox1.Controls.Add(nomeLabel);
-            this.groupBox1.Controls.Add(this.nomeTextBox);
-            this.groupBox1.Controls.Add(cpfLabel);
-            this.groupBox1.Controls.Add(this.cpfMaskedTextBox);
-            this.groupBox1.Controls.Add(dataNascimentoLabel);
-            this.groupBox1.Controls.Add(this.dataNascimentoDateTimePicker);
-            this.groupBox1.Controls.Add(enderecoLabel);
-            this.groupBox1.Controls.Add(this.enderecoTextBox);
-            this.groupBox1.Controls.Add(celularLabel);
-            this.groupBox1.Controls.Add(this.celularMaskedTextBox);
-            this.groupBox1.Controls.Add(emailLabel);
-            this.groupBox1.Controls.Add(this.emailTextBox);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 55);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(710, 356);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = " ";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.clientesBindingNavigator.AddNewItem = null;
+            this.clientesBindingNavigator.BindingSource = this.clientesBindingSource;
+            this.clientesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.clientesBindingNavigator.DeleteItem = null;
+            this.clientesBindingNavigator.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.clientesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.clientesBindingNavigatorSaveItem,
+            this.btnCancelar,
+            this.btnEditar});
+            this.clientesBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.clientesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.clientesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.clientesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.clientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.clientesBindingNavigator.Name = "clientesBindingNavigator";
+            this.clientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.clientesBindingNavigator.Size = new System.Drawing.Size(735, 39);
+            this.clientesBindingNavigator.TabIndex = 1;
+            this.clientesBindingNavigator.Text = "bindingNavigator1";
+            this.clientesBindingNavigator.RefreshItems += new System.EventHandler(this.clientesBindingNavigator_RefreshItems_1);
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(312, 273);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(312, 30);
+            this.emailTextBox.TabIndex = 13;
+            // 
+            // celularMaskedTextBox
+            // 
+            this.celularMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Celular", true));
+            this.celularMaskedTextBox.Location = new System.Drawing.Point(312, 237);
+            this.celularMaskedTextBox.Mask = "(00)0000-00009";
+            this.celularMaskedTextBox.Name = "celularMaskedTextBox";
+            this.celularMaskedTextBox.Size = new System.Drawing.Size(173, 30);
+            this.celularMaskedTextBox.TabIndex = 11;
+            this.celularMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // enderecoTextBox
+            // 
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(312, 198);
+            this.enderecoTextBox.Name = "enderecoTextBox";
+            this.enderecoTextBox.Size = new System.Drawing.Size(312, 30);
+            this.enderecoTextBox.TabIndex = 9;
+            // 
+            // dataNascimentoDateTimePicker
+            // 
+            this.dataNascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "DataNascimento", true));
+            this.dataNascimentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataNascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dataNascimentoDateTimePicker.Location = new System.Drawing.Point(312, 165);
+            this.dataNascimentoDateTimePicker.Name = "dataNascimentoDateTimePicker";
+            this.dataNascimentoDateTimePicker.Size = new System.Drawing.Size(102, 27);
+            this.dataNascimentoDateTimePicker.TabIndex = 7;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(312, 96);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(312, 30);
+            this.nomeTextBox.TabIndex = 3;
             // 
             // idLabel1
             // 
@@ -351,58 +371,47 @@ namespace aDefinir
             this.idLabel1.TabIndex = 1;
             this.idLabel1.Text = "ID";
             // 
-            // nomeTextBox
+            // groupBox1
             // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(312, 96);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(312, 30);
-            this.nomeTextBox.TabIndex = 3;
+            this.groupBox1.Controls.Add(cpfMaskedTextBox);
+            this.groupBox1.Controls.Add(idLabel);
+            this.groupBox1.Controls.Add(this.idLabel1);
+            this.groupBox1.Controls.Add(nomeLabel);
+            this.groupBox1.Controls.Add(this.nomeTextBox);
+            this.groupBox1.Controls.Add(cpfLabel);
+            this.groupBox1.Controls.Add(dataNascimentoLabel);
+            this.groupBox1.Controls.Add(this.dataNascimentoDateTimePicker);
+            this.groupBox1.Controls.Add(enderecoLabel);
+            this.groupBox1.Controls.Add(this.enderecoTextBox);
+            this.groupBox1.Controls.Add(celularLabel);
+            this.groupBox1.Controls.Add(this.celularMaskedTextBox);
+            this.groupBox1.Controls.Add(emailLabel);
+            this.groupBox1.Controls.Add(this.emailTextBox);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 42);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(710, 380);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = " ";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cpfMaskedTextBox
             // 
-            this.cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Cpf", true));
-            this.cpfMaskedTextBox.Location = new System.Drawing.Point(312, 132);
-            this.cpfMaskedTextBox.Mask = "000.000.000-00";
-            this.cpfMaskedTextBox.Name = "cpfMaskedTextBox";
-            this.cpfMaskedTextBox.ShortcutsEnabled = false;
-            this.cpfMaskedTextBox.Size = new System.Drawing.Size(173, 30);
-            this.cpfMaskedTextBox.TabIndex = 5;
-            this.cpfMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            // 
-            // dataNascimentoDateTimePicker
-            // 
-            this.dataNascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "DataNascimento", true));
-            this.dataNascimentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataNascimentoDateTimePicker.Location = new System.Drawing.Point(312, 165);
-            this.dataNascimentoDateTimePicker.Name = "dataNascimentoDateTimePicker";
-            this.dataNascimentoDateTimePicker.Size = new System.Drawing.Size(312, 27);
-            this.dataNascimentoDateTimePicker.TabIndex = 7;
-            // 
-            // enderecoTextBox
-            // 
-            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Endereco", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(312, 198);
-            this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(312, 30);
-            this.enderecoTextBox.TabIndex = 9;
-            // 
-            // celularMaskedTextBox
-            // 
-            this.celularMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Celular", true));
-            this.celularMaskedTextBox.Location = new System.Drawing.Point(312, 237);
-            this.celularMaskedTextBox.Mask = "(99) 00000-0000";
-            this.celularMaskedTextBox.Name = "celularMaskedTextBox";
-            this.celularMaskedTextBox.Size = new System.Drawing.Size(173, 30);
-            this.celularMaskedTextBox.TabIndex = 11;
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(312, 273);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(312, 30);
-            this.emailTextBox.TabIndex = 13;
+            cpfMaskedTextBox.AsciiOnly = true;
+            cpfMaskedTextBox.CausesValidation = false;
+            cpfMaskedTextBox.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Cpf", true));
+            cpfMaskedTextBox.Location = new System.Drawing.Point(312, 132);
+            cpfMaskedTextBox.Mask = "999-999-999-99";
+            cpfMaskedTextBox.Name = "cpfMaskedTextBox";
+            cpfMaskedTextBox.ResetOnPrompt = false;
+            cpfMaskedTextBox.ResetOnSpace = false;
+            cpfMaskedTextBox.Size = new System.Drawing.Size(173, 30);
+            cpfMaskedTextBox.SkipLiterals = false;
+            cpfMaskedTextBox.TabIndex = 5;
+            cpfMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // CadClientes
             // 
@@ -434,28 +443,27 @@ namespace aDefinir
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private LvSystemDataSetTableAdapters.ClientesTableAdapter clientesTableAdapter;
         private LvSystemDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator clientesBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton clientesBindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnEditar;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label idLabel1;
-        private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.DateTimePicker dataNascimentoDateTimePicker;
-        private System.Windows.Forms.TextBox enderecoTextBox;
+        private System.Windows.Forms.BindingNavigator clientesBindingNavigator;
         private System.Windows.Forms.TextBox emailTextBox;
         public System.Windows.Forms.MaskedTextBox celularMaskedTextBox;
-        protected internal System.Windows.Forms.MaskedTextBox cpfMaskedTextBox;
+        private System.Windows.Forms.TextBox enderecoTextBox;
+        private System.Windows.Forms.DateTimePicker dataNascimentoDateTimePicker;
+        private System.Windows.Forms.TextBox nomeTextBox;
+        private System.Windows.Forms.Label idLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

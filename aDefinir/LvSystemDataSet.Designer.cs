@@ -969,7 +969,7 @@ namespace aDefinir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CarrosRow AddCarrosRow(string Marca, string Modelo, string Placa, string Cor, string Observacoes, int Ano, ClientesRow parentClientesRowByFK_Carros_Clientes_ClienteId) {
+            public CarrosRow AddCarrosRow(string Marca, string Modelo, string Placa, string Cor, string Observacoes, string Ano, ClientesRow parentClientesRowByFK_Carros_Clientes_ClienteId) {
                 CarrosRow rowCarrosRow = ((CarrosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1037,7 +1037,7 @@ namespace aDefinir {
                 base.Columns.Add(this.columnCor);
                 this.columnObservacoes = new global::System.Data.DataColumn("Observacoes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObservacoes);
-                this.columnAno = new global::System.Data.DataColumn("Ano", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnAno = new global::System.Data.DataColumn("Ano", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAno);
                 this.columnClienteId = new global::System.Data.DataColumn("ClienteId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClienteId);
@@ -1054,7 +1054,7 @@ namespace aDefinir {
                 this.columnPlaca.MaxLength = 2147483647;
                 this.columnCor.MaxLength = 2147483647;
                 this.columnObservacoes.MaxLength = 2147483647;
-                this.columnAno.AllowDBNull = false;
+                this.columnAno.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2511,9 +2511,14 @@ namespace aDefinir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Ano {
+            public string Ano {
                 get {
-                    return ((int)(this[this.tableCarros.AnoColumn]));
+                    try {
+                        return ((string)(this[this.tableCarros.AnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Ano\' na tabela \'Carros\' é DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCarros.AnoColumn] = value;
@@ -2605,6 +2610,18 @@ namespace aDefinir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetObservacoesNull() {
                 this[this.tableCarros.ObservacoesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAnoNull() {
+                return this.IsNull(this.tableCarros.AnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAnoNull() {
+                this[this.tableCarros.AnoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3944,9 +3961,14 @@ SELECT Id, Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId FROM Carros WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_Ano, global::System.Nullable<int> Original_ClienteId) {
+        public virtual int Delete(int Original_Id, global::System.Nullable<int> Original_Ano, global::System.Nullable<int> Original_ClienteId) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Ano));
+            if ((Original_Ano.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Ano.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             if ((Original_ClienteId.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_ClienteId.Value));
@@ -3975,7 +3997,7 @@ SELECT Id, Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId FROM Carros WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Marca, string Modelo, string Placa, string Cor, string Observacoes, int Ano, global::System.Nullable<int> ClienteId) {
+        public virtual int Insert(string Marca, string Modelo, string Placa, string Cor, string Observacoes, global::System.Nullable<int> Ano, global::System.Nullable<int> ClienteId) {
             if ((Marca == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4006,7 +4028,12 @@ SELECT Id, Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId FROM Carros WH
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Observacoes));
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Ano));
+            if ((Ano.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Ano.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             if ((ClienteId.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ClienteId.Value));
             }
@@ -4033,7 +4060,7 @@ SELECT Id, Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId FROM Carros WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Marca, string Modelo, string Placa, string Cor, string Observacoes, int Ano, global::System.Nullable<int> ClienteId, int Original_Id, int Original_Ano, global::System.Nullable<int> Original_ClienteId, int Id) {
+        public virtual int Update(string Marca, string Modelo, string Placa, string Cor, string Observacoes, global::System.Nullable<int> Ano, global::System.Nullable<int> ClienteId, int Original_Id, global::System.Nullable<int> Original_Ano, global::System.Nullable<int> Original_ClienteId, int Id) {
             if ((Marca == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4064,7 +4091,12 @@ SELECT Id, Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId FROM Carros WH
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Observacoes));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Ano));
+            if ((Ano.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Ano.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             if ((ClienteId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ClienteId.Value));
             }
@@ -4072,7 +4104,12 @@ SELECT Id, Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId FROM Carros WH
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Ano));
+            if ((Original_Ano.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Ano.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             if ((Original_ClienteId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_ClienteId.Value));
@@ -4102,7 +4139,7 @@ SELECT Id, Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId FROM Carros WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Marca, string Modelo, string Placa, string Cor, string Observacoes, int Ano, global::System.Nullable<int> ClienteId, int Original_Id, int Original_Ano, global::System.Nullable<int> Original_ClienteId) {
+        public virtual int Update(string Marca, string Modelo, string Placa, string Cor, string Observacoes, global::System.Nullable<int> Ano, global::System.Nullable<int> ClienteId, int Original_Id, global::System.Nullable<int> Original_Ano, global::System.Nullable<int> Original_ClienteId) {
             return this.Update(Marca, Modelo, Placa, Cor, Observacoes, Ano, ClienteId, Original_Id, Original_Ano, Original_ClienteId, Original_Id);
         }
     }

@@ -3,12 +3,12 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class teste : DbMigration
+    public partial class v01 : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Agendamentoes",
+                "dbo.Agendamento",
                 c => new
                     {
                         Codigo = c.Int(nullable: false, identity: true),
@@ -20,15 +20,15 @@
                         Servico_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Codigo)
-                .ForeignKey("dbo.Carroes", t => t.Carro_Id)
-                .ForeignKey("dbo.Clientes", t => t.Cliente_Id)
-                .ForeignKey("dbo.Servicoes", t => t.Servico_Id)
+                .ForeignKey("dbo.Carro", t => t.Carro_Id)
+                .ForeignKey("dbo.Cliente", t => t.Cliente_Id)
+                .ForeignKey("dbo.Servico", t => t.Servico_Id)
                 .Index(t => t.Carro_Id)
                 .Index(t => t.Cliente_Id)
                 .Index(t => t.Servico_Id);
             
             CreateTable(
-                "dbo.Carroes",
+                "dbo.Carro",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -37,15 +37,15 @@
                         Placa = c.String(),
                         Cor = c.String(),
                         Observacoes = c.String(),
-                        Ano = c.Int(nullable: false),
+                        Ano = c.String(),
                         Cliente_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Clientes", t => t.Cliente_Id)
+                .ForeignKey("dbo.Cliente", t => t.Cliente_Id)
                 .Index(t => t.Cliente_Id);
             
             CreateTable(
-                "dbo.Clientes",
+                "dbo.Cliente",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -59,7 +59,7 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Servicoes",
+                "dbo.Servico",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -70,13 +70,13 @@
                         Produto_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Carroes", t => t.Carro_Id)
-                .ForeignKey("dbo.Produtoes", t => t.Produto_Id)
+                .ForeignKey("dbo.Carro", t => t.Carro_Id)
+                .ForeignKey("dbo.Produto", t => t.Produto_Id)
                 .Index(t => t.Carro_Id)
                 .Index(t => t.Produto_Id);
             
             CreateTable(
-                "dbo.Produtoes",
+                "dbo.Produto",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -92,23 +92,23 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Agendamentoes", "Servico_Id", "dbo.Servicoes");
-            DropForeignKey("dbo.Servicoes", "Produto_Id", "dbo.Produtoes");
-            DropForeignKey("dbo.Servicoes", "Carro_Id", "dbo.Carroes");
-            DropForeignKey("dbo.Agendamentoes", "Cliente_Id", "dbo.Clientes");
-            DropForeignKey("dbo.Agendamentoes", "Carro_Id", "dbo.Carroes");
-            DropForeignKey("dbo.Carroes", "Cliente_Id", "dbo.Clientes");
-            DropIndex("dbo.Servicoes", new[] { "Produto_Id" });
-            DropIndex("dbo.Servicoes", new[] { "Carro_Id" });
-            DropIndex("dbo.Carroes", new[] { "Cliente_Id" });
-            DropIndex("dbo.Agendamentoes", new[] { "Servico_Id" });
-            DropIndex("dbo.Agendamentoes", new[] { "Cliente_Id" });
-            DropIndex("dbo.Agendamentoes", new[] { "Carro_Id" });
-            DropTable("dbo.Produtoes");
-            DropTable("dbo.Servicoes");
-            DropTable("dbo.Clientes");
-            DropTable("dbo.Carroes");
-            DropTable("dbo.Agendamentoes");
+            DropForeignKey("dbo.Agendamento", "Servico_Id", "dbo.Servico");
+            DropForeignKey("dbo.Servico", "Produto_Id", "dbo.Produto");
+            DropForeignKey("dbo.Servico", "Carro_Id", "dbo.Carro");
+            DropForeignKey("dbo.Agendamento", "Cliente_Id", "dbo.Cliente");
+            DropForeignKey("dbo.Agendamento", "Carro_Id", "dbo.Carro");
+            DropForeignKey("dbo.Carro", "Cliente_Id", "dbo.Cliente");
+            DropIndex("dbo.Servico", new[] { "Produto_Id" });
+            DropIndex("dbo.Servico", new[] { "Carro_Id" });
+            DropIndex("dbo.Carro", new[] { "Cliente_Id" });
+            DropIndex("dbo.Agendamento", new[] { "Servico_Id" });
+            DropIndex("dbo.Agendamento", new[] { "Cliente_Id" });
+            DropIndex("dbo.Agendamento", new[] { "Carro_Id" });
+            DropTable("dbo.Produto");
+            DropTable("dbo.Servico");
+            DropTable("dbo.Cliente");
+            DropTable("dbo.Carro");
+            DropTable("dbo.Agendamento");
         }
     }
 }
