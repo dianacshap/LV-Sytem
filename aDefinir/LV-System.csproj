@@ -225,11 +225,11 @@
     <Compile Include="CadServicos.Designer.cs">
       <DependentUpon>CadServicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="CadProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="CadProdutos.Designer.cs">
+      <DependentUpon>CadProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="LvSystemContext.cs" />
     <Compile Include="Domain\Agendamento.cs" />
@@ -242,6 +242,9 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LvSystemDataSet.cs">
+      <DependentUpon>LvSystemDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LvSystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -274,8 +277,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="CadProdutos.resx">
+      <DependentUpon>CadProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109280018352_v01.resx">
       <DependentUpon>202109280018352_v01.cs</DependentUpon>

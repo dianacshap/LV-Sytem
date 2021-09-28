@@ -1404,8 +1404,8 @@ namespace aDefinir {
                 this.columnNome.MaxLength = 2147483647;
                 this.columnCpf.AllowDBNull = false;
                 this.columnDataNascimento.AllowDBNull = false;
+                this.columnEndereco.AllowDBNull = false;
                 this.columnEndereco.MaxLength = 2147483647;
-                this.columnCelular.AllowDBNull = false;
                 this.columnEmail.MaxLength = 2147483647;
             }
             
@@ -1741,9 +1741,6 @@ namespace aDefinir {
                 this.columnId.Unique = true;
                 this.columnNome.MaxLength = 2147483647;
                 this.columnFuncao.MaxLength = 2147483647;
-                this.columnCusto.AllowDBNull = false;
-                this.columnVolume.AllowDBNull = false;
-                this.columnDiluicao.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2726,12 +2723,7 @@ namespace aDefinir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Endereco {
                 get {
-                    try {
-                        return ((string)(this[this.tableClientes.EnderecoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Endereco\' na tabela \'Clientes\' é DBNull.", e);
-                    }
+                    return ((string)(this[this.tableClientes.EnderecoColumn]));
                 }
                 set {
                     this[this.tableClientes.EnderecoColumn] = value;
@@ -2742,7 +2734,12 @@ namespace aDefinir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public double Celular {
                 get {
-                    return ((double)(this[this.tableClientes.CelularColumn]));
+                    try {
+                        return ((double)(this[this.tableClientes.CelularColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Celular\' na tabela \'Clientes\' é DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableClientes.CelularColumn] = value;
@@ -2779,14 +2776,14 @@ namespace aDefinir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsEnderecoNull() {
-                return this.IsNull(this.tableClientes.EnderecoColumn);
+            public bool IsCelularNull() {
+                return this.IsNull(this.tableClientes.CelularColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetEnderecoNull() {
-                this[this.tableClientes.EnderecoColumn] = global::System.Convert.DBNull;
+            public void SetCelularNull() {
+                this[this.tableClientes.CelularColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2885,7 +2882,12 @@ namespace aDefinir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public double Custo {
                 get {
-                    return ((double)(this[this.tableProduto.CustoColumn]));
+                    try {
+                        return ((double)(this[this.tableProduto.CustoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Custo\' na tabela \'Produto\' é DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableProduto.CustoColumn] = value;
@@ -2896,7 +2898,12 @@ namespace aDefinir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public double Volume {
                 get {
-                    return ((double)(this[this.tableProduto.VolumeColumn]));
+                    try {
+                        return ((double)(this[this.tableProduto.VolumeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Volume\' na tabela \'Produto\' é DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableProduto.VolumeColumn] = value;
@@ -2907,7 +2914,12 @@ namespace aDefinir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public double Diluicao {
                 get {
-                    return ((double)(this[this.tableProduto.DiluicaoColumn]));
+                    try {
+                        return ((double)(this[this.tableProduto.DiluicaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Diluicao\' na tabela \'Produto\' é DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableProduto.DiluicaoColumn] = value;
@@ -2936,6 +2948,42 @@ namespace aDefinir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFuncaoNull() {
                 this[this.tableProduto.FuncaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCustoNull() {
+                return this.IsNull(this.tableProduto.CustoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCustoNull() {
+                this[this.tableProduto.CustoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsVolumeNull() {
+                return this.IsNull(this.tableProduto.VolumeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetVolumeNull() {
+                this[this.tableProduto.VolumeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDiluicaoNull() {
+                return this.IsNull(this.tableProduto.DiluicaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDiluicaoNull() {
+                this[this.tableProduto.DiluicaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4386,11 +4434,16 @@ SELECT Id, Nome, Cpf, DataNascimento, Endereco, Celular, Email FROM Clientes WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, double Original_Cpf, System.DateTime Original_DataNascimento, double Original_Celular) {
+        public virtual int Delete(int Original_Id, double Original_Cpf, System.DateTime Original_DataNascimento, global::System.Nullable<double> Original_Celular) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_Cpf));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DataNascimento));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Celular));
+            if ((Original_Celular.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Celular.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4411,7 +4464,7 @@ SELECT Id, Nome, Cpf, DataNascimento, Endereco, Celular, Email FROM Clientes WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nome, double Cpf, System.DateTime DataNascimento, string Endereco, double Celular, string Email) {
+        public virtual int Insert(string Nome, double Cpf, System.DateTime DataNascimento, string Endereco, global::System.Nullable<double> Celular, string Email) {
             if ((Nome == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4421,12 +4474,17 @@ SELECT Id, Nome, Cpf, DataNascimento, Endereco, Celular, Email FROM Clientes WHE
             this.Adapter.InsertCommand.Parameters[1].Value = ((double)(Cpf));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DataNascimento));
             if ((Endereco == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Endereco");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Endereco));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Celular));
+            if ((Celular.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Celular.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             if ((Email == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
@@ -4453,7 +4511,7 @@ SELECT Id, Nome, Cpf, DataNascimento, Endereco, Celular, Email FROM Clientes WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nome, double Cpf, System.DateTime DataNascimento, string Endereco, double Celular, string Email, int Original_Id, double Original_Cpf, System.DateTime Original_DataNascimento, double Original_Celular, int Id) {
+        public virtual int Update(string Nome, double Cpf, System.DateTime DataNascimento, string Endereco, global::System.Nullable<double> Celular, string Email, int Original_Id, double Original_Cpf, System.DateTime Original_DataNascimento, global::System.Nullable<double> Original_Celular, int Id) {
             if ((Nome == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4463,12 +4521,17 @@ SELECT Id, Nome, Cpf, DataNascimento, Endereco, Celular, Email FROM Clientes WHE
             this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(Cpf));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DataNascimento));
             if ((Endereco == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Endereco");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Endereco));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Celular));
+            if ((Celular.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Celular.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             if ((Email == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
@@ -4478,7 +4541,12 @@ SELECT Id, Nome, Cpf, DataNascimento, Endereco, Celular, Email FROM Clientes WHE
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_Cpf));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_DataNascimento));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_Celular));
+            if ((Original_Celular.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_Celular.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4500,7 +4568,7 @@ SELECT Id, Nome, Cpf, DataNascimento, Endereco, Celular, Email FROM Clientes WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nome, double Cpf, System.DateTime DataNascimento, string Endereco, double Celular, string Email, int Original_Id, double Original_Cpf, System.DateTime Original_DataNascimento, double Original_Celular) {
+        public virtual int Update(string Nome, double Cpf, System.DateTime DataNascimento, string Endereco, global::System.Nullable<double> Celular, string Email, int Original_Id, double Original_Cpf, System.DateTime Original_DataNascimento, global::System.Nullable<double> Original_Celular) {
             return this.Update(Nome, Cpf, DataNascimento, Endereco, Celular, Email, Original_Id, Original_Cpf, Original_DataNascimento, Original_Celular, Original_Id);
         }
     }
@@ -4745,11 +4813,26 @@ SELECT Id, Nome, Funcao, Custo, Volume, Diluicao FROM Produto WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, double Original_Custo, double Original_Volume, double Original_Diluicao) {
+        public virtual int Delete(int Original_Id, global::System.Nullable<double> Original_Custo, global::System.Nullable<double> Original_Volume, global::System.Nullable<double> Original_Diluicao) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_Custo));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Volume));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Diluicao));
+            if ((Original_Custo.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_Custo.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Volume.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Volume.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Diluicao.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Diluicao.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4770,7 +4853,7 @@ SELECT Id, Nome, Funcao, Custo, Volume, Diluicao FROM Produto WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nome, string Funcao, double Custo, double Volume, double Diluicao) {
+        public virtual int Insert(string Nome, string Funcao, global::System.Nullable<double> Custo, global::System.Nullable<double> Volume, global::System.Nullable<double> Diluicao) {
             if ((Nome == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4783,9 +4866,24 @@ SELECT Id, Nome, Funcao, Custo, Volume, Diluicao FROM Produto WHERE (Id = @Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Funcao));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Custo));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Volume));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Diluicao));
+            if ((Custo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Custo.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Volume.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Volume.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Diluicao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Diluicao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4806,7 +4904,7 @@ SELECT Id, Nome, Funcao, Custo, Volume, Diluicao FROM Produto WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nome, string Funcao, double Custo, double Volume, double Diluicao, int Original_Id, double Original_Custo, double Original_Volume, double Original_Diluicao, int Id) {
+        public virtual int Update(string Nome, string Funcao, global::System.Nullable<double> Custo, global::System.Nullable<double> Volume, global::System.Nullable<double> Diluicao, int Original_Id, global::System.Nullable<double> Original_Custo, global::System.Nullable<double> Original_Volume, global::System.Nullable<double> Original_Diluicao, int Id) {
             if ((Nome == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4819,13 +4917,43 @@ SELECT Id, Nome, Funcao, Custo, Volume, Diluicao FROM Produto WHERE (Id = @Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Funcao));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Custo));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Volume));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Diluicao));
+            if ((Custo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Custo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Volume.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Volume.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Diluicao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Diluicao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Original_Custo));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_Volume));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_Diluicao));
+            if ((Original_Custo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Original_Custo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Volume.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_Volume.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Diluicao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_Diluicao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4847,7 +4975,7 @@ SELECT Id, Nome, Funcao, Custo, Volume, Diluicao FROM Produto WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nome, string Funcao, double Custo, double Volume, double Diluicao, int Original_Id, double Original_Custo, double Original_Volume, double Original_Diluicao) {
+        public virtual int Update(string Nome, string Funcao, global::System.Nullable<double> Custo, global::System.Nullable<double> Volume, global::System.Nullable<double> Diluicao, int Original_Id, global::System.Nullable<double> Original_Custo, global::System.Nullable<double> Original_Volume, global::System.Nullable<double> Original_Diluicao) {
             return this.Update(Nome, Funcao, Custo, Volume, Diluicao, Original_Id, Original_Custo, Original_Volume, Original_Diluicao, Original_Id);
         }
     }
