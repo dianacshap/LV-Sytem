@@ -318,15 +318,14 @@ namespace aDefinir
             // 
             this.funcaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Funcao", true));
             this.funcaoTextBox.Location = new System.Drawing.Point(247, 106);
-            this.funcaoTextBox.Multiline = true;
             this.funcaoTextBox.Name = "funcaoTextBox";
-            this.funcaoTextBox.Size = new System.Drawing.Size(256, 83);
+            this.funcaoTextBox.Size = new System.Drawing.Size(100, 30);
             this.funcaoTextBox.TabIndex = 5;
             // 
             // custoLabel
             // 
             custoLabel.AutoSize = true;
-            custoLabel.Location = new System.Drawing.Point(131, 208);
+            custoLabel.Location = new System.Drawing.Point(125, 145);
             custoLabel.Name = "custoLabel";
             custoLabel.Size = new System.Drawing.Size(107, 25);
             custoLabel.TabIndex = 6;
@@ -335,7 +334,7 @@ namespace aDefinir
             // custoTextBox
             // 
             this.custoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Custo", true));
-            this.custoTextBox.Location = new System.Drawing.Point(253, 205);
+            this.custoTextBox.Location = new System.Drawing.Point(247, 142);
             this.custoTextBox.Name = "custoTextBox";
             this.custoTextBox.Size = new System.Drawing.Size(100, 30);
             this.custoTextBox.TabIndex = 7;
@@ -343,7 +342,7 @@ namespace aDefinir
             // volumeLabel
             // 
             volumeLabel.AutoSize = true;
-            volumeLabel.Location = new System.Drawing.Point(138, 244);
+            volumeLabel.Location = new System.Drawing.Point(132, 181);
             volumeLabel.Name = "volumeLabel";
             volumeLabel.Size = new System.Drawing.Size(109, 25);
             volumeLabel.TabIndex = 8;
@@ -352,7 +351,7 @@ namespace aDefinir
             // volumeTextBox
             // 
             this.volumeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Volume", true));
-            this.volumeTextBox.Location = new System.Drawing.Point(253, 241);
+            this.volumeTextBox.Location = new System.Drawing.Point(247, 178);
             this.volumeTextBox.Name = "volumeTextBox";
             this.volumeTextBox.Size = new System.Drawing.Size(100, 30);
             this.volumeTextBox.TabIndex = 9;
@@ -360,7 +359,7 @@ namespace aDefinir
             // diluicaoLabel
             // 
             diluicaoLabel.AutoSize = true;
-            diluicaoLabel.Location = new System.Drawing.Point(117, 277);
+            diluicaoLabel.Location = new System.Drawing.Point(111, 214);
             diluicaoLabel.Name = "diluicaoLabel";
             diluicaoLabel.Size = new System.Drawing.Size(130, 25);
             diluicaoLabel.TabIndex = 10;
@@ -369,7 +368,7 @@ namespace aDefinir
             // diluicaoTextBox
             // 
             this.diluicaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Diluicao", true));
-            this.diluicaoTextBox.Location = new System.Drawing.Point(253, 277);
+            this.diluicaoTextBox.Location = new System.Drawing.Point(247, 214);
             this.diluicaoTextBox.Name = "diluicaoTextBox";
             this.diluicaoTextBox.Size = new System.Drawing.Size(100, 30);
             this.diluicaoTextBox.TabIndex = 11;

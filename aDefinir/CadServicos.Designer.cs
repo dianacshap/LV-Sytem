@@ -145,7 +145,7 @@ namespace aDefinir
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.groupBox1.Location = new System.Drawing.Point(0, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(786, 376);
+            this.groupBox1.Size = new System.Drawing.Size(721, 359);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -241,7 +241,7 @@ namespace aDefinir
             this.servicosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.servicosBindingNavigator.Name = "servicosBindingNavigator";
             this.servicosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.servicosBindingNavigator.Size = new System.Drawing.Size(786, 39);
+            this.servicosBindingNavigator.Size = new System.Drawing.Size(721, 39);
             this.servicosBindingNavigator.TabIndex = 1;
             this.servicosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -353,7 +353,7 @@ namespace aDefinir
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(786, 418);
+            this.ClientSize = new System.Drawing.Size(721, 401);
             this.Controls.Add(this.servicosBindingNavigator);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
