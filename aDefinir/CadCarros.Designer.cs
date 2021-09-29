@@ -30,7 +30,6 @@ namespace aDefinir
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadCarros));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label marcaLabel;
             System.Windows.Forms.Label modeloLabel;
@@ -39,7 +38,19 @@ namespace aDefinir
             System.Windows.Forms.Label observacoesLabel;
             System.Windows.Forms.Label anoLabel;
             System.Windows.Forms.Label clienteIdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadCarros));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.idLabel1 = new System.Windows.Forms.Label();
+            this.carrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
+            this.marcaTextBox = new System.Windows.Forms.TextBox();
+            this.modeloTextBox = new System.Windows.Forms.TextBox();
+            this.placaTextBox = new System.Windows.Forms.TextBox();
+            this.corTextBox = new System.Windows.Forms.TextBox();
+            this.observacoesTextBox = new System.Windows.Forms.TextBox();
+            this.anoTextBox = new System.Windows.Forms.TextBox();
+            this.clienteIdComboBox = new System.Windows.Forms.ComboBox();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.carrosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -55,21 +66,10 @@ namespace aDefinir
             this.carrosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.idLabel1 = new System.Windows.Forms.Label();
-            this.marcaTextBox = new System.Windows.Forms.TextBox();
-            this.modeloTextBox = new System.Windows.Forms.TextBox();
-            this.placaTextBox = new System.Windows.Forms.TextBox();
-            this.corTextBox = new System.Windows.Forms.TextBox();
-            this.observacoesTextBox = new System.Windows.Forms.TextBox();
-            this.anoTextBox = new System.Windows.Forms.TextBox();
-            this.clienteIdComboBox = new System.Windows.Forms.ComboBox();
-            this.carrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carrosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.CarrosTableAdapter();
             this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
             this.clientesTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ClientesTableAdapter();
-            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             idLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             modeloLabel = new System.Windows.Forms.Label();
@@ -79,13 +79,93 @@ namespace aDefinir
             anoLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carrosBindingNavigator)).BeginInit();
-            this.carrosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrosBindingNavigator)).BeginInit();
+            this.carrosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            idLabel.Location = new System.Drawing.Point(180, 53);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(34, 25);
+            idLabel.TabIndex = 0;
+            idLabel.Text = "Id:";
+            // 
+            // marcaLabel
+            // 
+            marcaLabel.AutoSize = true;
+            marcaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            marcaLabel.Location = new System.Drawing.Point(79, 86);
+            marcaLabel.Name = "marcaLabel";
+            marcaLabel.Size = new System.Drawing.Size(73, 25);
+            marcaLabel.TabIndex = 2;
+            marcaLabel.Text = "Marca:";
+            // 
+            // modeloLabel
+            // 
+            modeloLabel.AutoSize = true;
+            modeloLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            modeloLabel.Location = new System.Drawing.Point(79, 122);
+            modeloLabel.Name = "modeloLabel";
+            modeloLabel.Size = new System.Drawing.Size(83, 25);
+            modeloLabel.TabIndex = 4;
+            modeloLabel.Text = "Modelo:";
+            // 
+            // placaLabel
+            // 
+            placaLabel.AutoSize = true;
+            placaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            placaLabel.Location = new System.Drawing.Point(79, 158);
+            placaLabel.Name = "placaLabel";
+            placaLabel.Size = new System.Drawing.Size(67, 25);
+            placaLabel.TabIndex = 6;
+            placaLabel.Text = "Placa:";
+            // 
+            // corLabel
+            // 
+            corLabel.AutoSize = true;
+            corLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            corLabel.Location = new System.Drawing.Point(79, 194);
+            corLabel.Name = "corLabel";
+            corLabel.Size = new System.Drawing.Size(50, 25);
+            corLabel.TabIndex = 8;
+            corLabel.Text = "Cor:";
+            // 
+            // observacoesLabel
+            // 
+            observacoesLabel.AutoSize = true;
+            observacoesLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            observacoesLabel.Location = new System.Drawing.Point(79, 230);
+            observacoesLabel.Name = "observacoesLabel";
+            observacoesLabel.Size = new System.Drawing.Size(135, 25);
+            observacoesLabel.TabIndex = 10;
+            observacoesLabel.Text = "Observacoes:";
+            // 
+            // anoLabel
+            // 
+            anoLabel.AutoSize = true;
+            anoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            anoLabel.Location = new System.Drawing.Point(79, 266);
+            anoLabel.Name = "anoLabel";
+            anoLabel.Size = new System.Drawing.Size(54, 25);
+            anoLabel.TabIndex = 12;
+            anoLabel.Text = "Ano:";
+            // 
+            // clienteIdLabel
+            // 
+            clienteIdLabel.AutoSize = true;
+            clienteIdLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            clienteIdLabel.Location = new System.Drawing.Point(79, 302);
+            clienteIdLabel.Name = "clienteIdLabel";
+            clienteIdLabel.Size = new System.Drawing.Size(100, 25);
+            clienteIdLabel.TabIndex = 14;
+            clienteIdLabel.Text = "Cliente Id:";
             // 
             // groupBox1
             // 
@@ -112,6 +192,98 @@ namespace aDefinir
             this.groupBox1.Size = new System.Drawing.Size(742, 379);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // idLabel1
+            // 
+            this.idLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Id", true));
+            this.idLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.idLabel1.Location = new System.Drawing.Point(220, 55);
+            this.idLabel1.Name = "idLabel1";
+            this.idLabel1.Size = new System.Drawing.Size(121, 23);
+            this.idLabel1.TabIndex = 1;
+            this.idLabel1.Text = "label1";
+            // 
+            // carrosBindingSource
+            // 
+            this.carrosBindingSource.DataMember = "Carros";
+            this.carrosBindingSource.DataSource = this.lvSystemDataSet;
+            // 
+            // lvSystemDataSet
+            // 
+            this.lvSystemDataSet.DataSetName = "LvSystemDataSet";
+            this.lvSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // marcaTextBox
+            // 
+            this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Marca", true));
+            this.marcaTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.marcaTextBox.Location = new System.Drawing.Point(220, 83);
+            this.marcaTextBox.Name = "marcaTextBox";
+            this.marcaTextBox.Size = new System.Drawing.Size(121, 30);
+            this.marcaTextBox.TabIndex = 3;
+            // 
+            // modeloTextBox
+            // 
+            this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Modelo", true));
+            this.modeloTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.modeloTextBox.Location = new System.Drawing.Point(220, 119);
+            this.modeloTextBox.Name = "modeloTextBox";
+            this.modeloTextBox.Size = new System.Drawing.Size(121, 30);
+            this.modeloTextBox.TabIndex = 5;
+            // 
+            // placaTextBox
+            // 
+            this.placaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Placa", true));
+            this.placaTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.placaTextBox.Location = new System.Drawing.Point(220, 155);
+            this.placaTextBox.Name = "placaTextBox";
+            this.placaTextBox.Size = new System.Drawing.Size(121, 30);
+            this.placaTextBox.TabIndex = 7;
+            // 
+            // corTextBox
+            // 
+            this.corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Cor", true));
+            this.corTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.corTextBox.Location = new System.Drawing.Point(220, 191);
+            this.corTextBox.Name = "corTextBox";
+            this.corTextBox.Size = new System.Drawing.Size(121, 30);
+            this.corTextBox.TabIndex = 9;
+            // 
+            // observacoesTextBox
+            // 
+            this.observacoesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Observacoes", true));
+            this.observacoesTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.observacoesTextBox.Location = new System.Drawing.Point(220, 227);
+            this.observacoesTextBox.Name = "observacoesTextBox";
+            this.observacoesTextBox.Size = new System.Drawing.Size(121, 30);
+            this.observacoesTextBox.TabIndex = 11;
+            // 
+            // anoTextBox
+            // 
+            this.anoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Ano", true));
+            this.anoTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.anoTextBox.Location = new System.Drawing.Point(220, 263);
+            this.anoTextBox.Name = "anoTextBox";
+            this.anoTextBox.Size = new System.Drawing.Size(121, 30);
+            this.anoTextBox.TabIndex = 13;
+            // 
+            // clienteIdComboBox
+            // 
+            this.clienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "ClienteId", true));
+            this.clienteIdComboBox.DataSource = this.clientesBindingSource1;
+            this.clienteIdComboBox.DisplayMember = "Nome";
+            this.clienteIdComboBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.clienteIdComboBox.FormattingEnabled = true;
+            this.clienteIdComboBox.Location = new System.Drawing.Point(220, 299);
+            this.clienteIdComboBox.Name = "clienteIdComboBox";
+            this.clienteIdComboBox.Size = new System.Drawing.Size(121, 33);
+            this.clienteIdComboBox.TabIndex = 15;
+            this.clienteIdComboBox.ValueMember = "Id";
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "Clientes";
+            this.clientesBindingSource1.DataSource = this.lvSystemDataSet;
             // 
             // carrosBindingNavigator
             // 
@@ -199,6 +371,7 @@ namespace aDefinir
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -259,173 +432,6 @@ namespace aDefinir
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            idLabel.Location = new System.Drawing.Point(79, 55);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(34, 25);
-            idLabel.TabIndex = 0;
-            idLabel.Text = "Id:";
-            // 
-            // idLabel1
-            // 
-            this.idLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Id", true));
-            this.idLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.idLabel1.Location = new System.Drawing.Point(220, 55);
-            this.idLabel1.Name = "idLabel1";
-            this.idLabel1.Size = new System.Drawing.Size(121, 23);
-            this.idLabel1.TabIndex = 1;
-            this.idLabel1.Text = "label1";
-            // 
-            // marcaLabel
-            // 
-            marcaLabel.AutoSize = true;
-            marcaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            marcaLabel.Location = new System.Drawing.Point(79, 86);
-            marcaLabel.Name = "marcaLabel";
-            marcaLabel.Size = new System.Drawing.Size(73, 25);
-            marcaLabel.TabIndex = 2;
-            marcaLabel.Text = "Marca:";
-            // 
-            // marcaTextBox
-            // 
-            this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Marca", true));
-            this.marcaTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.marcaTextBox.Location = new System.Drawing.Point(220, 83);
-            this.marcaTextBox.Name = "marcaTextBox";
-            this.marcaTextBox.Size = new System.Drawing.Size(121, 30);
-            this.marcaTextBox.TabIndex = 3;
-            // 
-            // modeloLabel
-            // 
-            modeloLabel.AutoSize = true;
-            modeloLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            modeloLabel.Location = new System.Drawing.Point(79, 122);
-            modeloLabel.Name = "modeloLabel";
-            modeloLabel.Size = new System.Drawing.Size(83, 25);
-            modeloLabel.TabIndex = 4;
-            modeloLabel.Text = "Modelo:";
-            // 
-            // modeloTextBox
-            // 
-            this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Modelo", true));
-            this.modeloTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.modeloTextBox.Location = new System.Drawing.Point(220, 119);
-            this.modeloTextBox.Name = "modeloTextBox";
-            this.modeloTextBox.Size = new System.Drawing.Size(121, 30);
-            this.modeloTextBox.TabIndex = 5;
-            // 
-            // placaLabel
-            // 
-            placaLabel.AutoSize = true;
-            placaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            placaLabel.Location = new System.Drawing.Point(79, 158);
-            placaLabel.Name = "placaLabel";
-            placaLabel.Size = new System.Drawing.Size(67, 25);
-            placaLabel.TabIndex = 6;
-            placaLabel.Text = "Placa:";
-            // 
-            // placaTextBox
-            // 
-            this.placaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Placa", true));
-            this.placaTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.placaTextBox.Location = new System.Drawing.Point(220, 155);
-            this.placaTextBox.Name = "placaTextBox";
-            this.placaTextBox.Size = new System.Drawing.Size(121, 30);
-            this.placaTextBox.TabIndex = 7;
-            // 
-            // corLabel
-            // 
-            corLabel.AutoSize = true;
-            corLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            corLabel.Location = new System.Drawing.Point(79, 194);
-            corLabel.Name = "corLabel";
-            corLabel.Size = new System.Drawing.Size(50, 25);
-            corLabel.TabIndex = 8;
-            corLabel.Text = "Cor:";
-            // 
-            // corTextBox
-            // 
-            this.corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Cor", true));
-            this.corTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.corTextBox.Location = new System.Drawing.Point(220, 191);
-            this.corTextBox.Name = "corTextBox";
-            this.corTextBox.Size = new System.Drawing.Size(121, 30);
-            this.corTextBox.TabIndex = 9;
-            // 
-            // observacoesLabel
-            // 
-            observacoesLabel.AutoSize = true;
-            observacoesLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            observacoesLabel.Location = new System.Drawing.Point(79, 230);
-            observacoesLabel.Name = "observacoesLabel";
-            observacoesLabel.Size = new System.Drawing.Size(135, 25);
-            observacoesLabel.TabIndex = 10;
-            observacoesLabel.Text = "Observacoes:";
-            // 
-            // observacoesTextBox
-            // 
-            this.observacoesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Observacoes", true));
-            this.observacoesTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.observacoesTextBox.Location = new System.Drawing.Point(220, 227);
-            this.observacoesTextBox.Name = "observacoesTextBox";
-            this.observacoesTextBox.Size = new System.Drawing.Size(121, 30);
-            this.observacoesTextBox.TabIndex = 11;
-            // 
-            // anoLabel
-            // 
-            anoLabel.AutoSize = true;
-            anoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            anoLabel.Location = new System.Drawing.Point(79, 266);
-            anoLabel.Name = "anoLabel";
-            anoLabel.Size = new System.Drawing.Size(54, 25);
-            anoLabel.TabIndex = 12;
-            anoLabel.Text = "Ano:";
-            // 
-            // anoTextBox
-            // 
-            this.anoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "Ano", true));
-            this.anoTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.anoTextBox.Location = new System.Drawing.Point(220, 263);
-            this.anoTextBox.Name = "anoTextBox";
-            this.anoTextBox.Size = new System.Drawing.Size(121, 30);
-            this.anoTextBox.TabIndex = 13;
-            // 
-            // clienteIdLabel
-            // 
-            clienteIdLabel.AutoSize = true;
-            clienteIdLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            clienteIdLabel.Location = new System.Drawing.Point(79, 302);
-            clienteIdLabel.Name = "clienteIdLabel";
-            clienteIdLabel.Size = new System.Drawing.Size(100, 25);
-            clienteIdLabel.TabIndex = 14;
-            clienteIdLabel.Text = "Cliente Id:";
-            // 
-            // clienteIdComboBox
-            // 
-            this.clienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carrosBindingSource, "ClienteId", true));
-            this.clienteIdComboBox.DataSource = this.clientesBindingSource1;
-            this.clienteIdComboBox.DisplayMember = "Nome";
-            this.clienteIdComboBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(220, 299);
-            this.clienteIdComboBox.Name = "clienteIdComboBox";
-            this.clienteIdComboBox.Size = new System.Drawing.Size(121, 33);
-            this.clienteIdComboBox.TabIndex = 15;
-            this.clienteIdComboBox.ValueMember = "Id";
-            // 
-            // carrosBindingSource
-            // 
-            this.carrosBindingSource.DataMember = "Carros";
-            this.carrosBindingSource.DataSource = this.lvSystemDataSet;
-            // 
-            // lvSystemDataSet
-            // 
-            this.lvSystemDataSet.DataSetName = "LvSystemDataSet";
-            this.lvSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // clientesBindingSource
             // 
             this.clientesBindingSource.DataMember = "Clientes";
@@ -449,11 +455,6 @@ namespace aDefinir
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
             // 
-            // clientesBindingSource1
-            // 
-            this.clientesBindingSource1.DataMember = "Clientes";
-            this.clientesBindingSource1.DataSource = this.lvSystemDataSet;
-            // 
             // CadCarros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,13 +471,13 @@ namespace aDefinir
             this.Load += new System.EventHandler(this.CadCarros_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrosBindingNavigator)).EndInit();
             this.carrosBindingNavigator.ResumeLayout(false);
             this.carrosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
