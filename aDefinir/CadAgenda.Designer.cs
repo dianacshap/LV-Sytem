@@ -105,7 +105,7 @@ namespace aDefinir
             situacaoLabel.Name = "situacaoLabel";
             situacaoLabel.Size = new System.Drawing.Size(95, 25);
             situacaoLabel.TabIndex = 6;
-            situacaoLabel.Text = "Situacao:";
+            situacaoLabel.Text = "Situação:";
             // 
             // horaLabel
             // 
@@ -132,7 +132,7 @@ namespace aDefinir
             codigoLabel.Name = "codigoLabel";
             codigoLabel.Size = new System.Drawing.Size(81, 25);
             codigoLabel.TabIndex = 0;
-            codigoLabel.Text = "Codigo:";
+            codigoLabel.Text = "Código:";
             // 
             // lvSystemDataSet
             // 
@@ -218,6 +218,7 @@ namespace aDefinir
             // 
             // codigoLabel1
             // 
+            this.codigoLabel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.codigoLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Codigo", true));
             this.codigoLabel1.Location = new System.Drawing.Point(39, 65);
             this.codigoLabel1.Name = "codigoLabel1";

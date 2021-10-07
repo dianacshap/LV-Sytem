@@ -37,8 +37,8 @@ namespace aDefinir
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label cpfLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadClientes));
             System.Windows.Forms.MaskedTextBox cpfMaskedTextBox;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadClientes));
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
             this.clientesTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ClientesTableAdapter();
@@ -143,6 +143,22 @@ namespace aDefinir
             cpfLabel.TabIndex = 4;
             cpfLabel.Text = "Cpf:";
             // 
+            // cpfMaskedTextBox
+            // 
+            cpfMaskedTextBox.AsciiOnly = true;
+            cpfMaskedTextBox.CausesValidation = false;
+            cpfMaskedTextBox.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Cpf", true));
+            cpfMaskedTextBox.Location = new System.Drawing.Point(312, 132);
+            cpfMaskedTextBox.Mask = "999-999-999-99";
+            cpfMaskedTextBox.Name = "cpfMaskedTextBox";
+            cpfMaskedTextBox.ResetOnPrompt = false;
+            cpfMaskedTextBox.ResetOnSpace = false;
+            cpfMaskedTextBox.Size = new System.Drawing.Size(173, 30);
+            cpfMaskedTextBox.SkipLiterals = false;
+            cpfMaskedTextBox.TabIndex = 5;
+            cpfMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            // 
             // clientesBindingSource
             // 
             this.clientesBindingSource.DataMember = "Clientes";
@@ -159,10 +175,14 @@ namespace aDefinir
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.AgendamentoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarrosTableAdapter = null;
             this.tableAdapterManager.ClientesTableAdapter = this.clientesTableAdapter;
+            this.tableAdapterManager.ProdutoServicoTableAdapter = null;
             this.tableAdapterManager.ProdutoTableAdapter = null;
+            this.tableAdapterManager.ServicoAgendamentoTableAdapter = null;
+            this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // bindingNavigatorMoveFirstItem
@@ -394,22 +414,6 @@ namespace aDefinir
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // cpfMaskedTextBox
-            // 
-            cpfMaskedTextBox.AsciiOnly = true;
-            cpfMaskedTextBox.CausesValidation = false;
-            cpfMaskedTextBox.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Cpf", true));
-            cpfMaskedTextBox.Location = new System.Drawing.Point(312, 132);
-            cpfMaskedTextBox.Mask = "999-999-999-99";
-            cpfMaskedTextBox.Name = "cpfMaskedTextBox";
-            cpfMaskedTextBox.ResetOnPrompt = false;
-            cpfMaskedTextBox.ResetOnSpace = false;
-            cpfMaskedTextBox.Size = new System.Drawing.Size(173, 30);
-            cpfMaskedTextBox.SkipLiterals = false;
-            cpfMaskedTextBox.TabIndex = 5;
-            cpfMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // CadClientes
             // 
