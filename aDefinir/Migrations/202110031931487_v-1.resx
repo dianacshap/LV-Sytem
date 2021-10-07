@@ -117,59 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="WhatsApp Image 2021-09-14 at 20.03.00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2021-09-14 at 20.03.00.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
   </data>
-  <data name="mais" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoveLast" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoveLast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MovePreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MovePreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoveFisrt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoveFisrt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mais3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mais3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoveFisrt4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoveFisrt4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoveNext1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoveNext1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mais 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mais 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="seta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Movefirst5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Movefirst5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoveNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoveNext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="moveFisrt3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moveFisrt3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MovePreview2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MovePreview2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lvsytem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lvsytem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoveFisrt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoveFisrt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoveLast1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoveLast1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

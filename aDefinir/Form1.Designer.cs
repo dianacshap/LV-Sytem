@@ -35,13 +35,13 @@ namespace aDefinir
             this.btnCarros = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelSelecao = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panelTopo = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProdutos = new System.Windows.Forms.Button();
+            this.panelSelecao = new System.Windows.Forms.Panel();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnMinizar = new System.Windows.Forms.Button();
+            this.panelTopo = new System.Windows.Forms.Panel();
             this.panelCentral.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTopo.SuspendLayout();
@@ -87,7 +87,7 @@ namespace aDefinir
             this.btnCliente.TabIndex = 0;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.button1_Click);
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnCarros
             // 
@@ -129,10 +129,21 @@ namespace aDefinir
             this.panelCentral.Size = new System.Drawing.Size(915, 436);
             this.panelCentral.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::aDefinir.Properties.Resources.lvsytem;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(136, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(777, 434);
+            this.panel2.TabIndex = 1;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnProdutos);
             this.panel1.Controls.Add(this.panelSelecao);
             this.panel1.Controls.Add(this.btnAgenda);
             this.panel1.Controls.Add(this.btnInicio);
@@ -146,6 +157,20 @@ namespace aDefinir
             this.panel1.Size = new System.Drawing.Size(136, 434);
             this.panel1.TabIndex = 0;
             // 
+            // btnProdutos
+            // 
+            this.btnProdutos.FlatAppearance.BorderSize = 0;
+            this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProdutos.ForeColor = System.Drawing.Color.Black;
+            this.btnProdutos.Location = new System.Drawing.Point(32, 162);
+            this.btnProdutos.Name = "btnProdutos";
+            this.btnProdutos.Size = new System.Drawing.Size(114, 42);
+            this.btnProdutos.TabIndex = 5;
+            this.btnProdutos.Text = "Produtos";
+            this.btnProdutos.UseVisualStyleBackColor = true;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
+            // 
             // panelSelecao
             // 
             this.panelSelecao.BackColor = System.Drawing.SystemColors.Info;
@@ -155,72 +180,47 @@ namespace aDefinir
             this.panelSelecao.Size = new System.Drawing.Size(15, 13);
             this.panelSelecao.TabIndex = 1;
             // 
-            // button5
+            // btnSair
             // 
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(881, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(31, 35);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "X";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSair.Location = new System.Drawing.Point(881, 7);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(31, 35);
+            this.btnSair.TabIndex = 0;
+            this.btnSair.Text = "X";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // button6
+            // btnMinizar
             // 
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(843, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(32, 34);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnMinizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnMinizar.FlatAppearance.BorderSize = 0;
+            this.btnMinizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMinizar.Location = new System.Drawing.Point(843, 5);
+            this.btnMinizar.Name = "btnMinizar";
+            this.btnMinizar.Size = new System.Drawing.Size(32, 34);
+            this.btnMinizar.TabIndex = 1;
+            this.btnMinizar.Text = "-";
+            this.btnMinizar.UseVisualStyleBackColor = true;
             // 
             // panelTopo
             // 
             this.panelTopo.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelTopo.Controls.Add(this.button6);
-            this.panelTopo.Controls.Add(this.button5);
+            this.panelTopo.Controls.Add(this.btnMinizar);
+            this.panelTopo.Controls.Add(this.btnSair);
             this.panelTopo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopo.Location = new System.Drawing.Point(0, 0);
             this.panelTopo.Name = "panelTopo";
             this.panelTopo.Size = new System.Drawing.Size(915, 45);
             this.panelTopo.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(32, 162);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 42);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Produtos";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::aDefinir.Properties.Resources.lvsytem;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(136, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(777, 434);
-            this.panel2.TabIndex = 1;
             // 
             // Form1
             // 
@@ -251,11 +251,11 @@ namespace aDefinir
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnMinizar;
         private System.Windows.Forms.Panel panelTopo;
         private System.Windows.Forms.Panel panelSelecao;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnProdutos;
     }
 }
 

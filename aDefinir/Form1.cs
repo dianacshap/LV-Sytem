@@ -17,42 +17,18 @@ namespace aDefinir
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Deseja Sair?", "LV System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            
-
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
            //minimizar
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CadClientes cliente = new CadClientes();  //instanciar form
-            cliente.TopLevel = false; //ñ é form de topo
-            cliente.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
-            panel2.Controls.Clear(); // limpa o painel
-            panel2.Controls.Add(cliente); //add o form no painel
-            cliente.Show();
-
-            //cursor panel seleçao
-            panelSelecao.Top = btnCliente.Top;
-
-      
-        }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
             panelCentral.Controls.Clear(); //para voltar a tela inicio
+            panelSelecao.Top = btnInicio.Top;
 
-           
 
 
         }
@@ -67,7 +43,7 @@ namespace aDefinir
             carros.Show();
 
             //cursor panel seleçao
-            panelSelecao.Top = btnCliente.Top;
+            panelSelecao.Top = btnCarros.Top;
 
 
         }
@@ -77,12 +53,12 @@ namespace aDefinir
             CadServicos Servicos = new CadServicos();  //instanciar form
             Servicos.TopLevel = false; //ñ é form de topo
             Servicos.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
-            panelCentral.Controls.Clear(); // limpa o painel
-            panelCentral.Controls.Add(Servicos); //add o form no painel
+            panel2.Controls.Clear(); // limpa o painel
+            panel2.Controls.Add(Servicos); //add o form no painel
             Servicos.Show();
 
             //cursor panel seleçao
-            panelSelecao.Top = btnCliente.Top;
+            panelSelecao.Top = btnServico.Top;
 
 
         }
@@ -92,13 +68,53 @@ namespace aDefinir
             CadAgenda agenda = new CadAgenda();  //instanciar form
             agenda.TopLevel = false; //ñ é form de topo
             agenda.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
-            panelCentral.Controls.Clear(); // limpa o painel
-            panelCentral.Controls.Add(agenda); //add o form no painel
+            panel2.Controls.Clear(); // limpa o painel
+            panel2.Controls.Add(agenda); //add o form no painel
             agenda.Show();
 
             //cursor panel seleçao
-            panelSelecao.Top = btnCliente.Top;
+            panelSelecao.Top = btnAgenda.Top;
 
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            CadClientes cliente = new CadClientes();  //instanciar form
+            cliente.TopLevel = false; //ñ é form de topo
+            cliente.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            panel2.Controls.Clear(); // limpa o painel
+            panel2.Controls.Add(cliente); //add o form no painel
+            cliente.Show();
+
+            //cursor panel seleçao
+            panelSelecao.Top = btnCliente.Top;
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja Sair?", "LV System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+
+        private void btnMinizar_Click(object sender, EventArgs e)
+        {
+            //minimizar
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            CadProdutos produtos = new CadProdutos();  //instanciar form
+            produtos.TopLevel = false; //ñ é form de topo
+            produtos.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            panel2.Controls.Clear(); // limpa o painel
+            panel2.Controls.Add(produtos); //add o form no painel
+            produtos.Show();
+
+            panelSelecao.Top = btnProdutos.Top;
         }
     }
 }

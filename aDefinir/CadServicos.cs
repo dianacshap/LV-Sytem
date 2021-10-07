@@ -17,18 +17,18 @@ namespace aDefinir
             InitializeComponent();
         }
 
-        private void servicosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void servicoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.servicosBindingSource.EndEdit();
+            this.servicoBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.lvSystemDataSet);
 
         }
 
         private void CadServicos_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Servicos'. Você pode movê-la ou removê-la conforme necessário.
-            this.servicosTableAdapter.Fill(this.lvSystemDataSet.Servicos);
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Servico'. Você pode movê-la ou removê-la conforme necessário.
+            this.servicoTableAdapter.Fill(this.lvSystemDataSet.Servico);
 
         }
     }

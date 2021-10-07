@@ -159,12 +159,10 @@ namespace aDefinir
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AgendamentosTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarrosTableAdapter = null;
             this.tableAdapterManager.ClientesTableAdapter = this.clientesTableAdapter;
             this.tableAdapterManager.ProdutoTableAdapter = null;
-            this.tableAdapterManager.ServicosTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // bindingNavigatorMoveFirstItem

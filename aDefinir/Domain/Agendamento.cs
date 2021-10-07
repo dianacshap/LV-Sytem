@@ -11,11 +11,11 @@ namespace aDefinir.Domain
     {
         [Key]
         public int Codigo { get; set; }
-        public DateTime Data { get; set; }
-        public DateTime Hora { get; set; }
+        public string Data { get; set; }
+        public string Hora { get; set; }
         public string Situacao { get; set; }
         public Carro Carro { get; set; }
         public Cliente Cliente { get; set; }
-        public Servico Servico { get; set; }
+        public ICollection<Servico> Servico { get; set; }
     }
 }

@@ -16,5 +16,6 @@ namespace aDefinir.Domain
         public double Custo { get; set; }
         public double Volume { get; set; }
         public double Diluicao { get; set; }
+        public ICollection<Servico> Servicos { get; set; }
     }
 }

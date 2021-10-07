@@ -16,7 +16,7 @@ namespace aDefinir
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadProdutos());
+            Application.Run(new Form1());
         }
     }
 }

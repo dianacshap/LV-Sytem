@@ -59,11 +59,70 @@ namespace aDefinir
             groupBox1.Enabled = false;
         }
 
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+
+        private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
         {
             carrosBindingSource.AddNew();
             groupBox1.Enabled = true;
         }
 
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            try //Tratamento de erro
+            {
+                if (MessageBox.Show("Confirma a exclusão do registro", "LVSystem", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    carrosBindingSource.RemoveCurrent();//remove
+                    carrosTableAdapter.Update(lvSystemDataSet.Carros);//salva
+
+                }
+
+            }
+            catch (Exception)//se "ele" não conseguir aqui captura o erro 
+            {
+                carrosTableAdapter.Fill(lvSystemDataSet.Carros); //se não tiver esse metodo, o registro é excluido mas ainda fica no bd
+                MessageBox.Show("Registro não pode ser excluido");
+            }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            clientesBindingSource.CancelEdit();
+            groupBox1.Enabled = false;
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+        }
+
+        private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            //Tratamento de erro
+            try
+            {
+                this.Validate();
+                this.carrosBindingSource.EndEdit();
+                carrosTableAdapter.Update(lvSystemDataSet.Carros);
+                groupBox1.Enabled = false; //Bloqueia Groupbox após salvar
+                MessageBox.Show("Registro Salvo");
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro, verifique os valores informados");
+            }
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMoveFirst_Click(object sender, EventArgs e)
+        {
+            carrosBindingSource.MoveFirst();
+        }
     }
 }

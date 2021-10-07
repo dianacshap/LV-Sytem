@@ -14,7 +14,7 @@ namespace aDefinir.Domain
         public string Nome { get; set; }
         public double Valor { get; set; }
         public double TempoServico { get; set; }
-        public Produto Produto { get; set; }
-        public Carro Carro { get; set; }
+        public ICollection<Produto> Produtos { get; set; }
+        public ICollection<Agendamento> Agendamento { get; set; }
     }
 }
