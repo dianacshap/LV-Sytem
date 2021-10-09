@@ -12,9 +12,10 @@ namespace aDefinir.Domain
         [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
+        public string Descricao { get; set; }
         public double Valor { get; set; }
         public double TempoServico { get; set; }
         public ICollection<Produto> Produtos { get; set; }
-        public ICollection<Agendamento> Agendamento { get; set; }
+        public ICollection<Agendamento> Agendamentos { get; set; }
     }
 }

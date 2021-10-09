@@ -231,18 +231,6 @@
     <Compile Include="CadServicos.Designer.cs">
       <DependentUpon>CadServicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="LvSystemContext.cs" />
     <Compile Include="Domain\Agendamento.cs" />
     <Compile Include="Domain\Carro.cs" />
@@ -275,6 +263,46 @@
     <Compile Include="Migrations\202110042316124_v03.designer.cs">
       <DependentUpon>202110042316124_v03.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110082213336_v05.cs" />
+    <Compile Include="Migrations\202110082213336_v05.designer.cs">
+      <DependentUpon>202110082213336_v05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110082357231_v06.cs" />
+    <Compile Include="Migrations\202110082357231_v06.designer.cs">
+      <DependentUpon>202110082357231_v06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110090018454_v061.cs" />
+    <Compile Include="Migrations\202110090018454_v061.designer.cs">
+      <DependentUpon>202110090018454_v061.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091717090_v07.cs" />
+    <Compile Include="Migrations\202110091717090_v07.designer.cs">
+      <DependentUpon>202110091717090_v07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091752325_v08.cs" />
+    <Compile Include="Migrations\202110091752325_v08.designer.cs">
+      <DependentUpon>202110091752325_v08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091756555_v09.cs" />
+    <Compile Include="Migrations\202110091756555_v09.designer.cs">
+      <DependentUpon>202110091756555_v09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091758188_v10.cs" />
+    <Compile Include="Migrations\202110091758188_v10.designer.cs">
+      <DependentUpon>202110091758188_v10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091759559_v11.cs" />
+    <Compile Include="Migrations\202110091759559_v11.designer.cs">
+      <DependentUpon>202110091759559_v11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091804355_v12.cs" />
+    <Compile Include="Migrations\202110091804355_v12.designer.cs">
+      <DependentUpon>202110091804355_v12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091828401_v13.cs" />
+    <Compile Include="Migrations\202110091828401_v13.designer.cs">
+      <DependentUpon>202110091828401_v13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,12 +324,6 @@
     <EmbeddedResource Include="CadProdutos.resx">
       <DependentUpon>CadProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110031931487_v-1.resx">
       <DependentUpon>202110031931487_v-1.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +332,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110042316124_v03.resx">
       <DependentUpon>202110042316124_v03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110082213336_v05.resx">
+      <DependentUpon>202110082213336_v05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110082357231_v06.resx">
+      <DependentUpon>202110082357231_v06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110090018454_v061.resx">
+      <DependentUpon>202110090018454_v061.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091717090_v07.resx">
+      <DependentUpon>202110091717090_v07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091752325_v08.resx">
+      <DependentUpon>202110091752325_v08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091756555_v09.resx">
+      <DependentUpon>202110091756555_v09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091758188_v10.resx">
+      <DependentUpon>202110091758188_v10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091759559_v11.resx">
+      <DependentUpon>202110091759559_v11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091804355_v12.resx">
+      <DependentUpon>202110091804355_v12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091828401_v13.resx">
+      <DependentUpon>202110091828401_v13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -333,6 +385,7 @@
       <DependentUpon>LvSystemDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\aDefinir.Domain.Agendamento.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

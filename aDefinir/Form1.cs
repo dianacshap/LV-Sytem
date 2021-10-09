@@ -35,7 +35,8 @@ namespace aDefinir
 
         private void btnCarros_Click(object sender, EventArgs e)
         {
-            CadCarros carros = new CadCarros();  //instanciar form
+            CadCarros cadCarros = new CadCarros();
+            CadCarros carros = cadCarros;  //instanciar form
             carros.TopLevel = false; //ñ é form de topo
             carros.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
             panel2.Controls.Clear(); // limpa o painel
@@ -50,7 +51,8 @@ namespace aDefinir
 
         private void btnServico_Click(object sender, EventArgs e)
         {
-            CadServicos Servicos = new CadServicos();  //instanciar form
+            CadServicos cadServicos = new CadServicos();
+            CadServicos Servicos = cadServicos;  //instanciar form
             Servicos.TopLevel = false; //ñ é form de topo
             Servicos.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
             panel2.Controls.Clear(); // limpa o painel
@@ -65,9 +67,11 @@ namespace aDefinir
 
         private void btnAgenda_Click(object sender, EventArgs e)
         {
-            CadAgenda agenda = new CadAgenda();  //instanciar form
-            agenda.TopLevel = false; //ñ é form de topo
-            agenda.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            CadAgenda agenda = new CadAgenda
+            {
+                TopLevel = false, //ñ é form de topo
+                Dock = DockStyle.Fill //DockStyle.fill (preencher form)
+            };  //instanciar form
             panel2.Controls.Clear(); // limpa o painel
             panel2.Controls.Add(agenda); //add o form no painel
             agenda.Show();
@@ -79,9 +83,11 @@ namespace aDefinir
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            CadClientes cliente = new CadClientes();  //instanciar form
-            cliente.TopLevel = false; //ñ é form de topo
-            cliente.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            CadClientes cliente = new CadClientes
+            {
+                TopLevel = false, //ñ é form de topo
+                Dock = DockStyle.Fill //DockStyle.fill (preencher form)
+            };  //instanciar form
             panel2.Controls.Clear(); // limpa o painel
             panel2.Controls.Add(cliente); //add o form no painel
             cliente.Show();
@@ -107,9 +113,11 @@ namespace aDefinir
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            CadProdutos produtos = new CadProdutos();  //instanciar form
-            produtos.TopLevel = false; //ñ é form de topo
-            produtos.Dock = DockStyle.Fill; //DockStyle.fill (preencher form)
+            CadProdutos produtos = new CadProdutos
+            {
+                TopLevel = false, //ñ é form de topo
+                Dock = DockStyle.Fill //DockStyle.fill (preencher form)
+            };  //instanciar form
             panel2.Controls.Clear(); // limpa o painel
             panel2.Controls.Add(produtos); //add o form no painel
             produtos.Show();

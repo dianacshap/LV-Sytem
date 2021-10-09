@@ -38,20 +38,20 @@ namespace aDefinir
 
         private void CadAgenda_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Carros'. Você pode movê-la ou removê-la conforme necessário.
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.View_ServicoAgendamento'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_ServicoAgendamentoTableAdapter.Fill(this.lvSystemDataSet.View_ServicoAgendamento);
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.ServicoAgendamento'. Você pode movê-la ou removê-la conforme necessário.
+            this.servicoAgendamentoTableAdapter.Fill(this.lvSystemDataSet.ServicoAgendamento);
             this.carrosTableAdapter.Fill(this.lvSystemDataSet.Carros);
-            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Agendamento'. Você pode movê-la ou removê-la conforme necessário.
             this.agendamentoTableAdapter.Fill(this.lvSystemDataSet.Agendamento);
-
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             agendamentoBindingSource.AddNew();
             situacaoComboBox.Text = "Agendado";
-            groupBox1.Enabled = true;
-            //dataTextBox.Text = DateTime.Now.ToShortDateString();
-            //horaTextBox.Text = DateTime.Now.ToShortTimeString();
+            dataAgMaskedTextBox.Text = DateTime.Now.ToShortDateString();
+            horaMaskedTextBox.Text = DateTime.Now.ToShortTimeString();
             totalTextBox.Text = "0.00";
             groupBox1.Enabled = true;
             
@@ -75,6 +75,17 @@ namespace aDefinir
                 agendamentoTableAdapter.Fill(lvSystemDataSet.Agendamento); //se não tiver esse metodo, o registro é excluido mas ainda fica no bd
                 MessageBox.Show("Registro não pode ser excluido");
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            agendamentoBindingSource.CancelEdit();
+            groupBox1.Enabled = false;
         }
     }
 }
