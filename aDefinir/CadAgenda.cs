@@ -38,10 +38,13 @@ namespace aDefinir
 
         private void CadAgenda_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Servico'. Você pode movê-la ou removê-la conforme necessário.
+            this.servicoTableAdapter.Fill(this.lvSystemDataSet.Servico);
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.View_Servico_Agendamento'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_Servico_AgendamentoTableAdapter.Fill(this.lvSystemDataSet.View_Servico_Agendamento);
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.AgendamentosServicos'. Você pode movê-la ou removê-la conforme necessário.
+            this.agendamentosServicosTableAdapter.Fill(this.lvSystemDataSet.AgendamentosServicos);
             // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.View_ServicoAgendamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.view_ServicoAgendamentoTableAdapter.Fill(this.lvSystemDataSet.View_ServicoAgendamento);
-            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.ServicoAgendamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.servicoAgendamentoTableAdapter.Fill(this.lvSystemDataSet.ServicoAgendamento);
             this.carrosTableAdapter.Fill(this.lvSystemDataSet.Carros);
             this.agendamentoTableAdapter.Fill(this.lvSystemDataSet.Agendamento);
         }
@@ -54,7 +57,7 @@ namespace aDefinir
             horaMaskedTextBox.Text = DateTime.Now.ToShortTimeString();
             totalTextBox.Text = "0.00";
             groupBox1.Enabled = true;
-            
+
 
         }
 
@@ -87,5 +90,6 @@ namespace aDefinir
             agendamentoBindingSource.CancelEdit();
             groupBox1.Enabled = false;
         }
+
     }
 }

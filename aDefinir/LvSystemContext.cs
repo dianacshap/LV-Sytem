@@ -15,6 +15,7 @@ namespace aDefinir.Data
         public DbSet<Carro> Carros { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Servico> Servicos { get; set; }
+        public DbSet<AgendamentosServicos> AgendamentosServicos { get; set; }
 
         public LvSystemContext() : base(nameOrConnectionString: "LvSystemConnectionString")
         {

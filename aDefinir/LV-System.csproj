@@ -231,6 +231,7 @@
     <Compile Include="CadServicos.Designer.cs">
       <DependentUpon>CadServicos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Domain\AgendamentosServicos.cs" />
     <Compile Include="LvSystemContext.cs" />
     <Compile Include="Domain\Agendamento.cs" />
     <Compile Include="Domain\Carro.cs" />
@@ -303,6 +304,10 @@
     <Compile Include="Migrations\202110091828401_v13.designer.cs">
       <DependentUpon>202110091828401_v13.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110101256465_v14.cs" />
+    <Compile Include="Migrations\202110101256465_v14.designer.cs">
+      <DependentUpon>202110101256465_v14.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -362,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110091828401_v13.resx">
       <DependentUpon>202110091828401_v13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110101256465_v14.resx">
+      <DependentUpon>202110101256465_v14.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
