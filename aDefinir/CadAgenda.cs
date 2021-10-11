@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aDefinir.LvSystemDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,8 @@ namespace aDefinir
                 this.agendamentoBindingSource.EndEdit();
                 agendamentoTableAdapter.Update(lvSystemDataSet.Agendamento);
                 groupBox1.Enabled = false; //Bloqueia Groupbox após salvar
-                MessageBox.Show("Registro Salvo");
+                MessageBox.Show("Agendamento Salvo, Informe os Serviços","LvSystem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCodServ.Focus();
 
 
             }
@@ -33,17 +35,17 @@ namespace aDefinir
             {
                 MessageBox.Show("Ocorreu um erro, verifique os valores informados");
             }
-
+            Finalizado();
         }
 
         private void CadAgenda_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.View_Total_Servicos'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_Total_ServicosTableAdapter.Fill(this.lvSystemDataSet.View_Total_Servicos);
             // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Servico'. Você pode movê-la ou removê-la conforme necessário.
             this.servicoTableAdapter.Fill(this.lvSystemDataSet.Servico);
             // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.View_Servico_Agendamento'. Você pode movê-la ou removê-la conforme necessário.
             this.view_Servico_AgendamentoTableAdapter.Fill(this.lvSystemDataSet.View_Servico_Agendamento);
-            // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.AgendamentosServicos'. Você pode movê-la ou removê-la conforme necessário.
-            this.agendamentosServicosTableAdapter.Fill(this.lvSystemDataSet.AgendamentosServicos);
             // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.View_ServicoAgendamento'. Você pode movê-la ou removê-la conforme necessário.
             this.carrosTableAdapter.Fill(this.lvSystemDataSet.Carros);
             this.agendamentoTableAdapter.Fill(this.lvSystemDataSet.Agendamento);
@@ -78,6 +80,7 @@ namespace aDefinir
                 agendamentoTableAdapter.Fill(lvSystemDataSet.Agendamento); //se não tiver esse metodo, o registro é excluido mas ainda fica no bd
                 MessageBox.Show("Registro não pode ser excluido");
             }
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -91,5 +94,170 @@ namespace aDefinir
             groupBox1.Enabled = false;
         }
 
+
+        private void txtCodServ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtCodServ.Text != "")
+            {
+                servicoBindingSource.Filter = "Id =" + txtCodServ.Text;
+                if (servicoBindingSource.Count == 1)//encotrou registro
+                {
+                    //Cria variável com todos os dados do registro encontrado
+                    DataRowView ServicoEncontrado = (DataRowView)servicoBindingSource.Current;
+                    txtServico.Text = ServicoEncontrado["Nome"].ToString();//pega coluna e preenche TextBox
+                    txtValorUnit.Text = ServicoEncontrado["Valor"].ToString();
+                    txtQtd.Text = "1";
+                    txtQtd.SelectAll();
+                    txtQtd.Focus();
+
+
+                }
+                else // abrir cadastro para localizar
+                {
+                    CadServicos serv = new CadServicos();
+                    serv.Show();
+
+                }
+            }
+        }
+
+        private void btnAddServ_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                agendamentosServicosTableAdapter.InserirServico(int.Parse(txtQtd.Text),
+               decimal.Parse(txtValorUnit.Text),
+               int.Parse(txtCodigo.Text),
+               int.Parse(txtCodServ.Text));
+                //Limpar todas as textboxes
+                txtCodServ.Clear();
+                txtServico.Clear();
+                txtValorUnit.Clear();
+                txtQtd.Clear();
+                txtCodServ.Focus();
+
+                //Atualiza Grid
+                Atualizar_Servico();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Tente Novamente");
+            }
+            Total();
+        }
+        private void Atualizar_Servico()
+        {
+            if (txtCodigo.Text != "") //pesquisar
+            {
+                //Recarrega os dados
+                view_Servico_AgendamentoTableAdapter.Fill(lvSystemDataSet.View_Servico_Agendamento);
+                //Filtra pelo código do agendamento
+                view_Servico_AgendamentoBindingSource.Filter = "Agendamentos_Codigo =" + txtCodigo.Text;
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            Atualizar_Servico();
+            
+        }
+
+        private void txtQtd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtQtd.Text != "")
+            {
+                txtValorUnit.SelectAll();
+                txtValorUnit.Focus();
+
+            }
+        }
+
+        private void txtValorUnit_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtValorUnit.Text != "")
+            {
+                btnAddServ_Click(sender, e);
+            }
+        }
+
+        private void view_Servico_AgendamentoDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int codigo = 0;
+            codigo = int.Parse(view_Servico_AgendamentoDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
+            try
+            {
+                agendamentosServicosTableAdapter.Remover_Servico(codigo);
+            }
+            catch (Exception)
+            {
+
+
+            }
+            Atualizar_Servico();
+            Total();
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+          
+            if (MessageBox.Show("Após finalizado o agendamento não poderá ser mais alterado", "LvSystem", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes);
+            {
+                situacaoComboBox.Text = "Finalizado";
+                this.agendamentoBindingSource.EndEdit();
+                agendamentoTableAdapter.Update(lvSystemDataSet.Agendamento);
+                MessageBox.Show("Agendamento Finalizado com Sucesso","LvSystem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Bloquear quando finalizado
+                Finalizado();
+            }
+        }
+
+        private void Finalizado()
+        {
+            if (situacaoComboBox.Text == "Finalizado" )
+            {
+                agendamentoBindingNavigatorSaveItem.Enabled = false;
+                bindingNavigatorDeleteItem.Enabled = false;
+                btnEditar.Enabled = false;
+                btnCancelar.Enabled = false;
+                btnFinalizar.Enabled = false;
+                carro_IdComboBox.Enabled = false;
+            }
+            else
+            {
+                agendamentoBindingNavigatorSaveItem.Enabled = true;
+                bindingNavigatorDeleteItem.Enabled = true;
+                btnEditar.Enabled = true;
+                btnCancelar.Enabled = true;
+                btnFinalizar.Enabled = true;
+                carro_IdComboBox.Enabled = true;
+            }
+        }
+
+        private void agendamentoBindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            Finalizado();
+        }
+        private void Total()
+        {
+            if (txtCodigo.Text != "")
+            {
+                view_Total_ServicosTableAdapter.Fill(lvSystemDataSet.View_Total_Servicos); //Carregar Dados
+                view_Total_ServicosBindingSource.Filter = "Agendamentos_Codigo =" + txtCodigo.Text;
+                if (view_Total_ServicosBindingSource.Count == 1)
+                {
+                    //Pegar o total e jogar na textBox
+                    DataRowView Resultado = (DataRowView)view_Total_ServicosBindingSource.Current;
+                    totalTextBox.Text = Resultado["Total"].ToString();
+                    agendamentoTableAdapter.Update(lvSystemDataSet.Agendamento);
+                }
+                else //Se não tiver itens no serviço o total é zero
+                {
+                    totalTextBox.Text = "0.00";
+                    agendamentoTableAdapter.Update(lvSystemDataSet.Agendamento);
+                }
+            }
+        }
     }
 }

@@ -36,27 +36,35 @@ namespace aDefinir
             System.Windows.Forms.Label codigoLabel;
             System.Windows.Forms.Label dataAgLabel;
             System.Windows.Forms.Label horaLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadAgenda));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadAgenda));
             this.servicos = new System.Windows.Forms.GroupBox();
+            this.txtCodServ = new System.Windows.Forms.MaskedTextBox();
+            this.txtServico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Serviço = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtValorUnit = new System.Windows.Forms.TextBox();
-            this.btnAddServ = new System.Windows.Forms.Button();
-            this.cbxServ = new System.Windows.Forms.ComboBox();
             this.txtQtd = new System.Windows.Forms.TextBox();
-            this.txtCodServ = new System.Windows.Forms.TextBox();
+            this.btnAddServ = new System.Windows.Forms.Button();
+            this.txtValorUnit = new System.Windows.Forms.TextBox();
             this.view_Servico_AgendamentoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view_Servico_AgendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.horaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.horaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.dataAgMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.codigoLabel1 = new System.Windows.Forms.Label();
             this.situacaoComboBox = new System.Windows.Forms.ComboBox();
             this.carro_IdComboBox = new System.Windows.Forms.ComboBox();
             this.carrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -79,19 +87,14 @@ namespace aDefinir
             this.agendamentoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnFinalizar = new System.Windows.Forms.ToolStripButton();
             this.agendamentosServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentosServicosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.AgendamentosServicosTableAdapter();
             this.view_Servico_AgendamentoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Servico_AgendamentoTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ServicoTableAdapter();
+            this.view_Total_ServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_Total_ServicosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter();
             totalLabel = new System.Windows.Forms.Label();
             carro_IdLabel = new System.Windows.Forms.Label();
             situacaoLabel = new System.Windows.Forms.Label();
@@ -109,6 +112,7 @@ namespace aDefinir
             this.agendamentoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentosServicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_Total_ServicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // totalLabel
@@ -167,21 +171,38 @@ namespace aDefinir
             // 
             // servicos
             // 
+            this.servicos.Controls.Add(this.txtCodServ);
+            this.servicos.Controls.Add(this.txtServico);
             this.servicos.Controls.Add(this.label4);
             this.servicos.Controls.Add(this.label3);
             this.servicos.Controls.Add(this.Serviço);
             this.servicos.Controls.Add(this.label1);
-            this.servicos.Controls.Add(this.txtValorUnit);
-            this.servicos.Controls.Add(this.btnAddServ);
-            this.servicos.Controls.Add(this.cbxServ);
             this.servicos.Controls.Add(this.txtQtd);
-            this.servicos.Controls.Add(this.txtCodServ);
+            this.servicos.Controls.Add(this.btnAddServ);
+            this.servicos.Controls.Add(this.txtValorUnit);
             this.servicos.Controls.Add(this.view_Servico_AgendamentoDataGridView);
             this.servicos.Location = new System.Drawing.Point(13, 213);
             this.servicos.Name = "servicos";
             this.servicos.Size = new System.Drawing.Size(705, 306);
             this.servicos.TabIndex = 2;
             this.servicos.TabStop = false;
+            // 
+            // txtCodServ
+            // 
+            this.txtCodServ.Location = new System.Drawing.Point(15, 25);
+            this.txtCodServ.Mask = "000";
+            this.txtCodServ.Name = "txtCodServ";
+            this.txtCodServ.Size = new System.Drawing.Size(100, 20);
+            this.txtCodServ.TabIndex = 11;
+            this.txtCodServ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCodServ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodServ_KeyDown);
+            // 
+            // txtServico
+            // 
+            this.txtServico.Location = new System.Drawing.Point(132, 25);
+            this.txtServico.Name = "txtServico";
+            this.txtServico.Size = new System.Drawing.Size(283, 20);
+            this.txtServico.TabIndex = 10;
             // 
             // label4
             // 
@@ -206,9 +227,9 @@ namespace aDefinir
             this.Serviço.AutoSize = true;
             this.Serviço.Location = new System.Drawing.Point(129, 9);
             this.Serviço.Name = "Serviço";
-            this.Serviço.Size = new System.Drawing.Size(55, 13);
+            this.Serviço.Size = new System.Drawing.Size(43, 13);
             this.Serviço.TabIndex = 7;
-            this.Serviço.Text = "Descrição";
+            this.Serviço.Text = "Serviço";
             // 
             // label1
             // 
@@ -219,12 +240,13 @@ namespace aDefinir
             this.label1.TabIndex = 6;
             this.label1.Text = "Código";
             // 
-            // txtValorUnit
+            // txtQtd
             // 
-            this.txtValorUnit.Location = new System.Drawing.Point(433, 23);
-            this.txtValorUnit.Name = "txtValorUnit";
-            this.txtValorUnit.Size = new System.Drawing.Size(96, 20);
-            this.txtValorUnit.TabIndex = 5;
+            this.txtQtd.Location = new System.Drawing.Point(433, 23);
+            this.txtQtd.Name = "txtQtd";
+            this.txtQtd.Size = new System.Drawing.Size(96, 20);
+            this.txtQtd.TabIndex = 5;
+            this.txtQtd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQtd_KeyDown);
             // 
             // btnAddServ
             // 
@@ -234,31 +256,15 @@ namespace aDefinir
             this.btnAddServ.TabIndex = 4;
             this.btnAddServ.Text = "+";
             this.btnAddServ.UseVisualStyleBackColor = true;
+            this.btnAddServ.Click += new System.EventHandler(this.btnAddServ_Click);
             // 
-            // cbxServ
+            // txtValorUnit
             // 
-            this.cbxServ.DataSource = this.servicoBindingSource;
-            this.cbxServ.DisplayMember = "Nome";
-            this.cbxServ.FormattingEnabled = true;
-            this.cbxServ.Location = new System.Drawing.Point(121, 24);
-            this.cbxServ.Name = "cbxServ";
-            this.cbxServ.Size = new System.Drawing.Size(294, 21);
-            this.cbxServ.TabIndex = 3;
-            this.cbxServ.ValueMember = "Id";
-            // 
-            // txtQtd
-            // 
-            this.txtQtd.Location = new System.Drawing.Point(535, 23);
-            this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(100, 20);
-            this.txtQtd.TabIndex = 2;
-            // 
-            // txtCodServ
-            // 
-            this.txtCodServ.Location = new System.Drawing.Point(15, 25);
-            this.txtCodServ.Name = "txtCodServ";
-            this.txtCodServ.Size = new System.Drawing.Size(100, 20);
-            this.txtCodServ.TabIndex = 1;
+            this.txtValorUnit.Location = new System.Drawing.Point(535, 23);
+            this.txtValorUnit.Name = "txtValorUnit";
+            this.txtValorUnit.Size = new System.Drawing.Size(100, 20);
+            this.txtValorUnit.TabIndex = 2;
+            this.txtValorUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValorUnit_KeyDown);
             // 
             // view_Servico_AgendamentoDataGridView
             // 
@@ -281,6 +287,82 @@ namespace aDefinir
             this.view_Servico_AgendamentoDataGridView.ReadOnly = true;
             this.view_Servico_AgendamentoDataGridView.Size = new System.Drawing.Size(667, 220);
             this.view_Servico_AgendamentoDataGridView.TabIndex = 0;
+            this.view_Servico_AgendamentoDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_Servico_AgendamentoDataGridView_CellContentDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Número";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 69;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Agendamentos_Codigo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Agendamentos_Codigo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Servicos_Id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Servicos_Id";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Serviço";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "TempoServico";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Tempo";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 65;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Quantidade";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 87;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ValorUnitario";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Valor Unitário";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SubTotal";
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn4.HeaderText = "SubTotal";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 75;
             // 
             // view_Servico_AgendamentoBindingSource
             // 
@@ -294,12 +376,12 @@ namespace aDefinir
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(horaLabel);
             this.groupBox1.Controls.Add(this.horaMaskedTextBox);
             this.groupBox1.Controls.Add(dataAgLabel);
             this.groupBox1.Controls.Add(this.dataAgMaskedTextBox);
             this.groupBox1.Controls.Add(codigoLabel);
-            this.groupBox1.Controls.Add(this.codigoLabel1);
             this.groupBox1.Controls.Add(situacaoLabel);
             this.groupBox1.Controls.Add(this.situacaoComboBox);
             this.groupBox1.Controls.Add(carro_IdLabel);
@@ -310,10 +392,25 @@ namespace aDefinir
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(706, 179);
+            this.groupBox1.Size = new System.Drawing.Size(722, 357);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agendamentos";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Codigo", true));
+            this.txtCodigo.Location = new System.Drawing.Point(23, 64);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(76, 30);
+            this.txtCodigo.TabIndex = 16;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            // 
+            // agendamentoBindingSource
+            // 
+            this.agendamentoBindingSource.DataMember = "Agendamento";
+            this.agendamentoBindingSource.DataSource = this.lvSystemDataSet;
+            this.agendamentoBindingSource.PositionChanged += new System.EventHandler(this.agendamentoBindingSource_PositionChanged);
             // 
             // horaMaskedTextBox
             // 
@@ -325,11 +422,6 @@ namespace aDefinir
             this.horaMaskedTextBox.TabIndex = 15;
             this.horaMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
-            // agendamentoBindingSource
-            // 
-            this.agendamentoBindingSource.DataMember = "Agendamento";
-            this.agendamentoBindingSource.DataSource = this.lvSystemDataSet;
-            // 
             // dataAgMaskedTextBox
             // 
             this.dataAgMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "DataAg", true));
@@ -339,15 +431,6 @@ namespace aDefinir
             this.dataAgMaskedTextBox.Size = new System.Drawing.Size(110, 30);
             this.dataAgMaskedTextBox.TabIndex = 14;
             this.dataAgMaskedTextBox.ValidatingType = typeof(System.DateTime);
-            // 
-            // codigoLabel1
-            // 
-            this.codigoLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Codigo", true));
-            this.codigoLabel1.Location = new System.Drawing.Point(29, 62);
-            this.codigoLabel1.Name = "codigoLabel1";
-            this.codigoLabel1.Size = new System.Drawing.Size(52, 23);
-            this.codigoLabel1.TabIndex = 1;
-            this.codigoLabel1.Text = "label1";
             // 
             // situacaoComboBox
             // 
@@ -401,7 +484,6 @@ namespace aDefinir
             this.tableAdapterManager.ClientesTableAdapter = null;
             this.tableAdapterManager.ProdutoServicoTableAdapter = null;
             this.tableAdapterManager.ProdutoTableAdapter = null;
-            this.tableAdapterManager.ServicoAgendamentoTableAdapter = null;
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -525,7 +607,8 @@ namespace aDefinir
             this.bindingNavigatorDeleteItem,
             this.agendamentoBindingNavigatorSaveItem,
             this.btnEditar,
-            this.btnCancelar});
+            this.btnCancelar,
+            this.btnFinalizar});
             this.agendamentoBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.agendamentoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.agendamentoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -533,7 +616,7 @@ namespace aDefinir
             this.agendamentoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.agendamentoBindingNavigator.Name = "agendamentoBindingNavigator";
             this.agendamentoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.agendamentoBindingNavigator.Size = new System.Drawing.Size(743, 25);
+            this.agendamentoBindingNavigator.Size = new System.Drawing.Size(938, 25);
             this.agendamentoBindingNavigator.TabIndex = 3;
             this.agendamentoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -557,6 +640,15 @@ namespace aDefinir
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizar.Image")));
+            this.btnFinalizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(70, 22);
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
             // agendamentosServicosBindingSource
             // 
             this.agendamentosServicosBindingSource.DataMember = "AgendamentosServicos";
@@ -570,81 +662,6 @@ namespace aDefinir
             // 
             this.view_Servico_AgendamentoTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Número";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 69;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Agendamentos_Codigo";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Agendamentos_Codigo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Servicos_Id";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Servicos_Id";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Serviço";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "TempoServico";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Tempo";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 65;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Quantidade";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 87;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "ValorUnitario";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Valor Unitário";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "SubTotal";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn4.HeaderText = "SubTotal";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 75;
-            // 
             // servicoBindingSource
             // 
             this.servicoBindingSource.DataMember = "Servico";
@@ -654,13 +671,22 @@ namespace aDefinir
             // 
             this.servicoTableAdapter.ClearBeforeFill = true;
             // 
+            // view_Total_ServicosBindingSource
+            // 
+            this.view_Total_ServicosBindingSource.DataMember = "View_Total_Servicos";
+            this.view_Total_ServicosBindingSource.DataSource = this.lvSystemDataSet;
+            // 
+            // view_Total_ServicosTableAdapter
+            // 
+            this.view_Total_ServicosTableAdapter.ClearBeforeFill = true;
+            // 
             // CadAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(743, 865);
+            this.ClientSize = new System.Drawing.Size(938, 865);
             this.Controls.Add(this.agendamentoBindingNavigator);
             this.Controls.Add(this.servicos);
             this.Controls.Add(this.groupBox1);
@@ -682,6 +708,7 @@ namespace aDefinir
             this.agendamentoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentosServicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_Total_ServicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,7 +718,6 @@ namespace aDefinir
         private System.Windows.Forms.GroupBox servicos;
         private System.Windows.Forms.GroupBox groupBox1;
         private LvSystemDataSet lvSystemDataSet;
-        private System.Windows.Forms.Label codigoLabel1;
         private System.Windows.Forms.BindingSource agendamentoBindingSource;
         private System.Windows.Forms.ComboBox situacaoComboBox;
         private System.Windows.Forms.ComboBox carro_IdComboBox;
@@ -726,11 +752,9 @@ namespace aDefinir
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Serviço;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtValorUnit;
-        private System.Windows.Forms.Button btnAddServ;
-        private System.Windows.Forms.ComboBox cbxServ;
         private System.Windows.Forms.TextBox txtQtd;
-        private System.Windows.Forms.TextBox txtCodServ;
+        private System.Windows.Forms.Button btnAddServ;
+        private System.Windows.Forms.TextBox txtValorUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -741,5 +765,11 @@ namespace aDefinir
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource servicoBindingSource;
         private LvSystemDataSetTableAdapters.ServicoTableAdapter servicoTableAdapter;
+        private System.Windows.Forms.TextBox txtServico;
+        private System.Windows.Forms.MaskedTextBox txtCodServ;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.ToolStripButton btnFinalizar;
+        private System.Windows.Forms.BindingSource view_Total_ServicosBindingSource;
+        private LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter view_Total_ServicosTableAdapter;
     }
 }
