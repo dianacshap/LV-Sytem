@@ -36,8 +36,8 @@ namespace aDefinir
             System.Windows.Forms.Label codigoLabel;
             System.Windows.Forms.Label dataAgLabel;
             System.Windows.Forms.Label horaLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadAgenda));
             this.servicos = new System.Windows.Forms.GroupBox();
             this.txtCodServ = new System.Windows.Forms.MaskedTextBox();
@@ -61,6 +61,7 @@ namespace aDefinir
             this.view_Servico_AgendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLocalizar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.horaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -70,7 +71,6 @@ namespace aDefinir
             this.carrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.carrosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.CarrosTableAdapter();
-            this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
             this.agendamentoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.AgendamentoTableAdapter();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -88,12 +88,13 @@ namespace aDefinir
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnFinalizar = new System.Windows.Forms.ToolStripButton();
-            this.agendamentosServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentosServicosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.AgendamentosServicosTableAdapter();
-            this.view_Servico_AgendamentoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Servico_AgendamentoTableAdapter();
-            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ServicoTableAdapter();
+            this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
+            this.agendamentosServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_Total_ServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_Servico_AgendamentoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Servico_AgendamentoTableAdapter();
             this.view_Total_ServicosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter();
             totalLabel = new System.Windows.Forms.Label();
             carro_IdLabel = new System.Windows.Forms.Label();
@@ -127,7 +128,7 @@ namespace aDefinir
             // carro_IdLabel
             // 
             carro_IdLabel.AutoSize = true;
-            carro_IdLabel.Location = new System.Drawing.Point(18, 106);
+            carro_IdLabel.Location = new System.Drawing.Point(18, 107);
             carro_IdLabel.Name = "carro_IdLabel";
             carro_IdLabel.Size = new System.Drawing.Size(88, 25);
             carro_IdLabel.TabIndex = 8;
@@ -344,9 +345,9 @@ namespace aDefinir
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "ValorUnitario";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn8.HeaderText = "Valor Unitário";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -356,9 +357,9 @@ namespace aDefinir
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "SubTotal";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn4.HeaderText = "SubTotal";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -376,6 +377,7 @@ namespace aDefinir
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLocalizar);
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(horaLabel);
             this.groupBox1.Controls.Add(this.horaMaskedTextBox);
@@ -397,6 +399,16 @@ namespace aDefinir
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agendamentos";
             // 
+            // btnLocalizar
+            // 
+            this.btnLocalizar.Location = new System.Drawing.Point(422, 135);
+            this.btnLocalizar.Name = "btnLocalizar";
+            this.btnLocalizar.Size = new System.Drawing.Size(108, 33);
+            this.btnLocalizar.TabIndex = 4;
+            this.btnLocalizar.Text = "Localizar";
+            this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
+            // 
             // txtCodigo
             // 
             this.txtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Codigo", true));
@@ -415,7 +427,7 @@ namespace aDefinir
             // horaMaskedTextBox
             // 
             this.horaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Hora", true));
-            this.horaMaskedTextBox.Location = new System.Drawing.Point(235, 65);
+            this.horaMaskedTextBox.Location = new System.Drawing.Point(235, 64);
             this.horaMaskedTextBox.Mask = "00:00";
             this.horaMaskedTextBox.Name = "horaMaskedTextBox";
             this.horaMaskedTextBox.Size = new System.Drawing.Size(74, 30);
@@ -425,7 +437,7 @@ namespace aDefinir
             // dataAgMaskedTextBox
             // 
             this.dataAgMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "DataAg", true));
-            this.dataAgMaskedTextBox.Location = new System.Drawing.Point(110, 65);
+            this.dataAgMaskedTextBox.Location = new System.Drawing.Point(110, 64);
             this.dataAgMaskedTextBox.Mask = "00/00/0000";
             this.dataAgMaskedTextBox.Name = "dataAgMaskedTextBox";
             this.dataAgMaskedTextBox.Size = new System.Drawing.Size(110, 30);
@@ -440,7 +452,7 @@ namespace aDefinir
             "Agendado",
             "Em Andamento",
             "Finalizado"});
-            this.situacaoComboBox.Location = new System.Drawing.Point(321, 65);
+            this.situacaoComboBox.Location = new System.Drawing.Point(321, 61);
             this.situacaoComboBox.Name = "situacaoComboBox";
             this.situacaoComboBox.Size = new System.Drawing.Size(229, 33);
             this.situacaoComboBox.TabIndex = 7;
@@ -451,7 +463,7 @@ namespace aDefinir
             this.carro_IdComboBox.DataSource = this.carrosBindingSource;
             this.carro_IdComboBox.DisplayMember = "Modelo";
             this.carro_IdComboBox.FormattingEnabled = true;
-            this.carro_IdComboBox.Location = new System.Drawing.Point(16, 134);
+            this.carro_IdComboBox.Location = new System.Drawing.Point(16, 135);
             this.carro_IdComboBox.Name = "carro_IdComboBox";
             this.carro_IdComboBox.Size = new System.Drawing.Size(400, 33);
             this.carro_IdComboBox.TabIndex = 9;
@@ -473,19 +485,6 @@ namespace aDefinir
             // carrosTableAdapter
             // 
             this.carrosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
-            this.tableAdapterManager.AgendamentosServicosTableAdapter = null;
-            this.tableAdapterManager.AgendamentoTableAdapter = this.agendamentoTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CarrosTableAdapter = null;
-            this.tableAdapterManager.ClientesTableAdapter = null;
-            this.tableAdapterManager.ProdutoServicoTableAdapter = null;
-            this.tableAdapterManager.ProdutoTableAdapter = null;
-            this.tableAdapterManager.ServicoTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // agendamentoTableAdapter
             // 
@@ -518,6 +517,7 @@ namespace aDefinir
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -616,7 +616,7 @@ namespace aDefinir
             this.agendamentoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.agendamentoBindingNavigator.Name = "agendamentoBindingNavigator";
             this.agendamentoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.agendamentoBindingNavigator.Size = new System.Drawing.Size(938, 25);
+            this.agendamentoBindingNavigator.Size = new System.Drawing.Size(742, 25);
             this.agendamentoBindingNavigator.TabIndex = 3;
             this.agendamentoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -649,32 +649,46 @@ namespace aDefinir
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
-            // agendamentosServicosBindingSource
-            // 
-            this.agendamentosServicosBindingSource.DataMember = "AgendamentosServicos";
-            this.agendamentosServicosBindingSource.DataSource = this.lvSystemDataSet;
-            // 
             // agendamentosServicosTableAdapter
             // 
             this.agendamentosServicosTableAdapter.ClearBeforeFill = true;
             // 
-            // view_Servico_AgendamentoTableAdapter
+            // servicoTableAdapter
             // 
-            this.view_Servico_AgendamentoTableAdapter.ClearBeforeFill = true;
+            this.servicoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
+            this.tableAdapterManager.AgendamentosServicosTableAdapter = null;
+            this.tableAdapterManager.AgendamentoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarrosTableAdapter = null;
+            this.tableAdapterManager.ClientesTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.ProdutoServicoTableAdapter = null;
+            this.tableAdapterManager.ProdutoTableAdapter = null;
+            this.tableAdapterManager.ServicoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // agendamentosServicosBindingSource
+            // 
+            this.agendamentosServicosBindingSource.DataMember = "AgendamentosServicos";
+            this.agendamentosServicosBindingSource.DataSource = this.lvSystemDataSet;
             // 
             // servicoBindingSource
             // 
             this.servicoBindingSource.DataMember = "Servico";
             this.servicoBindingSource.DataSource = this.lvSystemDataSet;
             // 
-            // servicoTableAdapter
-            // 
-            this.servicoTableAdapter.ClearBeforeFill = true;
-            // 
             // view_Total_ServicosBindingSource
             // 
             this.view_Total_ServicosBindingSource.DataMember = "View_Total_Servicos";
             this.view_Total_ServicosBindingSource.DataSource = this.lvSystemDataSet;
+            // 
+            // view_Servico_AgendamentoTableAdapter
+            // 
+            this.view_Servico_AgendamentoTableAdapter.ClearBeforeFill = true;
             // 
             // view_Total_ServicosTableAdapter
             // 
@@ -686,7 +700,7 @@ namespace aDefinir
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(938, 865);
+            this.ClientSize = new System.Drawing.Size(759, 503);
             this.Controls.Add(this.agendamentoBindingNavigator);
             this.Controls.Add(this.servicos);
             this.Controls.Add(this.groupBox1);
@@ -771,5 +785,6 @@ namespace aDefinir
         private System.Windows.Forms.ToolStripButton btnFinalizar;
         private System.Windows.Forms.BindingSource view_Total_ServicosBindingSource;
         private LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter view_Total_ServicosTableAdapter;
+        private System.Windows.Forms.Button btnLocalizar;
     }
 }

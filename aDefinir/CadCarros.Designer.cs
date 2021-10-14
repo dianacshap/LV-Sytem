@@ -39,14 +39,6 @@ namespace aDefinir
             this.anoLabel = new System.Windows.Forms.Label();
             this.clienteIdLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnMoveFirst = new System.Windows.Forms.Button();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.carrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
@@ -76,7 +68,7 @@ namespace aDefinir
             this.clientesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnLocalizar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
@@ -158,15 +150,6 @@ namespace aDefinir
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btnMoveFirst);
             this.groupBox1.Controls.Add(this.marcaLabel);
             this.groupBox1.Controls.Add(this.marcaTextBox);
             this.groupBox1.Controls.Add(this.modeloLabel);
@@ -188,81 +171,6 @@ namespace aDefinir
             this.groupBox1.Size = new System.Drawing.Size(742, 379);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::aDefinir.Properties.Resources.Cancelar;
-            this.button5.Location = new System.Drawing.Point(311, 9);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(36, 40);
-            this.button5.TabIndex = 22;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::aDefinir.Properties.Resources.mais3;
-            this.button4.Location = new System.Drawing.Point(269, 9);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(36, 40);
-            this.button4.TabIndex = 21;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::aDefinir.Properties.Resources.MoveLast1;
-            this.button3.Location = new System.Drawing.Point(227, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(36, 40);
-            this.button3.TabIndex = 20;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::aDefinir.Properties.Resources.MoveNext1;
-            this.button2.Location = new System.Drawing.Point(185, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 40);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(125, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(54, 23);
-            this.textBox2.TabIndex = 18;
-            this.textBox2.Text = "De {0}";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(86, 9);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(33, 40);
-            this.textBox1.TabIndex = 17;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::aDefinir.Properties.Resources.MovePreview2;
-            this.button1.Location = new System.Drawing.Point(49, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 40);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnMoveFirst
-            // 
-            this.btnMoveFirst.Image = global::aDefinir.Properties.Resources.Movefirst5;
-            this.btnMoveFirst.Location = new System.Drawing.Point(6, 9);
-            this.btnMoveFirst.Name = "btnMoveFirst";
-            this.btnMoveFirst.Size = new System.Drawing.Size(43, 40);
-            this.btnMoveFirst.TabIndex = 3;
-            this.btnMoveFirst.UseVisualStyleBackColor = true;
-            this.btnMoveFirst.Click += new System.EventHandler(this.btnMoveFirst_Click);
             // 
             // marcaTextBox
             // 
@@ -357,6 +265,8 @@ namespace aDefinir
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
+            this.tableAdapterManager.AgendamentosServicosTableAdapter = null;
             this.tableAdapterManager.AgendamentoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarrosTableAdapter = this.carrosTableAdapter;
@@ -391,7 +301,8 @@ namespace aDefinir
             this.bindingNavigatorDeleteItem,
             this.clientesBindingNavigatorSaveItem,
             this.btnCancelar,
-            this.btnEditar});
+            this.btnEditar,
+            this.btnLocalizar});
             this.carrosBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.carrosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.carrosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -519,14 +430,15 @@ namespace aDefinir
             this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
-            // button6
+            // btnLocalizar
             // 
-            this.button6.Image = global::aDefinir.Properties.Resources.Cancelar;
-            this.button6.Location = new System.Drawing.Point(353, 9);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(36, 40);
-            this.button6.TabIndex = 23;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnLocalizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLocalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalizar.Image")));
+            this.btnLocalizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLocalizar.Name = "btnLocalizar";
+            this.btnLocalizar.Size = new System.Drawing.Size(36, 36);
+            this.btnLocalizar.Text = "Localizar";
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // CadCarros
             // 
@@ -595,14 +507,6 @@ namespace aDefinir
         private System.Windows.Forms.ToolStripButton clientesBindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnEditar;
-        private System.Windows.Forms.Button btnMoveFirst;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolStripButton btnLocalizar;
     }
 }

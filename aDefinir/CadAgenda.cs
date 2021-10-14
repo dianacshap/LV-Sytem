@@ -259,5 +259,17 @@ namespace aDefinir
                 }
             }
         }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            VariaveisGlobais.CodigoLocalizado = 0;
+            FrmLocalizarVeiculo frmLocalizarVeiculo = new FrmLocalizarVeiculo();
+            frmLocalizarVeiculo.ShowDialog();
+            if (VariaveisGlobais.CodigoLocalizado > 0)
+            {
+                //Posicionar Código Localizado
+                carrosBindingSource.Position = carrosBindingSource.Find("Id", VariaveisGlobais.CodigoLocalizado);
+            }
+        }
     }
 }

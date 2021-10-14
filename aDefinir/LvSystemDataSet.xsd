@@ -567,6 +567,25 @@ SELECT Id, Quantidade, ValorUnitario, Agendamentos_Codigo, Servicos_Id FROM Agen
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Carro_ClientesTableAdapter" GeneratorDataComponentClassName="View_Carro_ClientesTableAdapter" Name="View_Carro_Clientes" UserDataComponentName="View_Carro_ClientesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LvSystemConnectionString (Settings)" DbObjectName="LVSystem.dbo.View_Carro_Clientes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Modelo, Marca, Expr1 FROM dbo.View_Carro_Clientes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -828,6 +847,28 @@ SELECT Id, Quantidade, ValorUnitario, Agendamentos_Codigo, Servicos_Id FROM Agen
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="View_Carro_Clientes" msprop:Generator_TableClassName="View_Carro_ClientesDataTable" msprop:Generator_TableVarName="tableView_Carro_Clientes" msprop:Generator_TablePropName="View_Carro_Clientes" msprop:Generator_RowDeletingName="View_Carro_ClientesRowDeleting" msprop:Generator_RowChangingName="View_Carro_ClientesRowChanging" msprop:Generator_RowEvHandlerName="View_Carro_ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Carro_ClientesRowDeleted" msprop:Generator_UserTableName="View_Carro_Clientes" msprop:Generator_RowChangedName="View_Carro_ClientesRowChanged" msprop:Generator_RowEvArgName="View_Carro_ClientesRowChangeEvent" msprop:Generator_RowClassName="View_Carro_ClientesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -867,6 +908,11 @@ SELECT Id, Quantidade, ValorUnitario, Agendamentos_Codigo, Servicos_Id FROM Agen
     <xs:unique name="View_Servico_Agendamento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:View_Servico_Agendamento" />
       <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="View_Carro_Clientes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Carro_Clientes" />
+      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:Expr1" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

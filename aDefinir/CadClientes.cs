@@ -99,5 +99,17 @@ namespace aDefinir
         {
 
         }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            VariaveisGlobais.CodigoLocalizado = 0;
+            FrmLocalizarCliente frmLocalizar = new FrmLocalizarCliente();
+            frmLocalizar.ShowDialog();
+            if (VariaveisGlobais.CodigoLocalizado > 0)
+            {
+                //Posicionar Código Localizado
+                clientesBindingSource.Position = clientesBindingSource.Find("Id", VariaveisGlobais.CodigoLocalizado);
+            }
+        }
     }
 }
