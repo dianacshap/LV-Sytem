@@ -51,11 +51,6 @@ namespace aDefinir
             groupBox1.Enabled = true; //Desbloqueia Group Box
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             clientesBindingSource.CancelEdit();

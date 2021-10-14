@@ -26,7 +26,8 @@ namespace aDefinir
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            panelCentral.Controls.Clear(); //para voltar a tela inicio
+            
+            panel2.Controls.Clear(); //para voltar a tela inicio
             panelSelecao.Top = btnInicio.Top;
 
 

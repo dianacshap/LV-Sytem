@@ -31,5 +31,16 @@ namespace aDefinir
             this.servicoTableAdapter.Fill(this.lvSystemDataSet.Servico);
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            servicoBindingSource.CancelEdit();
+            groupBox1.Enabled = false;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+        }
     }
 }

@@ -47,22 +47,22 @@ namespace aDefinir
             this.volumeTextBox = new System.Windows.Forms.TextBox();
             this.diluicaoTextBox = new System.Windows.Forms.TextBox();
             this.produtoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.produtoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ProdutoTableAdapter();
-            this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.produtoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.produtoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ProdutoTableAdapter();
+            this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             funcaoLabel = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@ namespace aDefinir
             idLabel.AutoSize = true;
             idLabel.Location = new System.Drawing.Point(154, 42);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(34, 25);
+            idLabel.Size = new System.Drawing.Size(27, 20);
             idLabel.TabIndex = 0;
             idLabel.Text = "Id:";
             // 
@@ -90,7 +90,7 @@ namespace aDefinir
             nomeLabel.AutoSize = true;
             nomeLabel.Location = new System.Drawing.Point(154, 73);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(70, 25);
+            nomeLabel.Size = new System.Drawing.Size(55, 20);
             nomeLabel.TabIndex = 2;
             nomeLabel.Text = "Nome:";
             // 
@@ -99,16 +99,16 @@ namespace aDefinir
             funcaoLabel.AutoSize = true;
             funcaoLabel.Location = new System.Drawing.Point(154, 109);
             funcaoLabel.Name = "funcaoLabel";
-            funcaoLabel.Size = new System.Drawing.Size(84, 25);
+            funcaoLabel.Size = new System.Drawing.Size(67, 20);
             funcaoLabel.TabIndex = 4;
-            funcaoLabel.Text = "Funcao:";
+            funcaoLabel.Text = "Função:";
             // 
             // custoLabel
             // 
             custoLabel.AutoSize = true;
             custoLabel.Location = new System.Drawing.Point(125, 145);
             custoLabel.Name = "custoLabel";
-            custoLabel.Size = new System.Drawing.Size(107, 25);
+            custoLabel.Size = new System.Drawing.Size(86, 20);
             custoLabel.TabIndex = 6;
             custoLabel.Text = "Custo (R$)";
             // 
@@ -117,7 +117,7 @@ namespace aDefinir
             volumeLabel.AutoSize = true;
             volumeLabel.Location = new System.Drawing.Point(132, 181);
             volumeLabel.Name = "volumeLabel";
-            volumeLabel.Size = new System.Drawing.Size(109, 25);
+            volumeLabel.Size = new System.Drawing.Size(86, 20);
             volumeLabel.TabIndex = 8;
             volumeLabel.Text = "Volume (L)";
             // 
@@ -126,9 +126,9 @@ namespace aDefinir
             diluicaoLabel.AutoSize = true;
             diluicaoLabel.Location = new System.Drawing.Point(111, 214);
             diluicaoLabel.Name = "diluicaoLabel";
-            diluicaoLabel.Size = new System.Drawing.Size(130, 25);
+            diluicaoLabel.Size = new System.Drawing.Size(104, 20);
             diluicaoLabel.TabIndex = 10;
-            diluicaoLabel.Text = "Diluicao 1L p/";
+            diluicaoLabel.Text = "Diluição 1L p/";
             // 
             // groupBox1
             // 
@@ -145,12 +145,13 @@ namespace aDefinir
             this.groupBox1.Controls.Add(diluicaoLabel);
             this.groupBox1.Controls.Add(this.diluicaoTextBox);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(742, 360);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Produtos";
             // 
             // idLabel1
             // 
@@ -176,7 +177,7 @@ namespace aDefinir
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(247, 70);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(100, 30);
+            this.nomeTextBox.Size = new System.Drawing.Size(100, 26);
             this.nomeTextBox.TabIndex = 3;
             // 
             // funcaoTextBox
@@ -184,7 +185,7 @@ namespace aDefinir
             this.funcaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Funcao", true));
             this.funcaoTextBox.Location = new System.Drawing.Point(247, 106);
             this.funcaoTextBox.Name = "funcaoTextBox";
-            this.funcaoTextBox.Size = new System.Drawing.Size(100, 30);
+            this.funcaoTextBox.Size = new System.Drawing.Size(100, 26);
             this.funcaoTextBox.TabIndex = 5;
             // 
             // custoTextBox
@@ -192,7 +193,7 @@ namespace aDefinir
             this.custoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Custo", true));
             this.custoTextBox.Location = new System.Drawing.Point(247, 142);
             this.custoTextBox.Name = "custoTextBox";
-            this.custoTextBox.Size = new System.Drawing.Size(100, 30);
+            this.custoTextBox.Size = new System.Drawing.Size(100, 26);
             this.custoTextBox.TabIndex = 7;
             // 
             // volumeTextBox
@@ -200,7 +201,7 @@ namespace aDefinir
             this.volumeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Volume", true));
             this.volumeTextBox.Location = new System.Drawing.Point(247, 178);
             this.volumeTextBox.Name = "volumeTextBox";
-            this.volumeTextBox.Size = new System.Drawing.Size(100, 30);
+            this.volumeTextBox.Size = new System.Drawing.Size(100, 26);
             this.volumeTextBox.TabIndex = 9;
             // 
             // diluicaoTextBox
@@ -208,7 +209,7 @@ namespace aDefinir
             this.diluicaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Diluicao", true));
             this.diluicaoTextBox.Location = new System.Drawing.Point(247, 214);
             this.diluicaoTextBox.Name = "diluicaoTextBox";
-            this.diluicaoTextBox.Size = new System.Drawing.Size(100, 30);
+            this.diluicaoTextBox.Size = new System.Drawing.Size(100, 26);
             this.diluicaoTextBox.TabIndex = 11;
             // 
             // produtoBindingNavigator
@@ -217,7 +218,7 @@ namespace aDefinir
             this.produtoBindingNavigator.BindingSource = this.produtoBindingSource;
             this.produtoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.produtoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.produtoBindingNavigator.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.produtoBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.produtoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -240,21 +241,59 @@ namespace aDefinir
             this.produtoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.produtoBindingNavigator.Name = "produtoBindingNavigator";
             this.produtoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.produtoBindingNavigator.Size = new System.Drawing.Size(795, 39);
+            this.produtoBindingNavigator.Size = new System.Drawing.Size(777, 27);
             this.produtoBindingNavigator.TabIndex = 1;
             this.produtoBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 36);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -269,12 +308,57 @@ namespace aDefinir
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // produtoBindingNavigatorSaveItem
+            // 
+            this.produtoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.produtoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("produtoBindingNavigatorSaveItem.Image")));
+            this.produtoBindingNavigatorSaveItem.Name = "produtoBindingNavigatorSaveItem";
+            this.produtoBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.produtoBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.produtoBindingNavigatorSaveItem.Click += new System.EventHandler(this.produtoBindingNavigatorSaveItem_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(61, 24);
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(77, 24);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // produtoTableAdapter
             // 
@@ -282,6 +366,8 @@ namespace aDefinir
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
+            this.tableAdapterManager.AgendamentosServicosTableAdapter = null;
             this.tableAdapterManager.AgendamentoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarrosTableAdapter = null;
@@ -291,94 +377,12 @@ namespace aDefinir
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // produtoBindingNavigatorSaveItem
-            // 
-            this.produtoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.produtoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("produtoBindingNavigatorSaveItem.Image")));
-            this.produtoBindingNavigatorSaveItem.Name = "produtoBindingNavigatorSaveItem";
-            this.produtoBindingNavigatorSaveItem.Size = new System.Drawing.Size(36, 36);
-            this.produtoBindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.produtoBindingNavigatorSaveItem.Click += new System.EventHandler(this.produtoBindingNavigatorSaveItem_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(73, 36);
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 36);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // CadProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 450);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(777, 434);
             this.Controls.Add(this.produtoBindingNavigator);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

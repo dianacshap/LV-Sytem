@@ -36,8 +36,8 @@ namespace aDefinir
             System.Windows.Forms.Label codigoLabel;
             System.Windows.Forms.Label dataAgLabel;
             System.Windows.Forms.Label horaLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadAgenda));
             this.servicos = new System.Windows.Forms.GroupBox();
             this.txtCodServ = new System.Windows.Forms.MaskedTextBox();
@@ -121,7 +121,7 @@ namespace aDefinir
             totalLabel.AutoSize = true;
             totalLabel.Location = new System.Drawing.Point(585, 37);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(62, 25);
+            totalLabel.Size = new System.Drawing.Size(48, 20);
             totalLabel.TabIndex = 10;
             totalLabel.Text = "Total:";
             // 
@@ -130,7 +130,7 @@ namespace aDefinir
             carro_IdLabel.AutoSize = true;
             carro_IdLabel.Location = new System.Drawing.Point(18, 107);
             carro_IdLabel.Name = "carro_IdLabel";
-            carro_IdLabel.Size = new System.Drawing.Size(88, 25);
+            carro_IdLabel.Size = new System.Drawing.Size(70, 20);
             carro_IdLabel.TabIndex = 8;
             carro_IdLabel.Text = "Carro Id:";
             // 
@@ -139,25 +139,25 @@ namespace aDefinir
             situacaoLabel.AutoSize = true;
             situacaoLabel.Location = new System.Drawing.Point(334, 37);
             situacaoLabel.Name = "situacaoLabel";
-            situacaoLabel.Size = new System.Drawing.Size(95, 25);
+            situacaoLabel.Size = new System.Drawing.Size(76, 20);
             situacaoLabel.TabIndex = 6;
-            situacaoLabel.Text = "Situacao:";
+            situacaoLabel.Text = "Situação:";
             // 
             // codigoLabel
             // 
             codigoLabel.AutoSize = true;
             codigoLabel.Location = new System.Drawing.Point(18, 37);
             codigoLabel.Name = "codigoLabel";
-            codigoLabel.Size = new System.Drawing.Size(81, 25);
+            codigoLabel.Size = new System.Drawing.Size(63, 20);
             codigoLabel.TabIndex = 0;
-            codigoLabel.Text = "Codigo:";
+            codigoLabel.Text = "Código:";
             // 
             // dataAgLabel
             // 
             dataAgLabel.AutoSize = true;
             dataAgLabel.Location = new System.Drawing.Point(105, 37);
             dataAgLabel.Name = "dataAgLabel";
-            dataAgLabel.Size = new System.Drawing.Size(89, 25);
+            dataAgLabel.Size = new System.Drawing.Size(72, 20);
             dataAgLabel.TabIndex = 13;
             dataAgLabel.Text = "Data Ag:";
             // 
@@ -166,7 +166,7 @@ namespace aDefinir
             horaLabel.AutoSize = true;
             horaLabel.Location = new System.Drawing.Point(239, 37);
             horaLabel.Name = "horaLabel";
-            horaLabel.Size = new System.Drawing.Size(60, 25);
+            horaLabel.Size = new System.Drawing.Size(48, 20);
             horaLabel.TabIndex = 14;
             horaLabel.Text = "Hora:";
             // 
@@ -182,6 +182,7 @@ namespace aDefinir
             this.servicos.Controls.Add(this.btnAddServ);
             this.servicos.Controls.Add(this.txtValorUnit);
             this.servicos.Controls.Add(this.view_Servico_AgendamentoDataGridView);
+            this.servicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.servicos.Location = new System.Drawing.Point(13, 213);
             this.servicos.Name = "servicos";
             this.servicos.Size = new System.Drawing.Size(705, 306);
@@ -193,7 +194,7 @@ namespace aDefinir
             this.txtCodServ.Location = new System.Drawing.Point(15, 25);
             this.txtCodServ.Mask = "000";
             this.txtCodServ.Name = "txtCodServ";
-            this.txtCodServ.Size = new System.Drawing.Size(100, 20);
+            this.txtCodServ.Size = new System.Drawing.Size(100, 22);
             this.txtCodServ.TabIndex = 11;
             this.txtCodServ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCodServ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodServ_KeyDown);
@@ -202,7 +203,7 @@ namespace aDefinir
             // 
             this.txtServico.Location = new System.Drawing.Point(132, 25);
             this.txtServico.Name = "txtServico";
-            this.txtServico.Size = new System.Drawing.Size(283, 20);
+            this.txtServico.Size = new System.Drawing.Size(283, 22);
             this.txtServico.TabIndex = 10;
             // 
             // label4
@@ -210,7 +211,7 @@ namespace aDefinir
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(541, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(40, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Valor";
             // 
@@ -219,7 +220,7 @@ namespace aDefinir
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(440, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Quantidade";
             // 
@@ -228,7 +229,7 @@ namespace aDefinir
             this.Serviço.AutoSize = true;
             this.Serviço.Location = new System.Drawing.Point(129, 9);
             this.Serviço.Name = "Serviço";
-            this.Serviço.Size = new System.Drawing.Size(43, 13);
+            this.Serviço.Size = new System.Drawing.Size(54, 16);
             this.Serviço.TabIndex = 7;
             this.Serviço.Text = "Serviço";
             // 
@@ -237,7 +238,7 @@ namespace aDefinir
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Código";
             // 
@@ -245,7 +246,7 @@ namespace aDefinir
             // 
             this.txtQtd.Location = new System.Drawing.Point(433, 23);
             this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(96, 20);
+            this.txtQtd.Size = new System.Drawing.Size(96, 22);
             this.txtQtd.TabIndex = 5;
             this.txtQtd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQtd_KeyDown);
             // 
@@ -263,7 +264,7 @@ namespace aDefinir
             // 
             this.txtValorUnit.Location = new System.Drawing.Point(535, 23);
             this.txtValorUnit.Name = "txtValorUnit";
-            this.txtValorUnit.Size = new System.Drawing.Size(100, 20);
+            this.txtValorUnit.Size = new System.Drawing.Size(100, 22);
             this.txtValorUnit.TabIndex = 2;
             this.txtValorUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValorUnit_KeyDown);
             // 
@@ -345,25 +346,25 @@ namespace aDefinir
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "ValorUnitario";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Format = "C2";
+            dataGridViewCellStyle11.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn8.HeaderText = "Valor Unitário";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 95;
+            this.dataGridViewTextBoxColumn8.Width = 114;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "SubTotal";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Format = "C2";
+            dataGridViewCellStyle12.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn4.HeaderText = "SubTotal";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 75;
+            this.dataGridViewTextBoxColumn4.Width = 88;
             // 
             // view_Servico_AgendamentoBindingSource
             // 
@@ -391,10 +392,10 @@ namespace aDefinir
             this.groupBox1.Controls.Add(totalLabel);
             this.groupBox1.Controls.Add(this.totalTextBox);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(722, 357);
+            this.groupBox1.Size = new System.Drawing.Size(706, 357);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agendamentos";
@@ -414,7 +415,7 @@ namespace aDefinir
             this.txtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Codigo", true));
             this.txtCodigo.Location = new System.Drawing.Point(23, 64);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(76, 30);
+            this.txtCodigo.Size = new System.Drawing.Size(76, 26);
             this.txtCodigo.TabIndex = 16;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
@@ -430,7 +431,7 @@ namespace aDefinir
             this.horaMaskedTextBox.Location = new System.Drawing.Point(235, 64);
             this.horaMaskedTextBox.Mask = "00:00";
             this.horaMaskedTextBox.Name = "horaMaskedTextBox";
-            this.horaMaskedTextBox.Size = new System.Drawing.Size(74, 30);
+            this.horaMaskedTextBox.Size = new System.Drawing.Size(74, 26);
             this.horaMaskedTextBox.TabIndex = 15;
             this.horaMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
@@ -440,7 +441,7 @@ namespace aDefinir
             this.dataAgMaskedTextBox.Location = new System.Drawing.Point(110, 64);
             this.dataAgMaskedTextBox.Mask = "00/00/0000";
             this.dataAgMaskedTextBox.Name = "dataAgMaskedTextBox";
-            this.dataAgMaskedTextBox.Size = new System.Drawing.Size(110, 30);
+            this.dataAgMaskedTextBox.Size = new System.Drawing.Size(110, 26);
             this.dataAgMaskedTextBox.TabIndex = 14;
             this.dataAgMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
@@ -454,7 +455,7 @@ namespace aDefinir
             "Finalizado"});
             this.situacaoComboBox.Location = new System.Drawing.Point(321, 61);
             this.situacaoComboBox.Name = "situacaoComboBox";
-            this.situacaoComboBox.Size = new System.Drawing.Size(229, 33);
+            this.situacaoComboBox.Size = new System.Drawing.Size(229, 28);
             this.situacaoComboBox.TabIndex = 7;
             // 
             // carro_IdComboBox
@@ -465,7 +466,7 @@ namespace aDefinir
             this.carro_IdComboBox.FormattingEnabled = true;
             this.carro_IdComboBox.Location = new System.Drawing.Point(16, 135);
             this.carro_IdComboBox.Name = "carro_IdComboBox";
-            this.carro_IdComboBox.Size = new System.Drawing.Size(400, 33);
+            this.carro_IdComboBox.Size = new System.Drawing.Size(400, 28);
             this.carro_IdComboBox.TabIndex = 9;
             this.carro_IdComboBox.ValueMember = "Id";
             // 
@@ -479,7 +480,7 @@ namespace aDefinir
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Total", true));
             this.totalTextBox.Location = new System.Drawing.Point(562, 64);
             this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(121, 30);
+            this.totalTextBox.Size = new System.Drawing.Size(121, 26);
             this.totalTextBox.TabIndex = 11;
             // 
             // carrosTableAdapter
@@ -496,7 +497,7 @@ namespace aDefinir
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
             // 
             // bindingNavigatorMovePreviousItem
@@ -561,6 +562,7 @@ namespace aDefinir
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
@@ -593,6 +595,7 @@ namespace aDefinir
             this.agendamentoBindingNavigator.BindingSource = this.agendamentoBindingSource;
             this.agendamentoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.agendamentoBindingNavigator.DeleteItem = null;
+            this.agendamentoBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.agendamentoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -616,7 +619,7 @@ namespace aDefinir
             this.agendamentoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.agendamentoBindingNavigator.Name = "agendamentoBindingNavigator";
             this.agendamentoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.agendamentoBindingNavigator.Size = new System.Drawing.Size(742, 25);
+            this.agendamentoBindingNavigator.Size = new System.Drawing.Size(775, 27);
             this.agendamentoBindingNavigator.TabIndex = 3;
             this.agendamentoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -632,20 +635,20 @@ namespace aDefinir
             // 
             // btnCancelar
             // 
-            this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(23, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(77, 24);
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnFinalizar
             // 
+            this.btnFinalizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btnFinalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizar.Image")));
             this.btnFinalizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(70, 22);
+            this.btnFinalizar.Size = new System.Drawing.Size(54, 22);
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
@@ -700,7 +703,7 @@ namespace aDefinir
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(759, 503);
+            this.ClientSize = new System.Drawing.Size(792, 503);
             this.Controls.Add(this.agendamentoBindingNavigator);
             this.Controls.Add(this.servicos);
             this.Controls.Add(this.groupBox1);
