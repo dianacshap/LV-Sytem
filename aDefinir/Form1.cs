@@ -125,5 +125,23 @@ namespace aDefinir
 
             panelSelecao.Top = btnProdutos.Top;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //Recarrega os dados
+            view_Detalhes_AgendamentosTableAdapter.Fill(lvSystemDataSet.View_Detalhes_Agendamentos);
+            view_Detalhes_AgendamentosBindingSource.Filter = "DataAg = '" + DateTime.Now.ToShortDateString() + "'and situacao like 'Em Andamento'";
+            int QuantidadeAndamento = int.Parse(view_Detalhes_AgendamentosBindingSource.Count.ToString());
+            view_Detalhes_AgendamentosBindingSource.RemoveFilter();
+            view_Detalhes_AgendamentosBindingSource.Filter = "DataAg ='" + DateTime.Now.ToShortDateString() + "' and situacao like 'Agendado'";
+            int QuantidadeAgendado = int.Parse(view_Detalhes_AgendamentosBindingSource.Count.ToString());
+            lblEmAndamento.Text = QuantidadeAndamento.ToString();
+            lblAgendado.Text = QuantidadeAgendado.ToString();
+        }
     }
 }

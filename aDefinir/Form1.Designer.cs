@@ -29,6 +29,7 @@ namespace aDefinir
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAgenda = new System.Windows.Forms.Button();
             this.btnServico = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
@@ -36,15 +37,28 @@ namespace aDefinir
             this.btnInicio = new System.Windows.Forms.Button();
             this.panelCentral = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupAgendamentos = new System.Windows.Forms.GroupBox();
+            this.lblAgendado = new System.Windows.Forms.Label();
+            this.lblEmAndamento = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.panelSelecao = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnMinizar = new System.Windows.Forms.Button();
             this.panelTopo = new System.Windows.Forms.Panel();
+            this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
+            this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.view_Detalhes_AgendamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_Detalhes_AgendamentosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Detalhes_AgendamentosTableAdapter();
             this.panelCentral.SuspendLayout();
+            this.groupAgendamentos.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTopo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_Detalhes_AgendamentosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgenda
@@ -140,9 +154,63 @@ namespace aDefinir
             this.panel2.Size = new System.Drawing.Size(777, 434);
             this.panel2.TabIndex = 1;
             // 
+            // groupAgendamentos
+            // 
+            this.groupAgendamentos.Controls.Add(this.lblAgendado);
+            this.groupAgendamentos.Controls.Add(this.lblEmAndamento);
+            this.groupAgendamentos.Controls.Add(this.label2);
+            this.groupAgendamentos.Controls.Add(this.label1);
+            this.groupAgendamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupAgendamentos.Location = new System.Drawing.Point(0, 310);
+            this.groupAgendamentos.Name = "groupAgendamentos";
+            this.groupAgendamentos.Size = new System.Drawing.Size(136, 121);
+            this.groupAgendamentos.TabIndex = 0;
+            this.groupAgendamentos.TabStop = false;
+            this.groupAgendamentos.Text = "Agendamentos";
+            // 
+            // lblAgendado
+            // 
+            this.lblAgendado.AutoSize = true;
+            this.lblAgendado.Location = new System.Drawing.Point(114, 75);
+            this.lblAgendado.Name = "lblAgendado";
+            this.lblAgendado.Size = new System.Drawing.Size(16, 16);
+            this.lblAgendado.TabIndex = 8;
+            this.lblAgendado.Text = "0";
+            // 
+            // lblEmAndamento
+            // 
+            this.lblEmAndamento.AutoSize = true;
+            this.lblEmAndamento.Location = new System.Drawing.Point(114, 43);
+            this.lblEmAndamento.Name = "lblEmAndamento";
+            this.lblEmAndamento.Size = new System.Drawing.Size(16, 16);
+            this.lblEmAndamento.TabIndex = 7;
+            this.lblEmAndamento.Text = "0";
+            this.lblEmAndamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(18, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Agendado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(18, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Em Andamento";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.groupAgendamentos);
             this.panel1.Controls.Add(this.btnProdutos);
             this.panel1.Controls.Add(this.panelSelecao);
             this.panel1.Controls.Add(this.btnAgenda);
@@ -222,6 +290,40 @@ namespace aDefinir
             this.panelTopo.Size = new System.Drawing.Size(915, 45);
             this.panelTopo.TabIndex = 1;
             // 
+            // lvSystemDataSet
+            // 
+            this.lvSystemDataSet.DataSetName = "LvSystemDataSet";
+            this.lvSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
+            this.tableAdapterManager.AgendamentosServicosTableAdapter = null;
+            this.tableAdapterManager.AgendamentoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarrosTableAdapter = null;
+            this.tableAdapterManager.ClientesTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.ProdutoServicoTableAdapter = null;
+            this.tableAdapterManager.ProdutoTableAdapter = null;
+            this.tableAdapterManager.ServicoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // view_Detalhes_AgendamentosBindingSource
+            // 
+            this.view_Detalhes_AgendamentosBindingSource.DataMember = "View_Detalhes_Agendamentos";
+            this.view_Detalhes_AgendamentosBindingSource.DataSource = this.lvSystemDataSet;
+            // 
+            // view_Detalhes_AgendamentosTableAdapter
+            // 
+            this.view_Detalhes_AgendamentosTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -235,9 +337,14 @@ namespace aDefinir
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelCentral.ResumeLayout(false);
+            this.groupAgendamentos.ResumeLayout(false);
+            this.groupAgendamentos.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panelTopo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_Detalhes_AgendamentosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +363,16 @@ namespace aDefinir
         private System.Windows.Forms.Panel panelTopo;
         private System.Windows.Forms.Panel panelSelecao;
         private System.Windows.Forms.Button btnProdutos;
+        private System.Windows.Forms.GroupBox groupAgendamentos;
+        private LvSystemDataSet lvSystemDataSet;
+        private System.Windows.Forms.BindingSource view_Detalhes_AgendamentosBindingSource;
+        private LvSystemDataSetTableAdapters.View_Detalhes_AgendamentosTableAdapter view_Detalhes_AgendamentosTableAdapter;
+        private LvSystemDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblAgendado;
+        private System.Windows.Forms.Label lblEmAndamento;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

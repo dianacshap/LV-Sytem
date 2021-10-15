@@ -36,9 +36,8 @@ namespace aDefinir
             System.Windows.Forms.Label dataNascimentoLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label cpfLabel;
-            System.Windows.Forms.MaskedTextBox cpfMaskedTextBox;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadClientes));
+            System.Windows.Forms.Label cpfLabel;
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
             this.clientesTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ClientesTableAdapter();
@@ -66,6 +65,7 @@ namespace aDefinir
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.idLabel1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             emailLabel = new System.Windows.Forms.Label();
             celularLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
@@ -73,7 +73,6 @@ namespace aDefinir
             nomeLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             cpfLabel = new System.Windows.Forms.Label();
-            cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingNavigator)).BeginInit();
@@ -134,31 +133,6 @@ namespace aDefinir
             idLabel.Size = new System.Drawing.Size(27, 20);
             idLabel.TabIndex = 0;
             idLabel.Text = "Id:";
-            // 
-            // cpfLabel
-            // 
-            cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(112, 132);
-            cpfLabel.Name = "cpfLabel";
-            cpfLabel.Size = new System.Drawing.Size(38, 20);
-            cpfLabel.TabIndex = 4;
-            cpfLabel.Text = "Cpf:";
-            // 
-            // cpfMaskedTextBox
-            // 
-            cpfMaskedTextBox.AsciiOnly = true;
-            cpfMaskedTextBox.CausesValidation = false;
-            cpfMaskedTextBox.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Cpf", true));
-            cpfMaskedTextBox.Location = new System.Drawing.Point(312, 132);
-            cpfMaskedTextBox.Mask = "999-999-999-99";
-            cpfMaskedTextBox.Name = "cpfMaskedTextBox";
-            cpfMaskedTextBox.ResetOnPrompt = false;
-            cpfMaskedTextBox.ResetOnSpace = false;
-            cpfMaskedTextBox.Size = new System.Drawing.Size(173, 26);
-            cpfMaskedTextBox.SkipLiterals = false;
-            cpfMaskedTextBox.TabIndex = 5;
-            cpfMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // clientesBindingSource
             // 
@@ -363,7 +337,6 @@ namespace aDefinir
             this.celularMaskedTextBox.Name = "celularMaskedTextBox";
             this.celularMaskedTextBox.Size = new System.Drawing.Size(173, 26);
             this.celularMaskedTextBox.TabIndex = 11;
-            this.celularMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // enderecoTextBox
             // 
@@ -404,12 +377,12 @@ namespace aDefinir
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(cpfMaskedTextBox);
+            this.groupBox1.Controls.Add(cpfLabel);
+            this.groupBox1.Controls.Add(this.cpfMaskedTextBox);
             this.groupBox1.Controls.Add(idLabel);
             this.groupBox1.Controls.Add(this.idLabel1);
             this.groupBox1.Controls.Add(nomeLabel);
             this.groupBox1.Controls.Add(this.nomeTextBox);
-            this.groupBox1.Controls.Add(cpfLabel);
             this.groupBox1.Controls.Add(dataNascimentoLabel);
             this.groupBox1.Controls.Add(this.dataNascimentoDateTimePicker);
             this.groupBox1.Controls.Add(enderecoLabel);
@@ -426,6 +399,24 @@ namespace aDefinir
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Cadastro de Clientes";
+            // 
+            // cpfLabel
+            // 
+            cpfLabel.AutoSize = true;
+            cpfLabel.Location = new System.Drawing.Point(112, 137);
+            cpfLabel.Name = "cpfLabel";
+            cpfLabel.Size = new System.Drawing.Size(38, 20);
+            cpfLabel.TabIndex = 13;
+            cpfLabel.Text = "Cpf:";
+            // 
+            // cpfMaskedTextBox
+            // 
+            this.cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Cpf", true));
+            this.cpfMaskedTextBox.Location = new System.Drawing.Point(312, 131);
+            this.cpfMaskedTextBox.Mask = "000-000-000-00";
+            this.cpfMaskedTextBox.Name = "cpfMaskedTextBox";
+            this.cpfMaskedTextBox.Size = new System.Drawing.Size(160, 26);
+            this.cpfMaskedTextBox.TabIndex = 14;
             // 
             // CadClientes
             // 
@@ -480,5 +471,6 @@ namespace aDefinir
         private System.Windows.Forms.Label idLabel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolStripButton btnLocalizar;
+        private System.Windows.Forms.MaskedTextBox cpfMaskedTextBox;
     }
 }
