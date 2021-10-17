@@ -36,8 +36,8 @@ namespace aDefinir
             System.Windows.Forms.Label codigoLabel;
             System.Windows.Forms.Label dataAgLabel;
             System.Windows.Forms.Label horaLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadAgenda));
             this.servicos = new System.Windows.Forms.GroupBox();
             this.txtCodServ = new System.Windows.Forms.MaskedTextBox();
@@ -96,6 +96,7 @@ namespace aDefinir
             this.view_Total_ServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_Servico_AgendamentoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Servico_AgendamentoTableAdapter();
             this.view_Total_ServicosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             totalLabel = new System.Windows.Forms.Label();
             carro_IdLabel = new System.Windows.Forms.Label();
             situacaoLabel = new System.Windows.Forms.Label();
@@ -172,6 +173,7 @@ namespace aDefinir
             // 
             // servicos
             // 
+            this.servicos.Controls.Add(this.btnPesquisar);
             this.servicos.Controls.Add(this.txtCodServ);
             this.servicos.Controls.Add(this.txtServico);
             this.servicos.Controls.Add(this.label4);
@@ -194,8 +196,8 @@ namespace aDefinir
             this.txtCodServ.Location = new System.Drawing.Point(15, 25);
             this.txtCodServ.Mask = "000";
             this.txtCodServ.Name = "txtCodServ";
-            this.txtCodServ.Size = new System.Drawing.Size(100, 22);
-            this.txtCodServ.TabIndex = 11;
+            this.txtCodServ.Size = new System.Drawing.Size(56, 22);
+            this.txtCodServ.TabIndex = 7;
             this.txtCodServ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCodServ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodServ_KeyDown);
             // 
@@ -204,7 +206,7 @@ namespace aDefinir
             this.txtServico.Location = new System.Drawing.Point(132, 25);
             this.txtServico.Name = "txtServico";
             this.txtServico.Size = new System.Drawing.Size(283, 22);
-            this.txtServico.TabIndex = 10;
+            this.txtServico.TabIndex = 9;
             // 
             // label4
             // 
@@ -247,7 +249,7 @@ namespace aDefinir
             this.txtQtd.Location = new System.Drawing.Point(433, 23);
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(96, 22);
-            this.txtQtd.TabIndex = 5;
+            this.txtQtd.TabIndex = 10;
             this.txtQtd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQtd_KeyDown);
             // 
             // btnAddServ
@@ -255,7 +257,7 @@ namespace aDefinir
             this.btnAddServ.Location = new System.Drawing.Point(641, 21);
             this.btnAddServ.Name = "btnAddServ";
             this.btnAddServ.Size = new System.Drawing.Size(23, 23);
-            this.btnAddServ.TabIndex = 4;
+            this.btnAddServ.TabIndex = 12;
             this.btnAddServ.Text = "+";
             this.btnAddServ.UseVisualStyleBackColor = true;
             this.btnAddServ.Click += new System.EventHandler(this.btnAddServ_Click);
@@ -265,7 +267,7 @@ namespace aDefinir
             this.txtValorUnit.Location = new System.Drawing.Point(535, 23);
             this.txtValorUnit.Name = "txtValorUnit";
             this.txtValorUnit.Size = new System.Drawing.Size(100, 22);
-            this.txtValorUnit.TabIndex = 2;
+            this.txtValorUnit.TabIndex = 11;
             this.txtValorUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValorUnit_KeyDown);
             // 
             // view_Servico_AgendamentoDataGridView
@@ -288,7 +290,7 @@ namespace aDefinir
             this.view_Servico_AgendamentoDataGridView.Name = "view_Servico_AgendamentoDataGridView";
             this.view_Servico_AgendamentoDataGridView.ReadOnly = true;
             this.view_Servico_AgendamentoDataGridView.Size = new System.Drawing.Size(667, 220);
-            this.view_Servico_AgendamentoDataGridView.TabIndex = 0;
+            this.view_Servico_AgendamentoDataGridView.TabIndex = 13;
             this.view_Servico_AgendamentoDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_Servico_AgendamentoDataGridView_CellContentDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
@@ -298,7 +300,7 @@ namespace aDefinir
             this.dataGridViewTextBoxColumn1.HeaderText = "Número";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 69;
+            this.dataGridViewTextBoxColumn1.Width = 81;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -331,7 +333,7 @@ namespace aDefinir
             this.dataGridViewTextBoxColumn6.HeaderText = "Tempo";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 65;
+            this.dataGridViewTextBoxColumn6.Width = 77;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -340,27 +342,27 @@ namespace aDefinir
             this.dataGridViewTextBoxColumn7.HeaderText = "Quantidade";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 87;
+            this.dataGridViewTextBoxColumn7.Width = 103;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "ValorUnitario";
-            dataGridViewCellStyle13.Format = "C2";
-            dataGridViewCellStyle13.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn8.HeaderText = "Valor Unitário";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 114;
+            this.dataGridViewTextBoxColumn8.Width = 105;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "SubTotal";
-            dataGridViewCellStyle14.Format = "C2";
-            dataGridViewCellStyle14.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn4.HeaderText = "SubTotal";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -405,7 +407,7 @@ namespace aDefinir
             this.btnLocalizar.Location = new System.Drawing.Point(422, 135);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(108, 33);
-            this.btnLocalizar.TabIndex = 4;
+            this.btnLocalizar.TabIndex = 6;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
@@ -416,7 +418,7 @@ namespace aDefinir
             this.txtCodigo.Location = new System.Drawing.Point(23, 64);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(76, 26);
-            this.txtCodigo.TabIndex = 16;
+            this.txtCodigo.TabIndex = 0;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // agendamentoBindingSource
@@ -432,7 +434,7 @@ namespace aDefinir
             this.horaMaskedTextBox.Mask = "00:00";
             this.horaMaskedTextBox.Name = "horaMaskedTextBox";
             this.horaMaskedTextBox.Size = new System.Drawing.Size(74, 26);
-            this.horaMaskedTextBox.TabIndex = 15;
+            this.horaMaskedTextBox.TabIndex = 2;
             this.horaMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // dataAgMaskedTextBox
@@ -442,7 +444,7 @@ namespace aDefinir
             this.dataAgMaskedTextBox.Mask = "00/00/0000";
             this.dataAgMaskedTextBox.Name = "dataAgMaskedTextBox";
             this.dataAgMaskedTextBox.Size = new System.Drawing.Size(110, 26);
-            this.dataAgMaskedTextBox.TabIndex = 14;
+            this.dataAgMaskedTextBox.TabIndex = 1;
             this.dataAgMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // situacaoComboBox
@@ -456,7 +458,7 @@ namespace aDefinir
             this.situacaoComboBox.Location = new System.Drawing.Point(321, 61);
             this.situacaoComboBox.Name = "situacaoComboBox";
             this.situacaoComboBox.Size = new System.Drawing.Size(229, 28);
-            this.situacaoComboBox.TabIndex = 7;
+            this.situacaoComboBox.TabIndex = 3;
             // 
             // carro_IdComboBox
             // 
@@ -467,7 +469,7 @@ namespace aDefinir
             this.carro_IdComboBox.Location = new System.Drawing.Point(16, 135);
             this.carro_IdComboBox.Name = "carro_IdComboBox";
             this.carro_IdComboBox.Size = new System.Drawing.Size(400, 28);
-            this.carro_IdComboBox.TabIndex = 9;
+            this.carro_IdComboBox.TabIndex = 5;
             this.carro_IdComboBox.ValueMember = "Id";
             // 
             // carrosBindingSource
@@ -481,7 +483,7 @@ namespace aDefinir
             this.totalTextBox.Location = new System.Drawing.Point(562, 64);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.Size = new System.Drawing.Size(121, 26);
-            this.totalTextBox.TabIndex = 11;
+            this.totalTextBox.TabIndex = 4;
             // 
             // carrosTableAdapter
             // 
@@ -506,13 +508,13 @@ namespace aDefinir
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -527,14 +529,14 @@ namespace aDefinir
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -542,7 +544,7 @@ namespace aDefinir
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
             // 
             // bindingNavigatorMoveLastItem
@@ -551,13 +553,13 @@ namespace aDefinir
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -566,7 +568,7 @@ namespace aDefinir
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -576,7 +578,7 @@ namespace aDefinir
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Excluir";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -585,7 +587,7 @@ namespace aDefinir
             this.agendamentoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.agendamentoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("agendamentoBindingNavigatorSaveItem.Image")));
             this.agendamentoBindingNavigatorSaveItem.Name = "agendamentoBindingNavigatorSaveItem";
-            this.agendamentoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.agendamentoBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.agendamentoBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.agendamentoBindingNavigatorSaveItem.Click += new System.EventHandler(this.agendamentoBindingNavigatorSaveItem_Click);
             // 
@@ -629,7 +631,7 @@ namespace aDefinir
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(23, 22);
+            this.btnEditar.Size = new System.Drawing.Size(24, 24);
             this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -648,7 +650,7 @@ namespace aDefinir
             this.btnFinalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizar.Image")));
             this.btnFinalizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(54, 22);
+            this.btnFinalizar.Size = new System.Drawing.Size(54, 24);
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
@@ -696,6 +698,16 @@ namespace aDefinir
             // view_Total_ServicosTableAdapter
             // 
             this.view_Total_ServicosTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(75, 24);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(23, 23);
+            this.btnPesquisar.TabIndex = 8;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // CadAgenda
             // 
@@ -789,5 +801,6 @@ namespace aDefinir
         private System.Windows.Forms.BindingSource view_Total_ServicosBindingSource;
         private LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter view_Total_ServicosTableAdapter;
         private System.Windows.Forms.Button btnLocalizar;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }

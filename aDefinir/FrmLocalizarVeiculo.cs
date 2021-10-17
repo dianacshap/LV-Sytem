@@ -36,7 +36,7 @@ namespace aDefinir
 
         }
 
-        private void view_Carro_ClientesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void view_Carro_ClientesDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

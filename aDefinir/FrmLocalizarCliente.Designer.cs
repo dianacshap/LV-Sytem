@@ -35,8 +35,6 @@ namespace aDefinir
             this.clientesTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ClientesTableAdapter();
             this.tableAdapterManager = new aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager();
             this.clientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.txtNomeLocalizar = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +42,8 @@ namespace aDefinir
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNomeLocalizar = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
@@ -100,25 +100,6 @@ namespace aDefinir
             this.clientesDataGridView.Size = new System.Drawing.Size(714, 195);
             this.clientesDataGridView.TabIndex = 1;
             this.clientesDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientesDataGridView_CellDoubleClick);
-            // 
-            // txtNomeLocalizar
-            // 
-            this.txtNomeLocalizar.Location = new System.Drawing.Point(12, 32);
-            this.txtNomeLocalizar.Name = "txtNomeLocalizar";
-            this.txtNomeLocalizar.Size = new System.Drawing.Size(438, 26);
-            this.txtNomeLocalizar.TabIndex = 2;
-            this.txtNomeLocalizar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(617, 270);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(98, 32);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -177,6 +158,25 @@ namespace aDefinir
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Visible = false;
             // 
+            // txtNomeLocalizar
+            // 
+            this.txtNomeLocalizar.Location = new System.Drawing.Point(12, 32);
+            this.txtNomeLocalizar.Name = "txtNomeLocalizar";
+            this.txtNomeLocalizar.Size = new System.Drawing.Size(438, 26);
+            this.txtNomeLocalizar.TabIndex = 0;
+            this.txtNomeLocalizar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(617, 270);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(98, 32);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // txtNome
             // 
             this.txtNome.AutoSize = true;
@@ -196,7 +196,7 @@ namespace aDefinir
             this.label2.TabIndex = 6;
             this.label2.Text = "Dê dois cliques sobre o registro desejado";
             // 
-            // FrmLocalizar
+            // FrmLocalizarCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(755, 314);
@@ -207,9 +207,9 @@ namespace aDefinir
             this.Controls.Add(this.txtNomeLocalizar);
             this.Controls.Add(this.clientesDataGridView);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Name = "FrmLocalizar";
+            this.Name = "FrmLocalizarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmLocalizar";
+            this.Text = "Localizar Cliente";
             this.Load += new System.EventHandler(this.FrmLocalizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();

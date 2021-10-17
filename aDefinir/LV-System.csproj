@@ -36,12 +36,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Azure.Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Core.1.6.0\lib\net461\Azure.Core.dll</HintPath>
     </Reference>
     <Reference Include="Azure.Identity, Version=1.3.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Identity.1.3.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -189,6 +194,8 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -238,11 +245,35 @@
     <Compile Include="FrmLocalizarCliente.Designer.cs">
       <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLocalizarServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizarServicos.Designer.cs">
+      <DependentUpon>FrmLocalizarServicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLocalizarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLocalizarVeiculo.Designer.cs">
       <DependentUpon>FrmLocalizarVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorio.Designer.cs">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioServicos.Designer.cs">
+      <DependentUpon>FrmRelatorioServicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioVeiculos.Designer.cs">
+      <DependentUpon>FrmRelatorioVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="LvSystemContext.cs" />
     <Compile Include="Domain\Agendamento.cs" />
@@ -320,10 +351,32 @@
     <Compile Include="Migrations\202110101256465_v14.designer.cs">
       <DependentUpon>202110101256465_v14.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110152248452_v15.cs" />
+    <Compile Include="Migrations\202110152248452_v15.designer.cs">
+      <DependentUpon>202110152248452_v15.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\VariaveisGlobais.cs" />
+    <Compile Include="RelatorioCarros1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatorioCarros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelatorioClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatorioClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelatorioServicos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatorioServicos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="CadAgenda.resx">
       <DependentUpon>CadAgenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,8 +398,20 @@
     <EmbeddedResource Include="FrmLocalizarCliente.resx">
       <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizarServicos.resx">
+      <DependentUpon>FrmLocalizarServicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarVeiculo.resx">
       <DependentUpon>FrmLocalizarVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorio.resx">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioServicos.resx">
+      <DependentUpon>FrmRelatorioServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioVeiculos.resx">
+      <DependentUpon>FrmRelatorioVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110031931487_v-1.resx">
       <DependentUpon>202110031931487_v-1.cs</DependentUpon>
@@ -390,6 +455,9 @@
     <EmbeddedResource Include="Migrations\202110101256465_v14.resx">
       <DependentUpon>202110101256465_v14.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110152248452_v15.resx">
+      <DependentUpon>202110152248452_v15.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -400,6 +468,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RelatorioCarros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioCarros1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioServicos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioServicos.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="LvSystemDataSet.xsc">
       <DependentUpon>LvSystemDataSet.xsd</DependentUpon>
     </None>
@@ -482,6 +562,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

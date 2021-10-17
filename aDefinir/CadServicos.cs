@@ -29,6 +29,7 @@ namespace aDefinir
         {
             // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Servico'. Você pode movê-la ou removê-la conforme necessário.
             this.servicoTableAdapter.Fill(this.lvSystemDataSet.Servico);
+            
 
         }
 
@@ -41,6 +42,24 @@ namespace aDefinir
         private void btnEditar_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioServicos frmRelatorioServicos = new FrmRelatorioServicos();
+            frmRelatorioServicos.ShowDialog();
+        }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            VariaveisGlobais.CodigoLocalizado = 0;
+            FrmLocalizarServicos frmLocalizarServico = new FrmLocalizarServicos();
+            frmLocalizarServico.ShowDialog();
+            if (VariaveisGlobais.CodigoLocalizado > 0)
+            {
+                //Posicionar Código Localizado
+                servicoBindingSource.Position = servicoBindingSource.Find("Id", VariaveisGlobais.CodigoLocalizado);
+            }
         }
     }
 }

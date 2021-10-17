@@ -68,6 +68,8 @@ namespace aDefinir
 
         private void btnAgenda_Click(object sender, EventArgs e)
         {
+            try
+            {
             CadAgenda agenda = new CadAgenda
             {
                 TopLevel = false, //ñ é form de topo
@@ -76,6 +78,11 @@ namespace aDefinir
             panel2.Controls.Clear(); // limpa o painel
             panel2.Controls.Add(agenda); //add o form no painel
             agenda.Show();
+
+            }
+            catch (Exception)
+            {
+            }
 
             //cursor panel seleçao
             panelSelecao.Top = btnAgenda.Top;

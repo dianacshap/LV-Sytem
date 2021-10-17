@@ -16,6 +16,6 @@ namespace aDefinir.Domain
         public string Situacao { get; set; }
         public Carro Carro { get; set; }
         public Cliente Cliente { get; set; }
-        public ICollection<Servico> Servico { get; set; }
+        public Servico Servico { get; set; }
     }
 }

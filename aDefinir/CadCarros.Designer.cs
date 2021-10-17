@@ -69,6 +69,7 @@ namespace aDefinir
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnLocalizar = new System.Windows.Forms.ToolStripButton();
+            this.btnRelatorio = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
@@ -180,7 +181,7 @@ namespace aDefinir
             this.marcaTextBox.Location = new System.Drawing.Point(220, 83);
             this.marcaTextBox.Name = "marcaTextBox";
             this.marcaTextBox.Size = new System.Drawing.Size(121, 26);
-            this.marcaTextBox.TabIndex = 3;
+            this.marcaTextBox.TabIndex = 0;
             // 
             // carrosBindingSource
             // 
@@ -199,7 +200,7 @@ namespace aDefinir
             this.modeloTextBox.Location = new System.Drawing.Point(220, 119);
             this.modeloTextBox.Name = "modeloTextBox";
             this.modeloTextBox.Size = new System.Drawing.Size(121, 26);
-            this.modeloTextBox.TabIndex = 5;
+            this.modeloTextBox.TabIndex = 1;
             // 
             // placaTextBox
             // 
@@ -208,7 +209,7 @@ namespace aDefinir
             this.placaTextBox.Location = new System.Drawing.Point(220, 155);
             this.placaTextBox.Name = "placaTextBox";
             this.placaTextBox.Size = new System.Drawing.Size(121, 26);
-            this.placaTextBox.TabIndex = 7;
+            this.placaTextBox.TabIndex = 2;
             // 
             // corTextBox
             // 
@@ -217,7 +218,7 @@ namespace aDefinir
             this.corTextBox.Location = new System.Drawing.Point(220, 191);
             this.corTextBox.Name = "corTextBox";
             this.corTextBox.Size = new System.Drawing.Size(121, 26);
-            this.corTextBox.TabIndex = 9;
+            this.corTextBox.TabIndex = 3;
             // 
             // observacoesTextBox
             // 
@@ -226,7 +227,7 @@ namespace aDefinir
             this.observacoesTextBox.Location = new System.Drawing.Point(220, 227);
             this.observacoesTextBox.Name = "observacoesTextBox";
             this.observacoesTextBox.Size = new System.Drawing.Size(121, 26);
-            this.observacoesTextBox.TabIndex = 11;
+            this.observacoesTextBox.TabIndex = 4;
             // 
             // anoTextBox
             // 
@@ -235,7 +236,7 @@ namespace aDefinir
             this.anoTextBox.Location = new System.Drawing.Point(220, 263);
             this.anoTextBox.Name = "anoTextBox";
             this.anoTextBox.Size = new System.Drawing.Size(121, 26);
-            this.anoTextBox.TabIndex = 13;
+            this.anoTextBox.TabIndex = 5;
             // 
             // clienteIdComboBox
             // 
@@ -247,7 +248,7 @@ namespace aDefinir
             this.clienteIdComboBox.Location = new System.Drawing.Point(220, 299);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
             this.clienteIdComboBox.Size = new System.Drawing.Size(121, 28);
-            this.clienteIdComboBox.TabIndex = 15;
+            this.clienteIdComboBox.TabIndex = 6;
             this.clienteIdComboBox.ValueMember = "Id";
             // 
             // clientesBindingSource1
@@ -303,7 +304,8 @@ namespace aDefinir
             this.clientesBindingNavigatorSaveItem,
             this.btnCancelar,
             this.btnEditar,
-            this.btnLocalizar});
+            this.btnLocalizar,
+            this.btnRelatorio});
             this.carrosBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.carrosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.carrosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -441,6 +443,15 @@ namespace aDefinir
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
+            this.btnRelatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(78, 24);
+            this.btnRelatorio.Text = "Relatório";
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
+            // 
             // CadCarros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,5 +520,6 @@ namespace aDefinir
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnLocalizar;
+        private System.Windows.Forms.ToolStripButton btnRelatorio;
     }
 }

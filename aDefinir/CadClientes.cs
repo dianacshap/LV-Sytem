@@ -106,5 +106,11 @@ namespace aDefinir
                 clientesBindingSource.Position = clientesBindingSource.Find("Id", VariaveisGlobais.CodigoLocalizado);
             }
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FrmRelatorio frmRelatorio = new FrmRelatorio();
+            frmRelatorio.ShowDialog();
+        }
     }
 }

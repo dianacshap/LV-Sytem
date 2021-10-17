@@ -125,10 +125,11 @@ namespace aDefinir
         {
             try
             {
+                
                 agendamentosServicosTableAdapter.InserirServico(int.Parse(txtQtd.Text),
-               decimal.Parse(txtValorUnit.Text),
-               int.Parse(txtCodigo.Text),
-               int.Parse(txtCodServ.Text));
+                   decimal.Parse(txtValorUnit.Text),
+                   int.Parse(txtCodigo.Text),
+                   int.Parse(txtCodServ.Text));
                 //Limpar todas as textboxes
                 txtCodServ.Clear();
                 txtServico.Clear();
@@ -269,6 +270,19 @@ namespace aDefinir
             {
                 //Posicionar Código Localizado
                 carrosBindingSource.Position = carrosBindingSource.Find("Id", VariaveisGlobais.CodigoLocalizado);
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            VariaveisGlobais.CodigoLocalizado = 0;
+            FrmLocalizarServicos frmLocalizarServico = new FrmLocalizarServicos();
+            frmLocalizarServico.ShowDialog();
+            if (VariaveisGlobais.CodigoLocalizado > 0)
+            {
+                //Posicionar Código Localizado
+                txtCodServ.Text = VariaveisGlobais.CodigoLocalizado.ToString();
+                txtCodServ.Focus();
             }
         }
     }

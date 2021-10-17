@@ -36,13 +36,12 @@ namespace aDefinir
             this.btnCarros = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupAgendamentos = new System.Windows.Forms.GroupBox();
             this.lblAgendado = new System.Windows.Forms.Label();
             this.lblEmAndamento = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.panelSelecao = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
@@ -53,9 +52,10 @@ namespace aDefinir
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.view_Detalhes_AgendamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_Detalhes_AgendamentosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Detalhes_AgendamentosTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelCentral.SuspendLayout();
-            this.groupAgendamentos.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupAgendamentos.SuspendLayout();
             this.panelTopo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_Detalhes_AgendamentosBindingSource)).BeginInit();
@@ -70,7 +70,7 @@ namespace aDefinir
             this.btnAgenda.Location = new System.Drawing.Point(32, 258);
             this.btnAgenda.Name = "btnAgenda";
             this.btnAgenda.Size = new System.Drawing.Size(114, 36);
-            this.btnAgenda.TabIndex = 3;
+            this.btnAgenda.TabIndex = 5;
             this.btnAgenda.Text = "Agenda";
             this.btnAgenda.UseVisualStyleBackColor = true;
             this.btnAgenda.Click += new System.EventHandler(this.btnAgenda_Click);
@@ -84,7 +84,7 @@ namespace aDefinir
             this.btnServico.Location = new System.Drawing.Point(32, 210);
             this.btnServico.Name = "btnServico";
             this.btnServico.Size = new System.Drawing.Size(114, 42);
-            this.btnServico.TabIndex = 1;
+            this.btnServico.TabIndex = 4;
             this.btnServico.Text = "Serviços";
             this.btnServico.UseVisualStyleBackColor = true;
             this.btnServico.Click += new System.EventHandler(this.btnServico_Click);
@@ -98,7 +98,7 @@ namespace aDefinir
             this.btnCliente.Location = new System.Drawing.Point(32, 66);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(114, 42);
-            this.btnCliente.TabIndex = 0;
+            this.btnCliente.TabIndex = 1;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
@@ -126,7 +126,7 @@ namespace aDefinir
             this.btnInicio.Location = new System.Drawing.Point(32, 18);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(114, 42);
-            this.btnInicio.TabIndex = 4;
+            this.btnInicio.TabIndex = 0;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -143,16 +143,23 @@ namespace aDefinir
             this.panelCentral.Size = new System.Drawing.Size(915, 436);
             this.panelCentral.TabIndex = 3;
             // 
-            // panel2
+            // panel1
             // 
-            this.panel2.BackgroundImage = global::aDefinir.Properties.Resources.lvsytem;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(136, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(777, 434);
-            this.panel2.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.groupAgendamentos);
+            this.panel1.Controls.Add(this.panelSelecao);
+            this.panel1.Controls.Add(this.btnAgenda);
+            this.panel1.Controls.Add(this.btnInicio);
+            this.panel1.Controls.Add(this.btnCliente);
+            this.panel1.Controls.Add(this.btnCarros);
+            this.panel1.Controls.Add(this.btnServico);
+            this.panel1.Controls.Add(this.btnProdutos);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.Color.LightGray;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(136, 434);
+            this.panel1.TabIndex = 0;
             // 
             // groupAgendamentos
             // 
@@ -207,24 +214,6 @@ namespace aDefinir
             this.label1.TabIndex = 5;
             this.label1.Text = "Em Andamento";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.groupAgendamentos);
-            this.panel1.Controls.Add(this.btnProdutos);
-            this.panel1.Controls.Add(this.panelSelecao);
-            this.panel1.Controls.Add(this.btnAgenda);
-            this.panel1.Controls.Add(this.btnInicio);
-            this.panel1.Controls.Add(this.btnCliente);
-            this.panel1.Controls.Add(this.btnCarros);
-            this.panel1.Controls.Add(this.btnServico);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 434);
-            this.panel1.TabIndex = 0;
-            // 
             // btnProdutos
             // 
             this.btnProdutos.FlatAppearance.BorderSize = 0;
@@ -234,18 +223,18 @@ namespace aDefinir
             this.btnProdutos.Location = new System.Drawing.Point(32, 162);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(114, 42);
-            this.btnProdutos.TabIndex = 5;
+            this.btnProdutos.TabIndex = 3;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
             // panelSelecao
             // 
-            this.panelSelecao.BackColor = System.Drawing.SystemColors.Info;
+            this.panelSelecao.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelSelecao.ForeColor = System.Drawing.Color.DarkRed;
-            this.panelSelecao.Location = new System.Drawing.Point(32, 34);
+            this.panelSelecao.Location = new System.Drawing.Point(127, 18);
             this.panelSelecao.Name = "panelSelecao";
-            this.panelSelecao.Size = new System.Drawing.Size(15, 13);
+            this.panelSelecao.Size = new System.Drawing.Size(28, 42);
             this.panelSelecao.TabIndex = 1;
             // 
             // btnSair
@@ -324,6 +313,17 @@ namespace aDefinir
             // 
             this.view_Detalhes_AgendamentosTableAdapter.ClearBeforeFill = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::aDefinir.Properties.Resources.lvsytem;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(136, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(777, 434);
+            this.panel2.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -339,9 +339,9 @@ namespace aDefinir
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelCentral.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.groupAgendamentos.ResumeLayout(false);
             this.groupAgendamentos.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panelTopo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lvSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_Detalhes_AgendamentosBindingSource)).EndInit();

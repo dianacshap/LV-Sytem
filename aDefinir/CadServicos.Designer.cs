@@ -30,11 +30,11 @@ namespace aDefinir
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadServicos));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label valorLabel;
             System.Windows.Forms.Label tempoServicoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadServicos));
             this.lvSystemDataSet = new aDefinir.LvSystemDataSet();
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.ServicoTableAdapter();
@@ -54,11 +54,13 @@ namespace aDefinir
             this.servicoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnRelatorio = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.tempoServicoTextBox = new System.Windows.Forms.TextBox();
+            this.btnLocalizar = new System.Windows.Forms.ToolStripButton();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
@@ -69,6 +71,46 @@ namespace aDefinir
             this.servicoBindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(132, 100);
+            idLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(27, 20);
+            idLabel.TabIndex = 9;
+            idLabel.Text = "Id:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(132, 148);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(55, 20);
+            nomeLabel.TabIndex = 11;
+            nomeLabel.Text = "Nome:";
+            // 
+            // valorLabel
+            // 
+            valorLabel.AutoSize = true;
+            valorLabel.Location = new System.Drawing.Point(132, 196);
+            valorLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new System.Drawing.Size(50, 20);
+            valorLabel.TabIndex = 13;
+            valorLabel.Text = "Valor:";
+            // 
+            // tempoServicoLabel
+            // 
+            tempoServicoLabel.AutoSize = true;
+            tempoServicoLabel.Location = new System.Drawing.Point(132, 244);
+            tempoServicoLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            tempoServicoLabel.Name = "tempoServicoLabel";
+            tempoServicoLabel.Size = new System.Drawing.Size(140, 20);
+            tempoServicoLabel.TabIndex = 15;
+            tempoServicoLabel.Text = "Tempo de Serviço:";
             // 
             // lvSystemDataSet
             // 
@@ -118,7 +160,9 @@ namespace aDefinir
             this.bindingNavigatorDeleteItem,
             this.servicoBindingNavigatorSaveItem,
             this.btnCancelar,
-            this.btnEditar});
+            this.btnEditar,
+            this.btnLocalizar,
+            this.btnRelatorio});
             this.servicoBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.servicoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.servicoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -244,6 +288,15 @@ namespace aDefinir
             this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
+            this.btnRelatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(78, 24);
+            this.btnRelatorio.Text = "Relatório";
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(idLabel);
@@ -256,90 +309,59 @@ namespace aDefinir
             this.groupBox1.Controls.Add(this.tempoServicoTextBox);
             this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 94);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(15, 39);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox1.Size = new System.Drawing.Size(1381, 578);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox1.Size = new System.Drawing.Size(738, 380);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Serviços";
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(132, 100);
-            idLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 20);
-            idLabel.TabIndex = 9;
-            idLabel.Text = "Id:";
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(293, 94);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(180, 26);
-            this.idTextBox.TabIndex = 10;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(132, 148);
-            nomeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(55, 20);
-            nomeLabel.TabIndex = 11;
-            nomeLabel.Text = "Nome:";
+            this.idTextBox.TabIndex = 0;
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(293, 142);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(180, 26);
-            this.nomeTextBox.TabIndex = 12;
-            // 
-            // valorLabel
-            // 
-            valorLabel.AutoSize = true;
-            valorLabel.Location = new System.Drawing.Point(132, 196);
-            valorLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(50, 20);
-            valorLabel.TabIndex = 13;
-            valorLabel.Text = "Valor:";
+            this.nomeTextBox.TabIndex = 1;
             // 
             // valorTextBox
             // 
             this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Valor", true));
             this.valorTextBox.Location = new System.Drawing.Point(293, 190);
-            this.valorTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.valorTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(180, 26);
-            this.valorTextBox.TabIndex = 14;
-            // 
-            // tempoServicoLabel
-            // 
-            tempoServicoLabel.AutoSize = true;
-            tempoServicoLabel.Location = new System.Drawing.Point(132, 244);
-            tempoServicoLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            tempoServicoLabel.Name = "tempoServicoLabel";
-            tempoServicoLabel.Size = new System.Drawing.Size(140, 20);
-            tempoServicoLabel.TabIndex = 15;
-            tempoServicoLabel.Text = "Tempo de Serviço:";
+            this.valorTextBox.TabIndex = 2;
             // 
             // tempoServicoTextBox
             // 
             this.tempoServicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "TempoServico", true));
             this.tempoServicoTextBox.Location = new System.Drawing.Point(293, 238);
-            this.tempoServicoTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tempoServicoTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.tempoServicoTextBox.Name = "tempoServicoTextBox";
             this.tempoServicoTextBox.Size = new System.Drawing.Size(180, 26);
-            this.tempoServicoTextBox.TabIndex = 16;
+            this.tempoServicoTextBox.TabIndex = 3;
+            // 
+            // btnLocalizar
+            // 
+            this.btnLocalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalizar.Image")));
+            this.btnLocalizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLocalizar.Name = "btnLocalizar";
+            this.btnLocalizar.Size = new System.Drawing.Size(77, 24);
+            this.btnLocalizar.Text = "Localizar";
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // CadServicos
             // 
@@ -351,7 +373,7 @@ namespace aDefinir
             this.Controls.Add(this.servicoBindingNavigator);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CadServicos";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -395,5 +417,7 @@ namespace aDefinir
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox valorTextBox;
         private System.Windows.Forms.TextBox tempoServicoTextBox;
+        private System.Windows.Forms.ToolStripButton btnRelatorio;
+        private System.Windows.Forms.ToolStripButton btnLocalizar;
     }
 }

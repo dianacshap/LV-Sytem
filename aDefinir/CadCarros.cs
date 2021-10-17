@@ -99,5 +99,11 @@ namespace aDefinir
                 carrosBindingSource.Position = carrosBindingSource.Find("Id", VariaveisGlobais.CodigoLocalizado);
             }
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioVeiculos frmRelatorioVeiculos = new FrmRelatorioVeiculos();
+            frmRelatorioVeiculos.ShowDialog();
+        }
     }
 }

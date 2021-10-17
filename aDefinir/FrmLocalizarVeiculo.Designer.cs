@@ -73,7 +73,7 @@ namespace aDefinir
             this.btnCancelar.Location = new System.Drawing.Point(631, 272);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(98, 32);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -83,7 +83,7 @@ namespace aDefinir
             this.txtNomeLocalizarVeiculo.Location = new System.Drawing.Point(26, 34);
             this.txtNomeLocalizarVeiculo.Name = "txtNomeLocalizarVeiculo";
             this.txtNomeLocalizarVeiculo.Size = new System.Drawing.Size(438, 29);
-            this.txtNomeLocalizarVeiculo.TabIndex = 7;
+            this.txtNomeLocalizarVeiculo.TabIndex = 0;
             this.txtNomeLocalizarVeiculo.TextChanged += new System.EventHandler(this.txtNomeLocalizarVeiculo_TextChanged);
             // 
             // label1
@@ -91,9 +91,9 @@ namespace aDefinir
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 24);
+            this.label1.Size = new System.Drawing.Size(158, 24);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Localizar Veículo";
+            this.label1.Text = "Nome do Veículo";
             // 
             // lvSystemDataSet
             // 
@@ -139,8 +139,8 @@ namespace aDefinir
             this.view_Carro_ClientesDataGridView.Name = "view_Carro_ClientesDataGridView";
             this.view_Carro_ClientesDataGridView.ReadOnly = true;
             this.view_Carro_ClientesDataGridView.Size = new System.Drawing.Size(703, 197);
-            this.view_Carro_ClientesDataGridView.TabIndex = 12;
-            this.view_Carro_ClientesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_Carro_ClientesDataGridView_CellContentClick);
+            this.view_Carro_ClientesDataGridView.TabIndex = 1;
+            this.view_Carro_ClientesDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_Carro_ClientesDataGridView_CellContentDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -178,7 +178,7 @@ namespace aDefinir
             // FrmLocalizarVeiculo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(755, 357);
+            this.ClientSize = new System.Drawing.Size(755, 316);
             this.ControlBox = false;
             this.Controls.Add(this.view_Carro_ClientesDataGridView);
             this.Controls.Add(this.label1);
