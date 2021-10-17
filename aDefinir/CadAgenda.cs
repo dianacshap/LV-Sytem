@@ -224,6 +224,14 @@ namespace aDefinir
                 btnCancelar.Enabled = false;
                 btnFinalizar.Enabled = false;
                 carro_IdComboBox.Enabled = false;
+                txtCodServ.Enabled = false;
+                btnPesquisar.Enabled = false;
+                txtServico.Enabled = false;
+                txtQtd.Enabled = false;
+                txtValorUnit.Enabled = false;
+                view_Servico_AgendamentoDataGridView.Enabled = false;
+
+
             }
             else
             {
@@ -233,6 +241,13 @@ namespace aDefinir
                 btnCancelar.Enabled = true;
                 btnFinalizar.Enabled = true;
                 carro_IdComboBox.Enabled = true;
+                servicos.Enabled = true;
+                txtCodServ.Enabled = true;
+                btnPesquisar.Enabled = true;
+                txtServico.Enabled = true;
+                txtQtd.Enabled = true;
+                txtValorUnit.Enabled = true;
+                view_Servico_AgendamentoDataGridView.Enabled = true;
             }
         }
 
@@ -284,6 +299,12 @@ namespace aDefinir
                 txtCodServ.Text = VariaveisGlobais.CodigoLocalizado.ToString();
                 txtCodServ.Focus();
             }
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            Frm_RelatorioAgendamentos frmRelatorioAgendamento = new Frm_RelatorioAgendamentos();
+            frmRelatorioAgendamento.ShowDialog();
         }
     }
 }

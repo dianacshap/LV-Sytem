@@ -36,10 +36,11 @@ namespace aDefinir
             System.Windows.Forms.Label codigoLabel;
             System.Windows.Forms.Label dataAgLabel;
             System.Windows.Forms.Label horaLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadAgenda));
             this.servicos = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtCodServ = new System.Windows.Forms.MaskedTextBox();
             this.txtServico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -96,7 +97,7 @@ namespace aDefinir
             this.view_Total_ServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_Servico_AgendamentoTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Servico_AgendamentoTableAdapter();
             this.view_Total_ServicosTableAdapter = new aDefinir.LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter();
-            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.ToolStripButton();
             totalLabel = new System.Windows.Forms.Label();
             carro_IdLabel = new System.Windows.Forms.Label();
             situacaoLabel = new System.Windows.Forms.Label();
@@ -131,9 +132,9 @@ namespace aDefinir
             carro_IdLabel.AutoSize = true;
             carro_IdLabel.Location = new System.Drawing.Point(18, 107);
             carro_IdLabel.Name = "carro_IdLabel";
-            carro_IdLabel.Size = new System.Drawing.Size(70, 20);
+            carro_IdLabel.Size = new System.Drawing.Size(61, 20);
             carro_IdLabel.TabIndex = 8;
-            carro_IdLabel.Text = "Carro Id:";
+            carro_IdLabel.Text = "Veículo";
             // 
             // situacaoLabel
             // 
@@ -158,9 +159,9 @@ namespace aDefinir
             dataAgLabel.AutoSize = true;
             dataAgLabel.Location = new System.Drawing.Point(105, 37);
             dataAgLabel.Name = "dataAgLabel";
-            dataAgLabel.Size = new System.Drawing.Size(72, 20);
+            dataAgLabel.Size = new System.Drawing.Size(44, 20);
             dataAgLabel.TabIndex = 13;
-            dataAgLabel.Text = "Data Ag:";
+            dataAgLabel.Text = "Data";
             // 
             // horaLabel
             // 
@@ -190,6 +191,16 @@ namespace aDefinir
             this.servicos.Size = new System.Drawing.Size(705, 306);
             this.servicos.TabIndex = 2;
             this.servicos.TabStop = false;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(75, 24);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(23, 23);
+            this.btnPesquisar.TabIndex = 8;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtCodServ
             // 
@@ -289,7 +300,7 @@ namespace aDefinir
             this.view_Servico_AgendamentoDataGridView.Location = new System.Drawing.Point(15, 62);
             this.view_Servico_AgendamentoDataGridView.Name = "view_Servico_AgendamentoDataGridView";
             this.view_Servico_AgendamentoDataGridView.ReadOnly = true;
-            this.view_Servico_AgendamentoDataGridView.Size = new System.Drawing.Size(667, 220);
+            this.view_Servico_AgendamentoDataGridView.Size = new System.Drawing.Size(667, 199);
             this.view_Servico_AgendamentoDataGridView.TabIndex = 13;
             this.view_Servico_AgendamentoDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_Servico_AgendamentoDataGridView_CellContentDoubleClick);
             // 
@@ -348,9 +359,9 @@ namespace aDefinir
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "ValorUnitario";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn8.HeaderText = "Valor Unitário";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -360,9 +371,9 @@ namespace aDefinir
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "SubTotal";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn4.HeaderText = "SubTotal";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -395,9 +406,9 @@ namespace aDefinir
             this.groupBox1.Controls.Add(this.totalTextBox);
             this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Location = new System.Drawing.Point(12, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(706, 357);
+            this.groupBox1.Size = new System.Drawing.Size(706, 187);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agendamentos";
@@ -613,6 +624,7 @@ namespace aDefinir
             this.agendamentoBindingNavigatorSaveItem,
             this.btnEditar,
             this.btnCancelar,
+            this.btnRelatorio,
             this.btnFinalizar});
             this.agendamentoBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.agendamentoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -699,15 +711,14 @@ namespace aDefinir
             // 
             this.view_Total_ServicosTableAdapter.ClearBeforeFill = true;
             // 
-            // btnPesquisar
+            // btnRelatorio
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(75, 24);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(23, 23);
-            this.btnPesquisar.TabIndex = 8;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
+            this.btnRelatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(78, 24);
+            this.btnRelatorio.Text = "Relatório";
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
             // CadAgenda
             // 
@@ -802,5 +813,6 @@ namespace aDefinir
         private LvSystemDataSetTableAdapters.View_Total_ServicosTableAdapter view_Total_ServicosTableAdapter;
         private System.Windows.Forms.Button btnLocalizar;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.ToolStripButton btnRelatorio;
     }
 }
