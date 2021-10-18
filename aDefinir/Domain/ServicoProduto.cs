@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace aDefinir.Domain
 {
-    class Produto
+    class ServicoProduto
     {
         [Key]
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Funcao { get; set; }
-        public string Custo { get; set; }
-        public string Volume { get; set; }
-        public string RendimentoDiluido { get; set; }
+        public Servico Servico { get; set; }
+        public Produto Produto { get; set; }
+        public string Consumo { get; set; }
+
+
     }
 }

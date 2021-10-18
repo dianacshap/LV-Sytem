@@ -114,8 +114,15 @@ namespace aDefinir
                 }
                 else // abrir cadastro para localizar
                 {
-                    CadServicos serv = new CadServicos();
-                    serv.Show();
+                    VariaveisGlobais.CodigoLocalizado = 0;
+                    FrmLocalizarServicos frmLocalizarServico = new FrmLocalizarServicos();
+                    frmLocalizarServico.ShowDialog();
+                    if (VariaveisGlobais.CodigoLocalizado > 0)
+                    {
+                        //Posicionar Código Localizado
+                        txtCodServ.Text = VariaveisGlobais.CodigoLocalizado.ToString();
+                        txtCodServ.Focus();
+                    }
 
                 }
             }

@@ -273,7 +273,6 @@ namespace aDefinir
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarrosTableAdapter = this.carrosTableAdapter;
             this.tableAdapterManager.ClientesTableAdapter = null;
-            this.tableAdapterManager.ProdutoServicoTableAdapter = null;
             this.tableAdapterManager.ProdutoTableAdapter = null;
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;

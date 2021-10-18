@@ -239,11 +239,18 @@
       <DependentUpon>CadServicos.cs</DependentUpon>
     </Compile>
     <Compile Include="Domain\AgendamentosServicos.cs" />
+    <Compile Include="Domain\ServicoProduto.cs" />
     <Compile Include="FrmLocalizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLocalizarCliente.Designer.cs">
       <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocalizarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizarProduto.Designer.cs">
+      <DependentUpon>FrmLocalizarProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLocalizarServicos.cs">
       <SubType>Form</SubType>
@@ -361,6 +368,22 @@
     <Compile Include="Migrations\202110152248452_v15.designer.cs">
       <DependentUpon>202110152248452_v15.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110172032392_v16.cs" />
+    <Compile Include="Migrations\202110172032392_v16.designer.cs">
+      <DependentUpon>202110172032392_v16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110172039096_v17.cs" />
+    <Compile Include="Migrations\202110172039096_v17.designer.cs">
+      <DependentUpon>202110172039096_v17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110172044373_v18.cs" />
+    <Compile Include="Migrations\202110172044373_v18.designer.cs">
+      <DependentUpon>202110172044373_v18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110172237425_v19.cs" />
+    <Compile Include="Migrations\202110172237425_v19.designer.cs">
+      <DependentUpon>202110172237425_v19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -409,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarCliente.resx">
       <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizarProduto.resx">
+      <DependentUpon>FrmLocalizarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarServicos.resx">
       <DependentUpon>FrmLocalizarServicos.cs</DependentUpon>
@@ -472,6 +498,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110152248452_v15.resx">
       <DependentUpon>202110152248452_v15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110172032392_v16.resx">
+      <DependentUpon>202110172032392_v16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110172039096_v17.resx">
+      <DependentUpon>202110172039096_v17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110172044373_v18.resx">
+      <DependentUpon>202110172044373_v18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110172237425_v19.resx">
+      <DependentUpon>202110172237425_v19.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

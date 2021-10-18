@@ -42,6 +42,21 @@ namespace aDefinir
             // TODO: esta linha de código carrega dados na tabela 'lvSystemDataSet.Produto'. Você pode movê-la ou removê-la conforme necessário.
             this.produtoTableAdapter.Fill(this.lvSystemDataSet.Produto);
 
+
+        }
+
+        private void produtoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.produtoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.lvSystemDataSet);
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            produtoBindingSource.AddNew();
+            groupBox1.Enabled = true;
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
@@ -63,9 +78,23 @@ namespace aDefinir
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Enabled = true;
+            //Tratamento de erro
+            try
+            {
+                this.Validate();
+                this.produtoBindingSource.EndEdit();
+                produtoTableAdapter.Update(lvSystemDataSet.Produto);
+                groupBox1.Enabled = false; //Bloqueia Groupbox após salvar
+                MessageBox.Show("Registro Salvo");
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro, verifique os valores informados");
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -74,9 +103,8 @@ namespace aDefinir
             groupBox1.Enabled = false;
         }
 
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            produtoBindingSource.AddNew();
             groupBox1.Enabled = true;
         }
     }
