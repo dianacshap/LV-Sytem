@@ -149,5 +149,18 @@ namespace aDefinir
             }
             Atualizar_Produto();
         }
+
+        private void btnLocalizaProduto_Click(object sender, EventArgs e)
+        {
+            VariaveisGlobais.CodigoLocalizado = 0;
+            FrmLocalizarProduto frmLocalizarProduto = new FrmLocalizarProduto();
+            frmLocalizarProduto.ShowDialog();
+            if (VariaveisGlobais.CodigoLocalizado > 0)
+            {
+                //Posicionar Código Localizado
+                txtCodigo.Text = VariaveisGlobais.CodigoLocalizado.ToString();
+                txtCodigo.Focus();
+            }
+        }
     }
 }

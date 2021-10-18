@@ -35,7 +35,7 @@ namespace aDefinir
             System.Windows.Forms.Label valorLabel;
             System.Windows.Forms.Label tempoServicoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadServicos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.servicoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -335,6 +335,7 @@ namespace aDefinir
             this.btnLocalizaProduto.TabIndex = 5;
             this.btnLocalizaProduto.Text = "button1";
             this.btnLocalizaProduto.UseVisualStyleBackColor = true;
+            this.btnLocalizaProduto.Click += new System.EventHandler(this.btnLocalizaProduto_Click);
             // 
             // txtQuantidadeUtilizada
             // 
@@ -582,9 +583,9 @@ namespace aDefinir
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "CustoTotal";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn7.HeaderText = "Custo";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;

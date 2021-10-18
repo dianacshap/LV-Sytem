@@ -227,6 +227,7 @@ namespace aDefinir
             this.tableAdapterManager.CarrosTableAdapter = null;
             this.tableAdapterManager.ClientesTableAdapter = null;
             this.tableAdapterManager.ProdutoTableAdapter = this.produtoTableAdapter;
+            this.tableAdapterManager.ServicoProdutoTableAdapter = null;
             this.tableAdapterManager.ServicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = aDefinir.LvSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -388,6 +389,7 @@ namespace aDefinir
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(77, 24);
             this.btnLocalizar.Text = "Localizar";
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnRelatorio
             // 

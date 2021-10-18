@@ -107,5 +107,17 @@ namespace aDefinir
         {
             groupBox1.Enabled = true;
         }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            VariaveisGlobais.CodigoLocalizado = 0;
+            FrmLocalizarProduto frmLocalizarProduto = new FrmLocalizarProduto();
+            frmLocalizarProduto.ShowDialog();
+            if (VariaveisGlobais.CodigoLocalizado > 0)
+            {
+                //Posicionar Código Localizado
+                produtoBindingSource.Position = produtoBindingSource.Find("Id", VariaveisGlobais.CodigoLocalizado);
+            }
+        }
     }
 }
