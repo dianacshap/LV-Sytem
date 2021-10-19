@@ -208,84 +208,84 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadAgenda.cs">
+    <Compile Include="Formularios de Cadastro\CadAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadAgenda.Designer.cs">
+    <Compile Include="Formularios de Cadastro\CadAgenda.Designer.cs">
       <DependentUpon>CadAgenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadCarros.cs">
+    <Compile Include="Formularios de Cadastro\CadCarros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadCarros.Designer.cs">
+    <Compile Include="Formularios de Cadastro\CadCarros.Designer.cs">
       <DependentUpon>CadCarros.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadClientes.cs">
+    <Compile Include="Formularios de Cadastro\CadClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadClientes.Designer.cs">
+    <Compile Include="Formularios de Cadastro\CadClientes.Designer.cs">
       <DependentUpon>CadClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadProdutos.cs">
+    <Compile Include="Formularios de Cadastro\CadProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadProdutos.Designer.cs">
+    <Compile Include="Formularios de Cadastro\CadProdutos.Designer.cs">
       <DependentUpon>CadProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadServicos.cs">
+    <Compile Include="Formularios de Cadastro\CadServicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadServicos.Designer.cs">
+    <Compile Include="Formularios de Cadastro\CadServicos.Designer.cs">
       <DependentUpon>CadServicos.cs</DependentUpon>
     </Compile>
     <Compile Include="Domain\AgendamentosServicos.cs" />
     <Compile Include="Domain\ServicoProduto.cs" />
-    <Compile Include="FrmLocalizarCliente.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLocalizarCliente.Designer.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarCliente.Designer.cs">
       <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLocalizarProduto.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLocalizarProduto.Designer.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarProduto.Designer.cs">
       <DependentUpon>FrmLocalizarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLocalizarServicos.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarServicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLocalizarServicos.Designer.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarServicos.Designer.cs">
       <DependentUpon>FrmLocalizarServicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLocalizarVeiculo.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLocalizarVeiculo.Designer.cs">
+    <Compile Include="Formularios Localizar\FrmLocalizarVeiculo.Designer.cs">
       <DependentUpon>FrmLocalizarVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRelatorio.cs">
+    <Compile Include="Formularios de Relatorio\FrmRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRelatorio.Designer.cs">
+    <Compile Include="Formularios de Relatorio\FrmRelatorio.Designer.cs">
       <DependentUpon>FrmRelatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRelatorioServicos.cs">
+    <Compile Include="Formularios de Relatorio\FrmRelatorioServicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRelatorioServicos.Designer.cs">
+    <Compile Include="Formularios de Relatorio\FrmRelatorioServicos.Designer.cs">
       <DependentUpon>FrmRelatorioServicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRelatorioVeiculos.cs">
+    <Compile Include="Formularios de Relatorio\FrmRelatorioVeiculos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRelatorioVeiculos.Designer.cs">
+    <Compile Include="Formularios de Relatorio\FrmRelatorioVeiculos.Designer.cs">
       <DependentUpon>FrmRelatorioVeiculos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_RelatorioAgendamentos.cs">
+    <Compile Include="Formularios de Relatorio\Frm_RelatorioAgendamentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_RelatorioAgendamentos.Designer.cs">
+    <Compile Include="Formularios de Relatorio\Frm_RelatorioAgendamentos.Designer.cs">
       <DependentUpon>Frm_RelatorioAgendamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="LvSystemContext.cs" />
@@ -294,10 +294,10 @@
     <Compile Include="Domain\Cliente.cs" />
     <Compile Include="Domain\Produto.cs" />
     <Compile Include="Domain\Servico.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Formularios de Cadastro\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Formularios de Cadastro\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="LvSystemDataSet.cs">
@@ -412,46 +412,46 @@
       <DependentUpon>RelatorioAgendamentos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="CadAgenda.resx">
+    <EmbeddedResource Include="Formularios de Cadastro\CadAgenda.resx">
       <DependentUpon>CadAgenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadCarros.resx">
+    <EmbeddedResource Include="Formularios de Cadastro\CadCarros.resx">
       <DependentUpon>CadCarros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadClientes.resx">
+    <EmbeddedResource Include="Formularios de Cadastro\CadClientes.resx">
       <DependentUpon>CadClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadServicos.resx">
+    <EmbeddedResource Include="Formularios de Cadastro\CadServicos.resx">
       <DependentUpon>CadServicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Formularios de Cadastro\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadProdutos.resx">
+    <EmbeddedResource Include="Formularios de Cadastro\CadProdutos.resx">
       <DependentUpon>CadProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLocalizarCliente.resx">
+    <EmbeddedResource Include="Formularios Localizar\FrmLocalizarCliente.resx">
       <DependentUpon>FrmLocalizarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLocalizarProduto.resx">
+    <EmbeddedResource Include="Formularios Localizar\FrmLocalizarProduto.resx">
       <DependentUpon>FrmLocalizarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLocalizarServicos.resx">
+    <EmbeddedResource Include="Formularios Localizar\FrmLocalizarServicos.resx">
       <DependentUpon>FrmLocalizarServicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLocalizarVeiculo.resx">
+    <EmbeddedResource Include="Formularios Localizar\FrmLocalizarVeiculo.resx">
       <DependentUpon>FrmLocalizarVeiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRelatorio.resx">
+    <EmbeddedResource Include="Formularios de Relatorio\FrmRelatorio.resx">
       <DependentUpon>FrmRelatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRelatorioServicos.resx">
+    <EmbeddedResource Include="Formularios de Relatorio\FrmRelatorioServicos.resx">
       <DependentUpon>FrmRelatorioServicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRelatorioVeiculos.resx">
+    <EmbeddedResource Include="Formularios de Relatorio\FrmRelatorioVeiculos.resx">
       <DependentUpon>FrmRelatorioVeiculos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_RelatorioAgendamentos.resx">
+    <EmbeddedResource Include="Formularios de Relatorio\Frm_RelatorioAgendamentos.resx">
       <DependentUpon>Frm_RelatorioAgendamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110031931487_v-1.resx">

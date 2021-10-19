@@ -17,12 +17,6 @@ namespace aDefinir
             InitializeComponent();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-           //minimizar
-            this.WindowState = FormWindowState.Minimized;
-        }
-
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
@@ -150,5 +144,6 @@ namespace aDefinir
             lblEmAndamento.Text = QuantidadeAndamento.ToString();
             lblAgendado.Text = QuantidadeAgendado.ToString();
         }
+
     }
 }

@@ -19,9 +19,21 @@ namespace aDefinir
 
         private void servicoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.servicoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.lvSystemDataSet);
+            try
+            {
+                this.Validate();
+                this.servicoBindingSource.EndEdit();
+                servicoTableAdapter.Update(lvSystemDataSet.Servico);
+                groupBox1.Enabled = false; //Bloqueia Groupbox após salvar
+                MessageBox.Show("Serviço Salvo, Informe os Produtos", "LvSystem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCodigo.Focus();
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro, verifique os valores informados");
+            }
 
         }
 
@@ -100,6 +112,7 @@ namespace aDefinir
                 Atualizar_Produto();
                 //Limpar todas as textboxes
                 txtQuantidadeUtilizada.Clear();
+                txtProduto.Clear();
                 txtCodigo.Focus();
                 txtCodigo.Clear();
             }
@@ -160,6 +173,31 @@ namespace aDefinir
                 //Posicionar Código Localizado
                 txtCodigo.Text = VariaveisGlobais.CodigoLocalizado.ToString();
                 txtCodigo.Focus();
+            }
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            servicoBindingSource.AddNew();
+            groupBox1.Enabled = true;
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            try //Tratamento de erro
+            {
+                if (MessageBox.Show("Confirma a exclusão do registro", "LVSystem", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    servicoBindingSource.RemoveCurrent();//remove
+                    servicoTableAdapter.Update(lvSystemDataSet.Servico);//salva
+
+                }
+
+            }
+            catch (Exception)//se "ele" não conseguir aqui captura o erro 
+            {
+                servicoTableAdapter.Fill(lvSystemDataSet.Servico); //se não tiver esse metodo, o registro é excluido mas ainda fica no bd
+                MessageBox.Show("Registro não pode ser excluido");
             }
         }
     }

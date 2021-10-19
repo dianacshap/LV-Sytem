@@ -717,6 +717,27 @@ SELECT Id, Consumo, Produto_Id, Servico_Id FROM ServicoProduto WHERE (Id = @Id)<
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Saldo_ServicoTableAdapter" GeneratorDataComponentClassName="View_Saldo_ServicoTableAdapter" Name="View_Saldo_Servico" UserDataComponentName="View_Saldo_ServicoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LvSystemConnectionString (Settings)" DbObjectName="LVSystem.dbo.View_Saldo_Servico" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Expr1, Id, Nome, Valor, CustoTotal, Saldo FROM dbo.View_Saldo_Servico</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
+              <Mapping SourceColumn="Valor" DataSetColumn="Valor" />
+              <Mapping SourceColumn="CustoTotal" DataSetColumn="CustoTotal" />
+              <Mapping SourceColumn="Saldo" DataSetColumn="Saldo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1161,6 +1182,24 @@ SELECT Id, Consumo, Produto_Id, Servico_Id FROM ServicoProduto WHERE (Id = @Id)<
               <xs:element name="RendimentoDiluido" msprop:Generator_ColumnVarNameInTable="columnRendimentoDiluido" msprop:Generator_ColumnPropNameInRow="RendimentoDiluido" msprop:Generator_ColumnPropNameInTable="RendimentoDiluidoColumn" msprop:Generator_UserColumnName="RendimentoDiluido" type="xs:decimal" minOccurs="0" />
               <xs:element name="CustoTotal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustoTotal" msprop:Generator_ColumnPropNameInRow="CustoTotal" msprop:Generator_ColumnPropNameInTable="CustoTotalColumn" msprop:Generator_UserColumnName="CustoTotal" type="xs:decimal" minOccurs="0" />
               <xs:element name="Servico_Id" msprop:Generator_ColumnVarNameInTable="columnServico_Id" msprop:Generator_ColumnPropNameInRow="Servico_Id" msprop:Generator_ColumnPropNameInTable="Servico_IdColumn" msprop:Generator_UserColumnName="Servico_Id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Saldo_Servico" msprop:Generator_TableClassName="View_Saldo_ServicoDataTable" msprop:Generator_TableVarName="tableView_Saldo_Servico" msprop:Generator_TablePropName="View_Saldo_Servico" msprop:Generator_RowDeletingName="View_Saldo_ServicoRowDeleting" msprop:Generator_RowChangingName="View_Saldo_ServicoRowChanging" msprop:Generator_RowEvHandlerName="View_Saldo_ServicoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Saldo_ServicoRowDeleted" msprop:Generator_UserTableName="View_Saldo_Servico" msprop:Generator_RowChangedName="View_Saldo_ServicoRowChanged" msprop:Generator_RowEvArgName="View_Saldo_ServicoRowChangeEvent" msprop:Generator_RowClassName="View_Saldo_ServicoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnPropNameInTable="ValorColumn" msprop:Generator_UserColumnName="Valor" type="xs:decimal" />
+              <xs:element name="CustoTotal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustoTotal" msprop:Generator_ColumnPropNameInRow="CustoTotal" msprop:Generator_ColumnPropNameInTable="CustoTotalColumn" msprop:Generator_UserColumnName="CustoTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Saldo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
